@@ -191,3 +191,83 @@ p {
   footer {
     margin-top: 64px;
   }
+  /*
+EN:
+Visual polish layer.
+Pure cosmetics, safe to remove later.
+
+RU:
+Косметический слой.
+Только внешний вид, безопасно удалить при масштабировании.
+*/
+
+:root {
+    --accent: #2563eb;      /* основной синий */
+    --accent-soft: #e8efff; /* светлый фон */
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --border-light: #e2e8f0;
+  }
+  
+  /* Общий фон */
+  body {
+    background-color: #f8fafc;
+    color: var(--text-main);
+  }
+  
+  /* Хедер */
+  header {
+    background: #ffffff;
+  }
+  
+  /* HERO */
+  #hero {
+    background: linear-gradient(180deg, #ffffff, var(--accent-soft));
+    padding: 48px 24px;
+    border-radius: 12px;
+    margin-bottom: 64px;
+  }
+  
+  #hero h2 {
+    font-size: 32px;
+  }
+  
+  #hero p {
+    color: var(--text-muted);
+    font-size: 18px;
+  }
+  
+  /* Карточки проектов */
+  article {
+    background: #ffffff;
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Кнопка */
+  a[href*="MigrantBot"],
+  a.button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a[href*="MigrantBot"]:hover {
+    background: #1e40af;
+  }
+  
+  /* Футер */
+  footer {
+    background: #ffffff;
+  }
