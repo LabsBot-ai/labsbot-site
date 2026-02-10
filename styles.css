@@ -1,0 +1,125 @@
+/* 
+EN:
+Base styles for LabsBot.ai.
+Minimal, clean, framework-free.
+Safe to remove or replace during scaling.
+
+RU:
+Базовые стили для LabsBot.ai.
+Минимум, чистота, без фреймворков.
+Можно безопасно удалить или заменить при масштабировании.
+*/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /*
+  EN:
+  System font stack for fast loading and native look.
+  
+  RU:
+  Системные шрифты — быстро грузятся, выглядят нативно.
+  */
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    color: #111;
+    background-color: #fff;
+  }
+  
+  /*
+  EN:
+  Limit content width for readability.
+  
+  RU:
+  Ограничиваем ширину для удобства чтения.
+  */
+  main {
+    max-width: 720px;
+    padding: 24px;
+    margin: 0 auto;
+  }
+  
+  /*
+  EN:
+  Simple header and navigation.
+  
+  RU:
+  Простой хедер и навигация.
+  */
+  header {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 24px;
+  }
+  
+  header h1 {
+    margin: 0 0 12px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 16px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #0055cc;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /*
+  EN:
+  Section spacing.
+  
+  RU:
+  Отступы между секциями.
+  */
+  section {
+    margin-bottom: 48px;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  
+  /*
+  EN:
+  Project cards (very light).
+  
+  RU:
+  Карточки проектов (очень лёгкие).
+  */
+  article {
+    padding: 16px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 16px;
+  }
+  
+  article h3 {
+    margin-top: 0;
+  }
+  
+  /*
+  EN:
+  Footer styling.
+  
+  RU:
+  Оформление футера.
+  */
+  footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+  }
