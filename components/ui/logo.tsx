@@ -1,11 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/images/logo.svg";
 
 export default function Logo() {
   return (
-    <Link href="/" className="inline-flex shrink-0" aria-label="LabsBot">
-      <Image src={logo} alt="LabsBot" width={32} height={32} />
+    <Link href="/" className="inline-flex shrink-0 items-center" aria-label="LabsBot">
+      <Image
+        src="/branding/labsbot-logo.png"
+        alt="LabsBot"
+        width={128}
+        height={32}
+        className="h-7 w-auto md:h-8"
+        priority
+      />
     </Link>
   );
 }

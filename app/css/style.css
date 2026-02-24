@@ -75,13 +75,13 @@
       background-position: 200% center;
     }
   }
-  /* Hero only: animated indigo-violet gradient, 15s ease-in-out */
-  @keyframes hero-gradient-shift {
+  /* Hero only: brand-blue gradient, 20s ease-in-out, vertical shift */
+  @keyframes hero-brand-shift {
     0%, 100% {
-      background-position: 0 0%;
+      background-position: 0 0, 0 0%;
     }
     50% {
-      background-position: 0 100%;
+      background-position: 0 0, 0 100%;
     }
   }
 }
@@ -102,20 +102,23 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-  /* Hero section only: single animated gradient (navy → indigo-violet glow → fade to body) */
-  .hero-gradient-bg {
-    background-image: linear-gradient(
-      180deg,
-      #070d14 0%,
-      #0b1220 12%,
-      rgba(79, 70, 229, 0.18) 32%,
-      rgba(109, 40, 217, 0.08) 48%,
-      rgba(79, 70, 229, 0.12) 64%,
-      #0f172a 84%,
-      #0b1220 100%
-    );
-    background-size: 100% 200%;
-    background-position: 0 0;
-    animation: hero-gradient-shift 15s ease-in-out infinite;
+  /* Hero section only: brand-blue palette, subtle radial glow, no purple/cyan */
+  .hero-brand-bg {
+    background-image: radial-gradient(
+        ellipse 80% 50% at 50% 30%,
+        rgba(47, 95, 168, 0.3) 0%,
+        transparent 55%
+      ),
+      linear-gradient(
+        180deg,
+        #0b1220 0%,
+        #0f2a4d 25%,
+        #173b6e 50%,
+        #0f2a4d 75%,
+        #0b1220 100%
+      );
+    background-size: 100% 100%, 100% 200%;
+    background-position: 0 0, 0 0;
+    animation: hero-brand-shift 20s ease-in-out infinite;
   }
 }
