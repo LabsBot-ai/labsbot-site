@@ -205,14 +205,7 @@ export default function Footer() {
             </div>
             <div className="text-sm">
               <p className="mb-3 text-indigo-200/65">
-                © Cruip.com
-                <span className="text-gray-700"> · </span>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
-                >
-                  Terms
-                </a>
+                © 2026 LabsBot.ai. All rights reserved.
               </p>
               <ul className="inline-flex gap-1">
                 <li>
