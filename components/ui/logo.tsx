@@ -9,7 +9,7 @@ export default function Logo() {
         alt="LabsBot"
         width={128}
         height={32}
-        className="h-7 w-auto md:h-8"
+        className="h-8 w-auto"
         priority
       />
     </Link>
