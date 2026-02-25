@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative flex h-16 items-center justify-between gap-3 rounded-[22px] bg-[linear-gradient(90deg,#D4DEE8_0%,#B8C8DC_20%,#8A9FB8_42%,#3D4F6B_68%,#1B2738_88%,#0B1220_100%)] px-3 transition-colors duration-500">
+        <div className="relative flex h-[72px] items-center justify-between gap-3 rounded-[22px] bg-[linear-gradient(90deg,#C9D6E4_0%,#AFC4DA_20%,#6F8FB2_45%,#2A3A52_70%,#0B1220_100%)] px-3 transition-colors duration-500">
           {/* Site branding */}
           <div className="flex items-center shrink-0">
             <Logo />
@@ -18,7 +18,7 @@ export default function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
             {/* Desktop menu links */}
-            <ul className="flex grow flex-wrap items-center justify-center gap-4 text-sm lg:gap-8">
+            <ul className="flex grow flex-wrap items-center justify-center gap-4 text-base font-medium lg:gap-8">
               <li>
                 <Link
                   href="/pricing"
