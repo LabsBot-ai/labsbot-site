@@ -113,8 +113,9 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-  /* Hero section only: darkened header palette, single atmosphere, no purple */
-  .hero-brand-bg {
+  /* Global page background: unified gradient, no section separation */
+  .page-bg {
+    min-height: 100vh;
     background-image: radial-gradient(
         ellipse 100% 60% at 50% 0%,
         rgba(65, 85, 130, 0.22) 0%,
@@ -131,6 +132,6 @@
       );
     background-size: 100% 100%, 100% 200%;
     background-position: 0 0, 0 0;
-    animation: hero-brand-shift 20s ease-in-out infinite;
+    background-attachment: scroll;
   }
 }
