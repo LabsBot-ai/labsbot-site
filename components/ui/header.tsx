@@ -18,11 +18,11 @@ export default function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex md:grow">
             {/* Desktop menu links */}
-            <ul className="flex grow flex-wrap items-center justify-center gap-4 lg:gap-8">
+            <ul className="flex grow flex-wrap items-center justify-center gap-2">
               <li>
                 <Link
                   href="/pricing"
-                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-3"
+                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-2"
                 >
                   Pricing
                 </Link>
@@ -30,7 +30,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/about"
-                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-3"
+                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-2"
                 >
                   About Us
                 </Link>
@@ -38,7 +38,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/blog"
-                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-3"
+                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-2"
                 >
                   Blog
                 </Link>
@@ -46,7 +46,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/help/frequently-asked-questions"
-                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-3"
+                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-2"
                 >
                   Help Centre
                 </Link>
