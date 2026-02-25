@@ -117,16 +117,16 @@
   .hero-brand-bg {
     background-image: radial-gradient(
         ellipse 80% 50% at 50% 30%,
-        rgba(47, 95, 168, 0.3) 0%,
+        rgba(55, 108, 185, 0.32) 0%,
         transparent 55%
       ),
       linear-gradient(
         180deg,
-        #0b1220 0%,
-        #0f2a4d 25%,
-        #173b6e 50%,
-        #0f2a4d 75%,
-        #0b1220 100%
+        #121c30 0%,
+        #1a3560 25%,
+        #254a82 50%,
+        #1a3560 75%,
+        #121c30 100%
       );
     background-size: 100% 100%, 100% 200%;
     background-position: 0 0, 0 0;

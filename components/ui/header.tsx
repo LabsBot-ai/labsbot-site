@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative flex h-[72px] items-center justify-between gap-3 rounded-[22px] bg-[linear-gradient(to_right,var(--color-gray-300),var(--color-indigo-300),var(--color-gray-200),var(--color-indigo-400),var(--color-gray-300))] bg-[length:200%_auto] animate-[gradient_14s_ease-in-out_infinite] px-3 transition-colors duration-500">
+        <div className="relative flex h-[72px] items-center justify-between gap-3 rounded-[22px] bg-[linear-gradient(to_right,var(--color-gray-300),var(--color-indigo-300),var(--color-gray-200),var(--color-indigo-400),var(--color-gray-300))] bg-[length:200%_auto] animate-[gradient_45s_linear_infinite] px-3 transition-colors duration-500">
           {/* Site branding */}
           <div className="flex items-center shrink-0">
             <Logo />
