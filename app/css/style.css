@@ -75,6 +75,17 @@
       background-position: 200% center;
     }
   }
+  @keyframes header-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   /* Hero only: brand-blue gradient, 20s ease-in-out, vertical shift */
   @keyframes hero-brand-shift {
     0%, 100% {
@@ -121,4 +132,15 @@
     background-position: 0 0, 0 0;
     animation: hero-brand-shift 20s ease-in-out infinite;
   }
+}
+
+/* Header animation (pure CSS, outside @theme) */
+.header-animated {
+  animation: header-shift 18s ease-in-out infinite;
+}
+
+@keyframes header-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
