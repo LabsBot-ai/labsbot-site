@@ -116,15 +116,12 @@
   /* Global page background: unified gradient, no section separation */
   .page-bg {
     min-height: 100vh;
-    background-image: linear-gradient(
-        180deg,
-        #e5e7eb 0%,
-        #dfe3f0 30%,
-        #cfd6e8 60%,
-        #d1d5db 100%
-      );
-    background-size: 100% 100%;
-    background-position: 0 0;
-    background-attachment: scroll;
+    background: linear-gradient(
+      180deg,
+      #d6dae6 0%,
+      #c4cbe0 30%,
+      #b3bdd8 60%,
+      #cdd3e5 100%
+    );
   }
 }
