@@ -113,20 +113,21 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-  /* Hero section only: brand-blue palette, subtle radial glow, no purple/cyan */
+  /* Hero section only: darkened header palette, single atmosphere, no purple */
   .hero-brand-bg {
     background-image: radial-gradient(
-        ellipse 80% 50% at 50% 30%,
-        rgba(55, 108, 185, 0.32) 0%,
-        transparent 55%
+        ellipse 100% 60% at 50% 0%,
+        rgba(65, 85, 130, 0.22) 0%,
+        transparent 50%
       ),
       linear-gradient(
         180deg,
-        #121c30 0%,
-        #1a3560 25%,
-        #254a82 50%,
-        #1a3560 75%,
-        #121c30 100%
+        #1c2232 0%,
+        #232b40 18%,
+        #2a3352 38%,
+        #262e48 58%,
+        #242c44 78%,
+        #1c2232 100%
       );
     background-size: 100% 100%, 100% 200%;
     background-position: 0 0, 0 0;
