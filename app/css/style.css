@@ -123,11 +123,9 @@
       ),
       linear-gradient(
         180deg,
-        #3a4158 0%,
-        #4a5170 25%,
-        #5a6390 50%,
-        #4a5170 75%,
-        #3a4158 100%
+        #e5e7eb 0%,
+        #d1d5db 50%,
+        #e5e7eb 100%
       );
     background-size: 100% 100%, 100% 200%;
     background-position: 0 0, 0 0;
