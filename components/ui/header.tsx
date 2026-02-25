@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative flex h-[72px] items-center justify-between gap-3 rounded-[22px] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] animate-[gradient_6s_linear_infinite] px-3 transition-colors duration-500">
+        <div className="relative flex h-[72px] items-center justify-between gap-3 rounded-[22px] bg-[linear-gradient(to_right,var(--color-gray-300),var(--color-indigo-300),var(--color-gray-200),var(--color-indigo-400),var(--color-gray-300))] bg-[length:200%_auto] animate-[gradient_14s_ease-in-out_infinite] px-3 transition-colors duration-500">
           {/* Site branding */}
           <div className="flex items-center shrink-0">
             <Logo />
@@ -22,7 +22,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/pricing"
-                  className="flex items-center px-2 py-1 text-lg font-medium tracking-wide text-gray-200 transition hover:text-gray-200 lg:px-3"
+                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-3"
                 >
                   Pricing
                 </Link>
@@ -30,7 +30,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/about"
-                  className="flex items-center px-2 py-1 text-lg font-medium tracking-wide text-gray-200 transition hover:text-gray-200 lg:px-3"
+                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-3"
                 >
                   About Us
                 </Link>
@@ -38,7 +38,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/blog"
-                  className="flex items-center px-2 py-1 text-lg font-medium tracking-wide text-gray-200 transition hover:text-gray-200 lg:px-3"
+                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-3"
                 >
                   Blog
                 </Link>
@@ -46,7 +46,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/help/frequently-asked-questions"
-                  className="flex items-center px-2 py-1 text-lg font-medium tracking-wide text-gray-200 transition hover:text-gray-200 lg:px-3"
+                  className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-3"
                 >
                   Help Centre
                 </Link>

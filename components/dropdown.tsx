@@ -32,7 +32,7 @@ export default function Dropdown({ children, title }: DropdownProps) {
       onMouseEnter={() => setDropdownOpen(true)}
       onMouseLeave={() => setDropdownOpen(false)}
     >
-      <span className="flex items-center px-2 py-1 text-lg font-medium tracking-wide text-gray-200 transition hover:text-white lg:px-3">
+      <span className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-3">
         {title}
       </span>
       <button
