@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Home - Open PRO",
+  title: "LabsBot — AI tools for real life",
   description: "Page description",
 };
 
