@@ -1,6 +1,6 @@
 export const metadata = {
   title: "LabsBot — AI tools for real life",
-  description: "Page description",
+  description: "LabsBot builds accessible automation platforms focused on clarity, trust and long-term scalability.",
 };
 
 import PageIllustration from "@/components/page-illustration";
