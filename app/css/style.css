@@ -117,12 +117,6 @@
   .page-bg {
     min-height: 100vh;
     background-image: radial-gradient(
-        ellipse 90% 60% at 50% 0%,
-        rgba(99, 102, 241, 0.12) 0%,
-        rgba(79, 70, 229, 0.08) 35%,
-        transparent 70%
-      ),
-      radial-gradient(
         ellipse 100% 60% at 50% 0%,
         rgba(65, 85, 130, 0.22) 0%,
         transparent 50%
@@ -135,8 +129,8 @@
         #4a5170 75%,
         #3a4158 100%
       );
-    background-size: 100% 100%, 100% 100%, 100% 200%;
-    background-position: 50% 0%, 0 0, 0 0;
+    background-size: 100% 100%, 100% 200%;
+    background-position: 0 0, 0 0;
     background-attachment: scroll;
   }
 }
