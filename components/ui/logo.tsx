@@ -6,7 +6,7 @@ export default function Logo() {
       <img
         src="/branding/labsbot-logo.png"
         alt="LabsBot"
-        className="h-12 w-auto object-contain shrink-0"
+        className="h-10 w-auto object-contain shrink-0"
         loading="eager"
       />
     </Link>
