@@ -4,8 +4,16 @@
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="600.000000pt" height="680.000000pt" viewBox="0 0 600.000000 680.000000"
  preserveAspectRatio="xMidYMid meet">
+<defs>
+  <linearGradient id="labsbotGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#c7d2fe"/>
+    <stop offset="40%" stop-color="#a5b4fc"/>
+    <stop offset="70%" stop-color="#818cf8"/>
+    <stop offset="100%" stop-color="#6366f1"/>
+  </linearGradient>
+</defs>
 <g transform="translate(0.000000,680.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+fill="url(#labsbotGradient)" stroke="none">
 <path d="M604 4151 c-2 -2 -4 -359 -4 -793 l0 -788 800 0 800 0 0 796 0 795
 -796 -3 c-438 -2 -798 -5 -800 -7z m46 -31 c4 7 12 11 18 9 6 -2 0 -11 -12
 -20 -21 -16 -22 -16 -23 5 0 11 1 15 4 7 4 -10 7 -10 13 -1z m213 3 c-13 -2
