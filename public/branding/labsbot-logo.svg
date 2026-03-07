@@ -5,9 +5,11 @@
  width="600.000000pt" height="680.000000pt" viewBox="0 0 600.000000 680.000000"
  preserveAspectRatio="xMidYMid meet">
 <defs>
-  <linearGradient id="labsbotGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+  <linearGradient id="labsbotGradient" x1="0%" y1="0%" x2="200%" y2="0%">
+    <animate attributeName="x1" values="0%;200%;0%" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="200%;400%;200%" dur="6s" repeatCount="indefinite"/>
     <stop offset="0%" stop-color="#c7d2fe"/>
-    <stop offset="40%" stop-color="#a5b4fc"/>
+    <stop offset="35%" stop-color="#a5b4fc"/>
     <stop offset="70%" stop-color="#818cf8"/>
     <stop offset="100%" stop-color="#6366f1"/>
   </linearGradient>
