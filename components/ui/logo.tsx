@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Logo() {
   return (
-    <Link href="/" className="inline-flex shrink-0 items-center" aria-label="LabsBot">
+    <Link href="/" className="labsbot-logo-wrap">
       <Image
         src="/branding/labsbot-logo.svg"
         alt="LabsBot"
