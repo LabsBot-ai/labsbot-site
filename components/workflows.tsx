@@ -51,12 +51,10 @@ export default function Workflows() {
               <div className={cardInnerClass}>
                 {arrowIcon}
                 <div className="flex items-center justify-center min-h-[200px] px-4 py-12">
-                  <Image
+                  <img
                     src="/branding/migreo.png"
                     alt="Migreo logo"
-                    width={160}
-                    height={160}
-                    className="w-40 h-auto object-contain drop-shadow-[0_0_35px_rgba(120,160,255,0.45)]"
+                    className="w-56 h-auto object-contain"
                   />
                 </div>
                 <div className="p-6">
