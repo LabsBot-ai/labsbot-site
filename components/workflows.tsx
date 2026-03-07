@@ -50,8 +50,12 @@ export default function Workflows() {
             <div className={productCardClass}>
               <div className={cardInnerClass}>
                 {arrowIcon}
-                <div className="flex items-center justify-center h-40 mb-6">
-                  <img src="/branding/migreo.png" alt="Migreo logo" />
+                <div className="flex items-center justify-center h-40 mb-6 overflow-hidden">
+                  <img
+                    src="/branding/migreo.png"
+                    alt="Migreo logo"
+                    className="max-h-28 w-auto object-contain"
+                  />
                 </div>
                 <div className="p-6">
                   <div className="mb-3">
