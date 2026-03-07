@@ -143,31 +143,3 @@
     display: block;
   }
 }
-
-.logo-shine {
-  position: relative;
-  display: inline-flex;
-  overflow: hidden;
-}
-
-.logo-shine-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255,255,255,0.25) 45%,
-    rgba(255,255,255,0.55) 50%,
-    rgba(255,255,255,0.25) 55%,
-    transparent 100%
-  );
-  transform: translateX(-150%);
-  animation: logoShine 7s infinite;
-}
-
-@keyframes logoShine {
-  0% { transform: translateX(-150%); }
-  40% { transform: translateX(150%); }
-  100% { transform: translateX(150%); }
-}

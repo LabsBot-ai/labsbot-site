@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative flex items-center justify-between gap-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 px-6 py-3">
+        <div className="relative flex items-center justify-between gap-3 rounded-2xl bg-white/10 backdrop-blur-md px-6 py-3">
           {/* Site branding */}
           <div className="flex items-center gap-3">
             <Logo />
