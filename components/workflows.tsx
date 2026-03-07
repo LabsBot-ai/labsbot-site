@@ -31,7 +31,7 @@ export default function Workflows() {
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
-              <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+              <span className="inline-flex text-2xl bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
                 Products
               </span>
             </div>
@@ -66,14 +66,14 @@ export default function Workflows() {
                     </span>
                   </div>
                   <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                    Migreo
+                    MIGREO
                   </h3>
                   <p className="mb-4 text-indigo-200/65">
                     AI assistant for migration and bureaucracy.
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <a
-                      className="btn-sm group inline-flex bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]"
+                      className="btn-sm group inline-flex bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:opacity-95 transition"
                       href="https://t.me/migreo_bot"
                       target="_blank"
                       rel="noopener noreferrer"
