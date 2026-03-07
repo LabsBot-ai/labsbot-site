@@ -54,9 +54,9 @@ export default function Workflows() {
                   <Image
                     src="/branding/migreo.png"
                     alt="Migreo logo"
-                    width={112}
-                    height={112}
-                    className="w-28 h-28 object-contain drop-shadow-[0_0_25px_rgba(120,160,255,0.35)]"
+                    width={160}
+                    height={160}
+                    className="w-40 h-auto object-contain drop-shadow-[0_0_35px_rgba(120,160,255,0.45)]"
                   />
                 </div>
                 <div className="p-6">
