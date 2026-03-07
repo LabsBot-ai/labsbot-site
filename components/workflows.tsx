@@ -50,13 +50,17 @@ export default function Workflows() {
             <div className={productCardClass}>
               <div className={cardInnerClass}>
                 {arrowIcon}
-                <Image
-                  className="inline-flex"
-                  src={WorflowImg01}
-                  width={350}
-                  height={288}
-                  alt="Migreo"
-                />
+                <div className="flex items-center justify-center min-h-[200px] px-4 py-12">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-white/5 backdrop-blur-sm">
+                    <Image
+                      src="/branding/migreo.png"
+                      alt="Migreo logo"
+                      width={56}
+                      height={56}
+                      className="w-14 h-14 object-contain"
+                    />
+                  </div>
+                </div>
                 <div className="p-6">
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
