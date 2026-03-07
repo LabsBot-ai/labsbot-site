@@ -25,18 +25,24 @@ export default function HeroHome() {
                 A growing ecosystem of practical AI products for migration, payments, language and education.
               </p>
               <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
-                <div data-aos="fade-up" data-aos-delay={400}>
-                  <Link
-                    className="btn group mb-4 w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                    href="/products"
-                  >
-                    <span className="relative inline-flex items-center">
-                      Explore products
-                      <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
-                        -&gt;
+                <div data-aos="fade-up" data-aos-delay={400} className="w-full sm:w-auto mb-4 sm:mb-0">
+                  <div className="relative inline-flex w-full sm:w-auto">
+                    <div
+                      className="absolute -inset-1 blur-xl opacity-40 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500"
+                      aria-hidden
+                    />
+                    <Link
+                      className="relative btn group w-full bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] sm:w-auto"
+                      href="/products"
+                    >
+                      <span className="relative inline-flex items-center">
+                        Explore products
+                        <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+                          -&gt;
+                        </span>
                       </span>
-                    </span>
-                  </Link>
+                    </Link>
+                  </div>
                 </div>
                 <div data-aos="fade-up" data-aos-delay={600}>
                   <Link
