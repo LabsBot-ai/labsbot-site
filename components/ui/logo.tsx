@@ -7,10 +7,10 @@ export default function Logo() {
       <Image
         src="/branding/labsbot-logo.svg"
         alt="LabsBot"
-        width={200}
+        width={180}
         height={40}
         priority
-        style={{ height: "40px", width: "auto" }}
+        style={{ height: "40px", width: "180px", objectFit: "contain" }}
       />
     </Link>
   );
