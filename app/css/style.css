@@ -113,15 +113,7 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-  /* Global page background: unified gradient, no section separation */
   .page-bg {
-    min-height: 100vh;
-    background: linear-gradient(
-      180deg,
-      #d6dae6 0%,
-      #c4cbe0 30%,
-      #b3bdd8 60%,
-      #cdd3e5 100%
-    );
+    background: #ffffff;
   }
 }
