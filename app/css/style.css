@@ -132,4 +132,11 @@
       #6366f1 100%
     );
   }
+  .labsbot-logo {
+    filter: brightness(1.25) drop-shadow(0 0 6px rgba(120, 120, 255, 0.35));
+    transition: filter 0.25s ease;
+  }
+  .labsbot-logo:hover {
+    filter: brightness(1.35) drop-shadow(0 0 10px rgba(120, 120, 255, 0.5));
+  }
 }

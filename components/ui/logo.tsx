@@ -7,9 +7,10 @@ export default function Logo() {
       <Image
         src="/branding/labsbot-logo.png"
         alt="LabsBot"
-        width={160}
-        height={40}
+        width={170}
+        height={44}
         priority
+        className="labsbot-logo"
       />
     </Link>
   );
