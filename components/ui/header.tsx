@@ -91,16 +91,22 @@ export default function Header() {
           <div className="flex items-center gap-2 ml-auto shrink-0">
             <Link
               href="/signin"
-              className="shrink-0 inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm font-medium md:btn-sm md:px-3 md:py-[5px] border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+              className="shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
             >
               Sign In
             </Link>
-            <Link
-              href="/signup"
-              className="shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium md:btn-sm md:px-4 md:py-2 bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]"
-            >
-              Register
-            </Link>
+            <div className="relative shrink-0 inline-flex">
+              <div
+                className="absolute -inset-0.5 blur-lg opacity-40 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500"
+                aria-hidden
+              />
+              <Link
+                href="/signup"
+                className="relative inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:opacity-95 transition"
+              >
+                Register
+              </Link>
+            </div>
             <MobileMenu />
           </div>
         </div>
