@@ -16,13 +16,21 @@ function LogoIcon() {
   );
 }
 
-export default function Logo({ className }: { className?: string }) {
+export default function Logo({ className, mobileIconOnly }: { className?: string; mobileIconOnly?: boolean }) {
   return (
     <Link href="/" className={className} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-      <div className="flex items-center gap-2">
+      {mobileIconOnly ? (
         <LogoIcon />
-        <span className="hidden md:inline">LabsBot</span>
-      </div>
+      ) : (
+        <Image
+          src="/branding/labsbot-logo.svg"
+          alt="LabsBot"
+          width={320}
+          height={64}
+          priority
+          className="h-12 w-auto"
+        />
+      )}
     </Link>
   );
 }
