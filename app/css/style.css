@@ -132,11 +132,27 @@
       #6366f1 100%
     );
   }
-  .labsbot-logo {
-    filter: brightness(1.25) drop-shadow(0 0 6px rgba(120, 120, 255, 0.35));
-    transition: filter 0.25s ease;
+  .logo-gradient {
+    display: inline-block;
+    position: relative;
   }
-  .labsbot-logo:hover {
-    filter: brightness(1.35) drop-shadow(0 0 10px rgba(120, 120, 255, 0.5));
+  .logo-gradient img {
+    position: relative;
+    z-index: 1;
+  }
+  .logo-gradient::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+      90deg,
+      rgba(200, 210, 255, 0.6) 0%,
+      rgba(140, 150, 255, 0.45) 35%,
+      rgba(99, 102, 241, 0.55) 70%,
+      rgba(120, 120, 255, 0.4) 100%
+    );
+    mix-blend-mode: screen;
+    pointer-events: none;
   }
 }
