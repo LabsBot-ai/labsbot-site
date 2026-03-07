@@ -57,6 +57,11 @@ export default function Workflows() {
                     src="/branding/migreo.png"
                     alt="Migreo logo"
                     className="max-h-28 w-auto object-contain"
+                    style={{
+                      filter: "none",
+                      mixBlendMode: "normal",
+                      opacity: 1,
+                    }}
                   />
                 </div>
                 <div className="p-6">
