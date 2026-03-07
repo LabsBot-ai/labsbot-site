@@ -50,24 +50,8 @@ export default function Workflows() {
             <div className={productCardClass}>
               <div className={cardInnerClass}>
                 {arrowIcon}
-                <div
-                  className="relative z-50 flex items-center justify-center h-40 mb-6 rounded-[inherit]"
-                  style={{
-                    isolation: "isolate",
-                    background:
-                      "linear-gradient(180deg, #0f172a 0%, #1e1b4b 25%, #312e81 50%, #4338ca 75%, #6366f1 100%)",
-                  }}
-                >
-                  <img
-                    src="/branding/migreo.png"
-                    alt="Migreo logo"
-                    className="w-48 h-auto object-contain"
-                    style={{
-                      filter: "none",
-                      mixBlendMode: "normal",
-                      opacity: 1,
-                    }}
-                  />
+                <div className="flex items-center justify-center h-40 mb-6">
+                  <img src="/branding/migreo.png" alt="Migreo logo" />
                 </div>
                 <div className="p-6">
                   <div className="mb-3">
