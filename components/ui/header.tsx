@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center justify-between px-4 py-3 rounded-2xl bg-white/10 backdrop-blur-md">
           {/* Site branding */}
           <div className="flex items-center gap-3">
-            <Logo className="max-w-[140px] md:max-w-none" />
+            <Logo className="h-10 md:h-12 w-auto shrink-0" />
           </div>
 
           {/* Desktop navigation */}
@@ -83,16 +83,16 @@ export default function Header() {
           </nav>
 
           {/* Sign in, Register, Mobile menu */}
-          <div className="flex items-center gap-2 ml-auto shrink-0">
+          <div className="flex items-center gap-3 ml-auto">
             <Link
               href="/signin"
-              className="btn-sm relative bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] py-[5px] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%]"
+              className="hidden md:inline-flex btn-sm relative bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] py-[5px] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%]"
             >
               Sign In
             </Link>
             <Link
               href="/signup"
-              className="btn-sm bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] py-[5px] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]"
+              className="btn-sm px-4 py-2 rounded-lg bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]"
             >
               Register
             </Link>
