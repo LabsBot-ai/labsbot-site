@@ -50,11 +50,16 @@ export default function Workflows() {
             <div className={productCardClass}>
               <div className={cardInnerClass}>
                 {arrowIcon}
-                <div className="flex items-center justify-center min-h-[200px] px-4 py-12">
+                <div className="flex items-center justify-center min-h-[200px] px-4 py-12 [isolation:isolate]">
                   <img
                     src="/branding/migreo.png"
                     alt="Migreo logo"
                     className="w-56 h-auto object-contain"
+                    style={{
+                      opacity: 1,
+                      filter: "none",
+                      mixBlendMode: "normal",
+                    }}
                   />
                 </div>
                 <div className="p-6">
