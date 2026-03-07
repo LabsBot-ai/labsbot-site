@@ -97,12 +97,12 @@ export default function Header() {
             </Link>
             <div className="relative shrink-0 inline-flex">
               <div
-                className="absolute -inset-0.5 blur-lg opacity-40 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500"
+                className="absolute -inset-0.5 blur-lg opacity-40 rounded-lg bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600"
                 aria-hidden
               />
               <Link
                 href="/signup"
-                className="relative inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:opacity-95 transition"
+                className="relative inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:opacity-95 transition"
               >
                 Register
               </Link>
