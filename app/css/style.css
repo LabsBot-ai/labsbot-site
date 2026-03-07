@@ -116,11 +116,11 @@
   .page-bg {
     background: linear-gradient(
       180deg,
-      #f8fafc 0%,
-      #eef2ff 25%,
-      #e0e7ff 55%,
-      #eef2ff 80%,
-      #ffffff 100%
+      #0f172a 0%,
+      #1e1b4b 25%,
+      #312e81 50%,
+      #4338ca 75%,
+      #6366f1 100%
     );
   }
 }

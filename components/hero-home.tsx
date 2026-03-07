@@ -4,9 +4,7 @@ import ModalVideo from "@/components/modal-video";
 
 export default function HeroHome() {
   return (
-    <section
-      className="bg-[radial-gradient(1200px_600px_at_70%_20%,rgba(120,140,255,0.15),transparent_60%),linear-gradient(180deg,#eef2ff_0%,#ffffff_60%)]"
-    >
+    <section className="bg-transparent">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
         <div className="py-12 md:py-20">
