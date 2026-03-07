@@ -46,7 +46,7 @@ export default function HeroHome() {
                 </div>
                 <div data-aos="fade-up" data-aos-delay={600}>
                   <Link
-                    className="inline-flex items-center justify-center w-full rounded-xl border border-white/20 px-6 py-3 text-white/90 bg-transparent transition hover:bg-white/10 sm:ml-4 sm:w-auto"
+                    className="inline-flex items-center justify-center w-full rounded-xl border border-white/20 px-6 py-3 text-sm font-medium text-white/90 bg-transparent hover:bg-white/10 transition sm:ml-4 sm:w-auto"
                     href="/contact"
                   >
                     Contact
