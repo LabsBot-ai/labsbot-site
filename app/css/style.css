@@ -114,6 +114,13 @@
     border-color: var(--color-gray-200, currentColor);
   }
   .page-bg {
-    background: #ffffff;
+    background: linear-gradient(
+      180deg,
+      #f8fafc 0%,
+      #eef2ff 25%,
+      #e0e7ff 55%,
+      #eef2ff 80%,
+      #ffffff 100%
+    );
   }
 }
