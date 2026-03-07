@@ -143,3 +143,22 @@
     display: block;
   }
 }
+
+.shine-overlay {
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.35) 40%,
+    rgba(255,255,255,0.6) 50%,
+    rgba(255,255,255,0.35) 60%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: translateX(-120%);
+  animation: labsbotShine 4s infinite;
+}
+
+@keyframes labsbotShine {
+  0% { transform: translateX(-120%); }
+  60% { transform: translateX(120%); }
+  100% { transform: translateX(120%); }
+}

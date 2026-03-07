@@ -11,8 +11,11 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative flex h-[72px] items-center justify-between gap-3 rounded-[22px] border border-white/5 bg-[linear-gradient(to_right,rgba(165,180,252,0.35)_0%,rgba(129,140,248,0.25)_25%,rgba(99,102,241,0.18)_50%,rgba(79,70,229,0.12)_75%,rgba(49,46,129,0.08)_100%)] backdrop-blur-md animate-[gradient_45s_linear_infinite] px-3 transition-colors duration-500">
           {/* Site branding */}
-          <div className="flex items-center shrink-0">
-            <Logo />
+          <div className="flex items-center gap-3 px-5 py-2 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
+            <div className="relative flex items-center">
+              <Logo />
+              <span className="pointer-events-none absolute inset-0 rounded-2xl shine-overlay"></span>
+            </div>
           </div>
 
           {/* Desktop navigation */}
