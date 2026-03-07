@@ -7,6 +7,8 @@ import Spotlight from "@/components/spotlight";
 
 const productCardClass =
   "group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-0 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-0 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100";
+const productCardClassNoSpotlight =
+  "group/card relative h-full overflow-hidden rounded-2xl p-px";
 const cardInnerClass =
   "relative z-10 h-full overflow-hidden rounded-[inherit]";
 const arrowIcon = (
@@ -46,8 +48,8 @@ export default function Workflows() {
           </div>
           {/* Spotlight items - 4 product cards */}
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-4">
-            {/* Migreo (Live) */}
-            <div className={productCardClass}>
+            {/* Migreo (Live) - no spotlight so logo PNG colors are not distorted */}
+            <div className={productCardClassNoSpotlight}>
               <div className={cardInnerClass}>
                 {arrowIcon}
                 <div className="flex items-center justify-center h-40 mb-6 overflow-hidden">
