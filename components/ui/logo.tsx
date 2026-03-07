@@ -10,7 +10,6 @@ export default function Logo() {
         width={200}
         height={40}
         priority
-        className="labsbot-logo"
         style={{ height: "40px", width: "auto" }}
       />
     </Link>
