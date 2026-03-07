@@ -51,7 +51,7 @@ export default function Workflows() {
               <div className={cardInnerClass}>
                 {arrowIcon}
                 <div
-                  className="relative z-50 flex items-center justify-center h-40 mb-6"
+                  className="relative z-50 flex items-center justify-center h-40 mb-6 bg-gray-900"
                   style={{ isolation: "isolate" }}
                 >
                   <img
