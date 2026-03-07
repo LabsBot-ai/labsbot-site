@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Logo() {
+export default function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
+    <Link href="/" className={className} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
       <div className="relative logo-shine">
         <Image
           src="/branding/labsbot-logo.svg"
