@@ -28,7 +28,7 @@ export default function Logo({ className, mobileIconOnly }: { className?: string
           width={320}
           height={64}
           priority
-          className="h-12 w-auto"
+          className={className || "h-10 md:h-12 lg:h-14 w-auto"}
         />
       )}
     </Link>
