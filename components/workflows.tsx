@@ -54,14 +54,9 @@ export default function Workflows() {
                 {arrowIcon}
                 <div className="flex items-center justify-center h-40 mb-6 overflow-hidden">
                   <img
-                    src="/branding/migreo.png"
+                    src="/branding/migreo-ui.svg"
                     alt="Migreo logo"
                     className="max-h-28 w-auto object-contain"
-                    style={{
-                      filter: "none",
-                      mixBlendMode: "normal",
-                      opacity: 1,
-                    }}
                   />
                 </div>
                 <div className="p-6">
