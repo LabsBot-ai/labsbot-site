@@ -53,11 +53,10 @@ export default function Workflows() {
               <div className={cardInnerClass}>
                 {arrowIcon}
                 <div className="flex items-center justify-center h-40 mb-6 overflow-hidden">
-                  <img
+                  <iframe
                     src="/branding/migreo.svg"
-                    alt="Migreo logo"
-                    className="h-28 w-full object-contain"
-                    role="img"
+                    className="h-28 w-full border-0"
+                    title="Migreo logo"
                   />
                 </div>
                 <div className="p-6">
