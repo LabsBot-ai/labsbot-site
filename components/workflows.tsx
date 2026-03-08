@@ -52,12 +52,11 @@ export default function Workflows() {
             <div className={productCardClass}>
               <div className={cardInnerClass}>
                 {arrowIcon}
-                <div className="relative flex items-center justify-center h-40 mb-6 overflow-hidden">
-                  <div className="absolute inset-0 bg-slate-900/90 rounded-xl" />
+                <div className="flex items-center justify-center h-40 mb-6 overflow-hidden">
                   <img
                     src="/branding/migreo.png"
                     alt="Migreo logo"
-                    className="relative z-10 max-h-28 w-auto object-contain"
+                    className="max-h-28 w-auto object-contain"
                     style={{
                       filter: "none",
                       mixBlendMode: "normal",
