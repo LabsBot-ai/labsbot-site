@@ -53,13 +53,11 @@ export default function Workflows() {
               <div className={cardInnerClass}>
                 {arrowIcon}
                 <div className="flex items-center justify-center h-40 mb-6 overflow-hidden">
-                  <div
-                    className="h-28 w-full flex items-center justify-center [-webkit-mask-image:url(/branding/migreo.png)] [-webkit-mask-size:contain] [-webkit-mask-repeat:no-repeat] [-webkit-mask-position:center] [mask-image:url(/branding/migreo.png)] [mask-size:contain] [mask-repeat:no-repeat] [mask-position:center]"
-                    style={{
-                      backgroundImage: "linear-gradient(to bottom right, #ffffff 0%, #d9e1ff 40%, #a8b4ff 70%, #ffffff 100%)",
-                    }}
+                  <img
+                    src="/branding/migreo.svg"
+                    alt="Migreo logo"
+                    className="h-28 w-full object-contain"
                     role="img"
-                    aria-label="Migreo logo"
                   />
                 </div>
                 <div className="p-6">
