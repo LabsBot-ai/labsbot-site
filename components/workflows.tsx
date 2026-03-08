@@ -9,9 +9,6 @@ const productCardClass =
   "group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-0 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-0 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100";
 const productCardClassNoSpotlight =
   "group/card relative h-full overflow-hidden rounded-2xl p-px";
-/** MIGREO only: glow layer clipped to card edges so content stays untinted */
-const migreoGlowLayerClass =
-  "pointer-events-none absolute inset-0 z-0 overflow-hidden rounded-[inherit] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,transparent_85%,black_100%)] [-webkit-mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,transparent_85%,black_100%)] before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-0 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 group-hover/card:before:opacity-100 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-0 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 group-hover/card:after:opacity-20";
 const cardInnerClass =
   "relative z-10 h-full overflow-hidden rounded-[inherit]";
 const arrowIcon = (
@@ -51,16 +48,16 @@ export default function Workflows() {
           </div>
           {/* Spotlight items - 4 product cards */}
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-4">
-            {/* Migreo (Live) - spotlight in edge-clipped layer; content transparent, logo untinted */}
-            <div className={productCardClassNoSpotlight}>
-              <div className={migreoGlowLayerClass} aria-hidden="true" />
+            {/* Migreo (Live) */}
+            <div className={productCardClass}>
               <div className={cardInnerClass}>
                 {arrowIcon}
-                <div className="flex items-center justify-center h-40 mb-6 overflow-hidden">
+                <div className="relative flex items-center justify-center h-40 mb-6 overflow-hidden">
+                  <div className="absolute inset-0 bg-slate-900/90 rounded-xl" />
                   <img
                     src="/branding/migreo.png"
                     alt="Migreo logo"
-                    className="max-h-28 w-auto object-contain"
+                    className="relative z-10 max-h-28 w-auto object-contain"
                     style={{
                       filter: "none",
                       mixBlendMode: "normal",
