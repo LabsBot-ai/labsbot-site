@@ -48,11 +48,11 @@ export default function Workflows() {
           </div>
           {/* Spotlight items - 4 product cards */}
           <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-4">
-            {/* Migreo (Live) - spotlight with opaque logo area so PNG colors stay true */}
+            {/* Migreo (Live) - spotlight; logo container has no background so no black panel */}
             <div className={productCardClass}>
               <div className={cardInnerClass}>
                 {arrowIcon}
-                <div className="flex items-center justify-center h-40 mb-6 overflow-hidden bg-slate-900">
+                <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
                   <img
                     src="/branding/migreo.png"
                     alt="Migreo logo"
