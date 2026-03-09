@@ -55,7 +55,7 @@ export default function Workflows() {
                   href="https://t.me/MigrantEuroBot?start=site"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute right-6 top-6 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-0 transition-opacity group-hover/card:opacity-100"
+                  className="absolute right-6 top-6 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-100"
                   aria-label="Open Migreo on Telegram"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width={9} height={8} fill="none">
