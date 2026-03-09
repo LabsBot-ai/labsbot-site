@@ -54,7 +54,7 @@ export default function Workflows() {
                 {arrowIcon}
                 <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
                   <img
-                    src="/branding/migreo.png"
+                    src="/branding/migreo.svg"
                     alt="Migreo logo"
                     className="max-h-28 w-auto object-contain"
                     style={{
