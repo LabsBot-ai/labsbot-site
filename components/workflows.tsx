@@ -59,7 +59,6 @@ export default function Workflows() {
                     className="max-h-28 w-auto object-contain"
                     style={{
                       filter: "none",
-                      mixBlendMode: "normal",
                       opacity: 1,
                     }}
                   />
