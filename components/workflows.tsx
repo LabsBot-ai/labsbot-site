@@ -56,7 +56,7 @@ export default function Workflows() {
                   <img
                     src="/branding/migreo.svg"
                     alt="Migreo logo"
-                    className="max-h-28 w-auto object-contain"
+                    className="max-h-24 w-auto object-contain"
                     style={{
                       filter: "none",
                       opacity: 1,
