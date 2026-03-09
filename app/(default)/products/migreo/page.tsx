@@ -16,16 +16,13 @@ export default function MigreoProductPage() {
             {/* Hero */}
             <div className="pb-16 md:pb-24">
               <div className="flex flex-col items-center text-center">
-                <div className="relative z-20 mb-8 flex h-32 items-center justify-center">
+                <div className="relative z-20 mb-8 flex h-20 items-center justify-center">
                   <img
                     src="/branding/migreo.svg"
                     alt="Migreo logo"
-                    className="max-h-24 w-auto object-contain"
+                    className="max-h-16 w-auto object-contain"
                   />
                 </div>
-                <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
-                  MIGREO
-                </h1>
                 <p className="max-w-2xl text-xl text-indigo-200/80">
                   AI assistant for migration and bureaucracy.
                 </p>
