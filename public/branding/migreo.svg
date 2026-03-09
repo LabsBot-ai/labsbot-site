@@ -16,10 +16,10 @@
   <defs
      id="defs1">
     <linearGradient id="logoBaseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="40%" stop-color="#d9e1ff"/>
-      <stop offset="70%" stop-color="#a8b4ff"/>
-      <stop offset="100%" stop-color="#ffffff"/>
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="40%" stop-color="#bfc6e0"/>
+      <stop offset="70%" stop-color="#949ee0"/>
+      <stop offset="100%" stop-color="#e0e0e0"/>
     </linearGradient>
     <linearGradient id="logoShineGradient" x1="-100%" y1="0%" x2="200%" y2="0%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
