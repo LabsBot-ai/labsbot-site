@@ -21,14 +21,10 @@
       <stop offset="70%" stop-color="#a8b4ff"/>
       <stop offset="100%" stop-color="#ffffff"/>
     </linearGradient>
-    <linearGradient id="logoShineGradient" x1="-100%" y1="0%" x2="200%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.15"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35"/>
-      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.15"/>
+    <linearGradient id="logoShineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="40%" stop-color="#ffffff" stop-opacity="0.15"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-      <animate attributeName="x1" from="-100%" to="200%" dur="6s" repeatCount="indefinite"/>
-      <animate attributeName="x2" from="0%" to="300%" dur="6s" repeatCount="indefinite"/>
     </linearGradient>
   </defs>
   <sodipodi:namedview
