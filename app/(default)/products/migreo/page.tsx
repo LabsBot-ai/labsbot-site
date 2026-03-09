@@ -26,14 +26,6 @@ export default function MigreoProductPage() {
                 <p className="max-w-2xl animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
                   AI assistant for migration and bureaucracy.
                 </p>
-                <a
-                  className="btn-sm group mt-8 inline-flex bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] transition hover:opacity-95"
-                  href="https://t.me/MigrantEuroBot?start=site"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open Telegram
-                </a>
               </div>
             </div>
 
@@ -112,12 +104,12 @@ export default function MigreoProductPage() {
                 migration questions.
               </p>
               <a
-                className="btn group inline-flex bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] transition hover:opacity-95"
+                className="btn-sm group inline-flex bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] transition hover:opacity-95"
                 href="https://t.me/MigrantEuroBot?start=site"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open in Telegram
+                Open Telegram
               </a>
             </div>
           </div>
