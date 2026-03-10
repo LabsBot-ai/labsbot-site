@@ -137,7 +137,7 @@ export default function MigreoProductPage() {
                   />
                   <Spotlight className="group grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className={productCardClass}>
-                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_100%_100%,rgba(99,102,241,0.10),transparent_70%)]`}>
+                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_100%_100%,rgba(99,102,241,0.10),transparent_70%)] shadow-[inset_0_0_1px_rgba(99,102,241,0.35)]`}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
                           {immigrationIcon}
@@ -154,7 +154,7 @@ export default function MigreoProductPage() {
                     </div>
                   </div>
                   <div className={productCardClass}>
-                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_0%_100%,rgba(99,102,241,0.10),transparent_70%)]`}>
+                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_0%_100%,rgba(99,102,241,0.10),transparent_70%)] shadow-[inset_0_0_1px_rgba(99,102,241,0.35)]`}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
                           {housingIcon}
@@ -171,7 +171,7 @@ export default function MigreoProductPage() {
                     </div>
                   </div>
                   <div className={productCardClass}>
-                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_100%_0%,rgba(99,102,241,0.10),transparent_70%)]`}>
+                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_100%_0%,rgba(99,102,241,0.10),transparent_70%)] shadow-[inset_0_0_1px_rgba(99,102,241,0.35)]`}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
                           {workIcon}
@@ -188,7 +188,7 @@ export default function MigreoProductPage() {
                     </div>
                   </div>
                   <div className={productCardClass}>
-                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_0%_0%,rgba(99,102,241,0.10),transparent_70%)]`}>
+                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_0%_0%,rgba(99,102,241,0.10),transparent_70%)] shadow-[inset_0_0_1px_rgba(99,102,241,0.35)]`}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
                           {documentIcon}
