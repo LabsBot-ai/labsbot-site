@@ -129,7 +129,13 @@ export default function MigreoProductPage() {
                 <h2 className="pb-6 font-nacelle text-2xl font-semibold text-transparent md:text-3xl animate-[gradient_12s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text">
                   MIGREO Capabilities
                 </h2>
-                <Spotlight className="group grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div className="relative">
+                  <img
+                    src="/branding/migreo-symbol.svg"
+                    alt=""
+                    className="pointer-events-none absolute left-1/2 top-1/2 w-[640px] -translate-x-1/2 -translate-y-1/2 opacity-5"
+                  />
+                  <Spotlight className="group grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
                       <div className="p-8">
@@ -199,6 +205,7 @@ export default function MigreoProductPage() {
                     </div>
                   </div>
                 </Spotlight>
+                </div>
               </div>
             </div>
 
