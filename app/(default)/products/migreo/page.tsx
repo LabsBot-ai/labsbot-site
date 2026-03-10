@@ -18,7 +18,7 @@ export default function MigreoProductPage() {
             <div className="pb-16 md:pb-24">
               <div className="flex flex-col items-center text-center">
                 <Link
-                  href="/products"
+                  href="/#products"
                   className="mb-6 text-sm text-gray-400 transition hover:text-gray-200"
                 >
                   ← Back to products
@@ -122,7 +122,7 @@ export default function MigreoProductPage() {
               </div>
               <div className="mt-4 text-center">
                 <Link
-                  href="/products"
+                  href="/#products"
                   className="text-sm text-gray-400 transition hover:text-gray-200"
                 >
                   ← Back to products
