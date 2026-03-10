@@ -53,7 +53,7 @@ export default function MigreoProductPage() {
               {/* Use cases */}
               <div>
                 <h2 className="pb-6 font-nacelle text-2xl font-semibold text-gray-200 md:text-3xl">
-                  Example use cases
+                  How MIGREO Helps
                 </h2>
                 <ul className="space-y-6">
                   <li className="rounded-xl border border-gray-700/50 bg-gray-800/30 px-6 py-4">
