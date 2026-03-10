@@ -213,12 +213,8 @@ export default function MigreoProductPage() {
             <div className="relative mx-auto max-w-3xl rounded-3xl border border-indigo-500/20 bg-gradient-to-b from-indigo-900/30 via-indigo-800/20 to-transparent px-10 py-14 text-center backdrop-blur-sm shadow-[0_0_80px_rgba(99,102,241,0.15)]">
               <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/10 blur-3xl"></div>
               <h2 className="pb-4 font-nacelle text-2xl font-semibold text-gray-200">
-                Try MIGREO now
+                Get started with MIGREO
               </h2>
-              <p className="mb-6 text-indigo-200/80">
-                Start a conversation in Telegram and get answers to your
-                migration questions.
-              </p>
               <div className="flex justify-center">
                 <a
                   className="btn-sm group inline-flex bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] transition hover:opacity-95"
