@@ -55,8 +55,8 @@ export default function MigreoProductPage() {
                 <h2 className="pb-6 font-nacelle text-2xl font-semibold text-transparent md:text-3xl animate-[gradient_12s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text">
                   How MIGREO Helps
                 </h2>
-                <ul className="space-y-6">
-                  <li className="rounded-xl border border-gray-700/50 bg-gray-800/30 px-6 py-4">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  <div className="rounded-xl border border-gray-700/50 bg-gray-900/40 px-6 py-4 transition-colors hover:border-gray-600/50 hover:bg-gray-800/40">
                     <h3 className="mb-2 font-semibold text-gray-200">
                       Visa applications
                     </h3>
@@ -65,8 +65,8 @@ export default function MigreoProductPage() {
                       for short-term and long-term visas. Get answers about
                       Schengen visas, national visas, and transit procedures.
                     </p>
-                  </li>
-                  <li className="rounded-xl border border-gray-700/50 bg-gray-800/30 px-6 py-4">
+                  </div>
+                  <div className="rounded-xl border border-gray-700/50 bg-gray-900/40 px-6 py-4 transition-colors hover:border-gray-600/50 hover:bg-gray-800/40">
                     <h3 className="mb-2 font-semibold text-gray-200">
                       Residence permits
                     </h3>
@@ -75,8 +75,8 @@ export default function MigreoProductPage() {
                       conditions. The bot can explain work permits, study
                       permits, and family reunification options.
                     </p>
-                  </li>
-                  <li className="rounded-xl border border-gray-700/50 bg-gray-800/30 px-6 py-4">
+                  </div>
+                  <div className="rounded-xl border border-gray-700/50 bg-gray-900/40 px-6 py-4 transition-colors hover:border-gray-600/50 hover:bg-gray-800/40">
                     <h3 className="mb-2 font-semibold text-gray-200">
                       Document preparation
                     </h3>
@@ -85,8 +85,8 @@ export default function MigreoProductPage() {
                       other formalities. Know what to bring to appointments and
                       how to avoid common mistakes.
                     </p>
-                  </li>
-                  <li className="rounded-xl border border-gray-700/50 bg-gray-800/30 px-6 py-4">
+                  </div>
+                  <div className="rounded-xl border border-gray-700/50 bg-gray-900/40 px-6 py-4 transition-colors hover:border-gray-600/50 hover:bg-gray-800/40">
                     <h3 className="mb-2 font-semibold text-gray-200">
                       Procedural questions
                     </h3>
@@ -95,8 +95,8 @@ export default function MigreoProductPage() {
                       at appointments. The bot clarifies official terminology
                       and points you to the right authorities.
                     </p>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
 
