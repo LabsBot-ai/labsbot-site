@@ -124,9 +124,10 @@ export default function MigreoProductPage() {
               <div className="mt-4 text-center">
                 <Link
                   href="/#products"
-                  className="text-sm text-gray-400 transition transition-transform duration-200 hover:-translate-x-1 hover:text-gray-200"
+                  className="flex items-center justify-center gap-2 text-sm text-gray-400 transition transition-transform duration-200 hover:-translate-x-1 hover:text-gray-200"
                 >
-                  ← Back to products
+                  <span>←</span>
+                  <span>Back to products</span>
                 </Link>
               </div>
             </div>
