@@ -133,7 +133,7 @@ export default function MigreoProductPage() {
                   <img
                     src="/branding/migreo-symbol.svg"
                     alt=""
-                    className="pointer-events-none absolute left-1/2 top-1/2 w-[420px] md:w-[560px] lg:w-[720px] -translate-x-1/2 -translate-y-1/2 opacity-5 blur-[2px]"
+                    className="pointer-events-none absolute left-1/2 top-1/2 w-[420px] md:w-[560px] lg:w-[720px] -translate-x-1/2 -translate-y-1/2 opacity-[0.08] blur-[2px]"
                   />
                   <Spotlight className="group grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className={productCardClass}>
