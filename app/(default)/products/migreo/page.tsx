@@ -6,6 +6,12 @@ export const metadata = {
 
 import Link from "next/link";
 import PageIllustration from "@/components/page-illustration";
+import Spotlight from "@/components/spotlight";
+
+const productCardClass =
+  "group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-0 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-0 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100";
+const cardInnerClass =
+  "relative z-10 h-full overflow-hidden rounded-[inherit]";
 
 export default function MigreoProductPage() {
   return (
@@ -55,48 +61,65 @@ export default function MigreoProductPage() {
                 <h2 className="pb-6 font-nacelle text-2xl font-semibold text-transparent md:text-3xl animate-[gradient_12s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text">
                   How MIGREO Helps
                 </h2>
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <div className="rounded-xl border border-gray-700/50 bg-gray-900/40 px-6 py-4 transition-colors hover:border-gray-600/50 hover:bg-gray-800/40">
-                    <h3 className="mb-2 font-semibold text-gray-200">
-                      Visa applications
-                    </h3>
-                    <p className="text-indigo-200/80">
-                      Understand requirements, document checklists, and deadlines
-                      for short-term and long-term visas. Get answers about
-                      Schengen visas, national visas, and transit procedures.
-                    </p>
+                <Spotlight className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  <div className={productCardClass}>
+                    <div className={cardInnerClass}>
+                      <div className="p-6">
+                        <h3 className="mb-2 font-semibold text-gray-200">
+                          Visa applications
+                        </h3>
+                        <p className="text-indigo-200/80">
+                          Understand requirements, document checklists, and
+                          deadlines for short-term and long-term visas. Get
+                          answers about Schengen visas, national visas, and
+                          transit procedures.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="rounded-xl border border-gray-700/50 bg-gray-900/40 px-6 py-4 transition-colors hover:border-gray-600/50 hover:bg-gray-800/40">
-                    <h3 className="mb-2 font-semibold text-gray-200">
-                      Residence permits
-                    </h3>
-                    <p className="text-indigo-200/80">
-                      Learn about different permit types, renewal steps, and
-                      conditions. The bot can explain work permits, study
-                      permits, and family reunification options.
-                    </p>
+                  <div className={productCardClass}>
+                    <div className={cardInnerClass}>
+                      <div className="p-6">
+                        <h3 className="mb-2 font-semibold text-gray-200">
+                          Residence permits
+                        </h3>
+                        <p className="text-indigo-200/80">
+                          Learn about different permit types, renewal steps, and
+                          conditions. The bot can explain work permits, study
+                          permits, and family reunification options.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="rounded-xl border border-gray-700/50 bg-gray-900/40 px-6 py-4 transition-colors hover:border-gray-600/50 hover:bg-gray-800/40">
-                    <h3 className="mb-2 font-semibold text-gray-200">
-                      Document preparation
-                    </h3>
-                    <p className="text-indigo-200/80">
-                      Get help with translations, certifications, apostilles, and
-                      other formalities. Know what to bring to appointments and
-                      how to avoid common mistakes.
-                    </p>
+                  <div className={productCardClass}>
+                    <div className={cardInnerClass}>
+                      <div className="p-6">
+                        <h3 className="mb-2 font-semibold text-gray-200">
+                          Document preparation
+                        </h3>
+                        <p className="text-indigo-200/80">
+                          Get help with translations, certifications,
+                          apostilles, and other formalities. Know what to bring
+                          to appointments and how to avoid common mistakes.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="rounded-xl border border-gray-700/50 bg-gray-900/40 px-6 py-4 transition-colors hover:border-gray-600/50 hover:bg-gray-800/40">
-                    <h3 className="mb-2 font-semibold text-gray-200">
-                      Procedural questions
-                    </h3>
-                    <p className="text-indigo-200/80">
-                      Ask about timelines, appeal procedures, and what to expect
-                      at appointments. The bot clarifies official terminology
-                      and points you to the right authorities.
-                    </p>
+                  <div className={productCardClass}>
+                    <div className={cardInnerClass}>
+                      <div className="p-6">
+                        <h3 className="mb-2 font-semibold text-gray-200">
+                          Procedural questions
+                        </h3>
+                        <p className="text-indigo-200/80">
+                          Ask about timelines, appeal procedures, and what to
+                          expect at appointments. The bot clarifies official
+                          terminology and points you to the right authorities.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </Spotlight>
               </div>
             </div>
 
