@@ -156,6 +156,11 @@ export default function MigreoProductPage() {
                             Housing
                           </h3>
                         </div>
+                        <p className="text-indigo-200/80">
+                          With our platform you can find housing faster,
+                          understand rental agreements, and resolve housing
+                          issues in any language.
+                        </p>
                       </div>
                     </div>
                   </div>
