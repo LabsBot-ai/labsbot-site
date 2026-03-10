@@ -24,7 +24,7 @@ const strokeProps = {
   strokeLinejoin: "round" as const,
   fill: "none",
 };
-const passportIcon = (
+const immigrationIcon = (
   <div className={iconWrapperClass}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const passportIcon = (
     </svg>
   </div>
 );
-const idCardIcon = (
+const housingIcon = (
   <div className={iconWrapperClass}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -46,12 +46,27 @@ const idCardIcon = (
       aria-hidden="true"
       {...strokeProps}
     >
-      <rect x="2" y="4" width="20" height="16" rx="2" />
-      <path d="M2 10h20M8 4v4h4V4" />
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z" />
+      <path d="M9 22V12h6v10" />
     </svg>
   </div>
 );
-const fileIcon = (
+const workIcon = (
+  <div className={iconWrapperClass}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className={iconClass}
+      aria-hidden="true"
+      {...strokeProps}
+    >
+      <path d="M4 8h16v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8z" />
+      <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+      <path d="M8 12h8" />
+    </svg>
+  </div>
+);
+const documentIcon = (
   <div className={iconWrapperClass}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -63,20 +78,6 @@ const fileIcon = (
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
       <path d="M14 2v6h6" />
       <path d="M9 13h6M9 17h6" />
-    </svg>
-  </div>
-);
-const questionIcon = (
-  <div className={iconWrapperClass}>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      className={iconClass}
-      aria-hidden="true"
-      {...strokeProps}
-    >
-      <circle cx="12" cy="12" r="10" />
-      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01" />
     </svg>
   </div>
 );
@@ -134,16 +135,14 @@ export default function MigreoProductPage() {
                     <div className={cardInnerClass}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
-                          {passportIcon}
+                          {immigrationIcon}
                           <h3 className="font-semibold text-gray-200">
-                            Visa applications
+                            Immigration
                           </h3>
                         </div>
                         <p className="text-indigo-200/80">
-                          Understand requirements, document checklists, and
-                          deadlines for short-term and long-term visas. Get
-                          answers about Schengen visas, national visas, and
-                          transit procedures.
+                          Navigate immigration processes and create the required
+                          documents in any language with our intelligent tools.
                         </p>
                       </div>
                     </div>
@@ -152,16 +151,11 @@ export default function MigreoProductPage() {
                     <div className={cardInnerClass}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
-                          {idCardIcon}
+                          {housingIcon}
                           <h3 className="font-semibold text-gray-200">
-                            Residence permits
+                            Housing
                           </h3>
                         </div>
-                        <p className="text-indigo-200/80">
-                          Learn about different permit types, renewal steps, and
-                          conditions. The bot can explain work permits, study
-                          permits, and family reunification options.
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -169,16 +163,11 @@ export default function MigreoProductPage() {
                     <div className={cardInnerClass}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
-                          {fileIcon}
+                          {workIcon}
                           <h3 className="font-semibold text-gray-200">
-                            Document preparation
+                            Work
                           </h3>
                         </div>
-                        <p className="text-indigo-200/80">
-                          Get help with translations, certifications,
-                          apostilles, and other formalities. Know what to bring
-                          to appointments and how to avoid common mistakes.
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -186,16 +175,11 @@ export default function MigreoProductPage() {
                     <div className={cardInnerClass}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
-                          {questionIcon}
+                          {documentIcon}
                           <h3 className="font-semibold text-gray-200">
-                            Procedural questions
+                            Documents
                           </h3>
                         </div>
-                        <p className="text-indigo-200/80">
-                          Ask about timelines, appeal procedures, and what to
-                          expect at appointments. The bot clarifies official
-                          terminology and points you to the right authorities.
-                        </p>
                       </div>
                     </div>
                   </div>
