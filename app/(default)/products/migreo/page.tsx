@@ -141,9 +141,9 @@ export default function MigreoProductPage() {
                           </h3>
                         </div>
                         <p className="text-indigo-200/80">
-                          Thanks to intelligent tools, you can navigate
-                          immigration processes and create the required
-                          documents in any language.
+                          Using the capabilities of artificial intelligence, we
+                          help people understand migration processes and make
+                          decisions faster and with greater confidence.
                         </p>
                       </div>
                     </div>
@@ -158,9 +158,9 @@ export default function MigreoProductPage() {
                           </h3>
                         </div>
                         <p className="text-indigo-200/80">
-                          With our platform you can find housing faster,
-                          understand rental agreements, and resolve housing
-                          issues.
+                          An intelligent system built into our platform helps
+                          people find housing, understand rental agreements,
+                          and resolve housing issues.
                         </p>
                       </div>
                     </div>
@@ -175,9 +175,9 @@ export default function MigreoProductPage() {
                           </h3>
                         </div>
                         <p className="text-indigo-200/80">
-                          Our system helps you prepare your CV, understand
-                          employment contracts, and navigate the job market in a
-                          new country.
+                          Digital tools we developed support CV preparation,
+                          understanding employment contracts, and starting a
+                          career in a new country.
                         </p>
                       </div>
                     </div>
@@ -191,6 +191,11 @@ export default function MigreoProductPage() {
                             Documents
                           </h3>
                         </div>
+                        <p className="text-indigo-200/80">
+                          We integrate advanced AI capabilities for document
+                          translation, letter drafting, and preparing requests
+                          for organizations and institutions.
+                        </p>
                       </div>
                     </div>
                   </div>
