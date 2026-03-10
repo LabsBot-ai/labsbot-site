@@ -17,13 +17,6 @@ export default function HeroHome() {
               An intelligent ecosystem for real life.
             </h1>
             <div className="mx-auto max-w-3xl">
-              <p
-                className="mb-8 text-xl text-indigo-200/65"
-                data-aos="fade-up"
-                data-aos-delay={200}
-              >
-                A growing ecosystem of practical AI products for migration, payments, language and education.
-              </p>
               <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
                 <div data-aos="fade-up" data-aos-delay={400} className="w-full sm:w-auto mb-4 sm:mb-0">
                   <div className="relative inline-flex w-full sm:w-auto">
