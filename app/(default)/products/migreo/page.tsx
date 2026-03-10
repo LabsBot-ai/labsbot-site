@@ -4,6 +4,7 @@ export const metadata = {
     "AI assistant for migration and bureaucracy. Get help with visas, residence permits, and official procedures.",
 };
 
+import Link from "next/link";
 import PageIllustration from "@/components/page-illustration";
 
 export default function MigreoProductPage() {
@@ -16,6 +17,12 @@ export default function MigreoProductPage() {
             {/* Hero */}
             <div className="pb-16 md:pb-24">
               <div className="flex flex-col items-center text-center">
+                <Link
+                  href="/products"
+                  className="mb-6 text-sm text-gray-400 transition hover:text-gray-200"
+                >
+                  ← Back to products
+                </Link>
                 <div className="relative z-20 mb-8 flex h-20 items-center justify-center">
                   <img
                     src="/branding/migreo.svg"
@@ -111,6 +118,12 @@ export default function MigreoProductPage() {
               >
                 Open Telegram
               </a>
+              <Link
+                href="/products"
+                className="mt-6 inline-block text-sm text-gray-400 transition hover:text-gray-200"
+              >
+                ← Back to products
+              </Link>
             </div>
           </div>
         </div>
