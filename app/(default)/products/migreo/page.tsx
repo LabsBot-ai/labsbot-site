@@ -133,7 +133,7 @@ export default function MigreoProductPage() {
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
                       <div className="p-8">
-                        <div className="mb-2 flex items-center gap-2">
+                        <div className="mb-2 flex items-start gap-2">
                           {passportIcon}
                           <h3 className="font-semibold text-gray-200">
                             Visa applications
@@ -151,7 +151,7 @@ export default function MigreoProductPage() {
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
                       <div className="p-8">
-                        <div className="mb-2 flex items-center gap-2">
+                        <div className="mb-2 flex items-start gap-2">
                           {idCardIcon}
                           <h3 className="font-semibold text-gray-200">
                             Residence permits
@@ -168,7 +168,7 @@ export default function MigreoProductPage() {
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
                       <div className="p-8">
-                        <div className="mb-2 flex items-center gap-2">
+                        <div className="mb-2 flex items-start gap-2">
                           {fileIcon}
                           <h3 className="font-semibold text-gray-200">
                             Document preparation
@@ -185,7 +185,7 @@ export default function MigreoProductPage() {
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
                       <div className="p-8">
-                        <div className="mb-2 flex items-center gap-2">
+                        <div className="mb-2 flex items-start gap-2">
                           {questionIcon}
                           <h3 className="font-semibold text-gray-200">
                             Procedural questions
