@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
 
         {/* Top section — link grid */}
-        <div className="grid grid-cols-2 gap-12 py-8 md:grid-cols-3 md:py-12 xl:gap-20">
+        <div className="mx-auto max-w-2xl grid grid-cols-2 gap-10 py-8 md:grid-cols-3 md:py-12 text-center">
           {/* Product */}
           <div className="space-y-2">
             <h3 className="text-sm font-medium text-gray-200">Product</h3>
