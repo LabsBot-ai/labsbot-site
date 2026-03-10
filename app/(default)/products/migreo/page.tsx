@@ -110,20 +110,24 @@ export default function MigreoProductPage() {
                 Start a conversation in Telegram and get answers to your
                 migration questions.
               </p>
-              <a
-                className="btn-sm group inline-flex bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] transition hover:opacity-95"
-                href="https://t.me/MigrantEuroBot?start=site"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Open Telegram
-              </a>
-              <Link
-                href="/products"
-                className="mt-6 inline-block text-sm text-gray-400 transition hover:text-gray-200"
-              >
-                ← Back to products
-              </Link>
+              <div className="flex justify-center">
+                <a
+                  className="btn-sm group inline-flex bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] transition hover:opacity-95"
+                  href="https://t.me/MigrantEuroBot?start=site"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open Telegram
+                </a>
+              </div>
+              <div className="mt-4 text-center">
+                <Link
+                  href="/products"
+                  className="text-sm text-gray-400 transition hover:text-gray-200"
+                >
+                  ← Back to products
+                </Link>
+              </div>
             </div>
           </div>
         </div>
