@@ -64,7 +64,7 @@ export default function MigreoProductPage() {
                 <Spotlight className="group grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
-                      <div className="p-6">
+                      <div className="p-8">
                         <h3 className="mb-2 font-semibold text-gray-200">
                           Visa applications
                         </h3>
@@ -79,7 +79,7 @@ export default function MigreoProductPage() {
                   </div>
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
-                      <div className="p-6">
+                      <div className="p-8">
                         <h3 className="mb-2 font-semibold text-gray-200">
                           Residence permits
                         </h3>
@@ -93,7 +93,7 @@ export default function MigreoProductPage() {
                   </div>
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
-                      <div className="p-6">
+                      <div className="p-8">
                         <h3 className="mb-2 font-semibold text-gray-200">
                           Document preparation
                         </h3>
@@ -107,7 +107,7 @@ export default function MigreoProductPage() {
                   </div>
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
-                      <div className="p-6">
+                      <div className="p-8">
                         <h3 className="mb-2 font-semibold text-gray-200">
                           Procedural questions
                         </h3>
