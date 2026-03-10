@@ -13,29 +13,61 @@ const productCardClass =
 const cardInnerClass =
   "relative z-10 h-full overflow-hidden rounded-[inherit]";
 
-const iconClass = "shrink-0 w-5 h-5 text-gray-200";
+const iconClass =
+  "shrink-0 w-6 h-6 text-gray-200";
+const strokeProps = {
+  stroke: "currentColor",
+  strokeWidth: 1.5,
+  strokeLinecap: "round" as const,
+  strokeLinejoin: "round" as const,
+  fill: "none",
+};
 const passportIcon = (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconClass}
-    aria-hidden="true">
-    <path fillRule="evenodd" d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6l-5-5H4zm0 2h4v2h8v2H8v8H6V4H4zm10 0v2h2v9H8v-2h6V4z" clipRule="evenodd" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className={iconClass}
+    aria-hidden="true"
+    {...strokeProps}
+  >
+    <path d="M8 3v18M8 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8M8 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2" />
   </svg>
 );
 const idCardIcon = (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconClass}
-    aria-hidden="true">
-    <path fillRule="evenodd" d="M2 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0h3v12H4V4zm5 0h7v2H9V4zm0 4h7v2H9V8zm0 4h5v2H9v-2z" clipRule="evenodd" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className={iconClass}
+    aria-hidden="true"
+    {...strokeProps}
+  >
+    <rect x="2" y="4" width="20" height="16" rx="2" />
+    <path d="M2 10h20M8 4v4h4V4" />
   </svg>
 );
 const fileIcon = (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconClass}
-    aria-hidden="true">
-    <path fillRule="evenodd" d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6l-5-5H4zm0 2h5v4h6v9H5V4zm7 0v2h4l-4-2z" clipRule="evenodd" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className={iconClass}
+    aria-hidden="true"
+    {...strokeProps}
+  >
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+    <path d="M14 2v6h6" />
+    <path d="M9 13h6M9 17h6" />
   </svg>
 );
 const questionIcon = (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconClass}
-    aria-hidden="true">
-    <path fillRule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm.75-9.5a.75.75 0 0 0-1.5 0v1.5c0 .414.336.75.75.75h1.5a.75.75 0 0 0 0-1.5H11V8.25a1.25 1.25 0 0 1 2.5 0 1 1 0 0 0 2 0 3.25 3.25 0 0 0-6.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5zM10 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" clipRule="evenodd" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className={iconClass}
+    aria-hidden="true"
+    {...strokeProps}
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01" />
   </svg>
 );
 
