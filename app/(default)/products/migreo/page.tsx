@@ -13,8 +13,10 @@ const productCardClass =
 const cardInnerClass =
   "relative z-10 h-full overflow-hidden rounded-[inherit]";
 
+const iconWrapperClass =
+  "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5";
 const iconClass =
-  "shrink-0 w-6 h-6 text-gray-100";
+  "h-6 w-6 text-gray-100";
 const strokeProps = {
   stroke: "currentColor",
   strokeWidth: 2,
@@ -23,52 +25,60 @@ const strokeProps = {
   fill: "none",
 };
 const passportIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className={iconClass}
-    aria-hidden="true"
-    {...strokeProps}
-  >
-    <path d="M8 3v18M8 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8M8 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2" />
-  </svg>
+  <div className={iconWrapperClass}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className={iconClass}
+      aria-hidden="true"
+      {...strokeProps}
+    >
+      <path d="M8 3v18M8 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8M8 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2" />
+    </svg>
+  </div>
 );
 const idCardIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className={iconClass}
-    aria-hidden="true"
-    {...strokeProps}
-  >
-    <rect x="2" y="4" width="20" height="16" rx="2" />
-    <path d="M2 10h20M8 4v4h4V4" />
-  </svg>
+  <div className={iconWrapperClass}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className={iconClass}
+      aria-hidden="true"
+      {...strokeProps}
+    >
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="M2 10h20M8 4v4h4V4" />
+    </svg>
+  </div>
 );
 const fileIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className={iconClass}
-    aria-hidden="true"
-    {...strokeProps}
-  >
-    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-    <path d="M14 2v6h6" />
-    <path d="M9 13h6M9 17h6" />
-  </svg>
+  <div className={iconWrapperClass}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className={iconClass}
+      aria-hidden="true"
+      {...strokeProps}
+    >
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <path d="M14 2v6h6" />
+      <path d="M9 13h6M9 17h6" />
+    </svg>
+  </div>
 );
 const questionIcon = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    className={iconClass}
-    aria-hidden="true"
-    {...strokeProps}
-  >
-    <circle cx="12" cy="12" r="10" />
-    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01" />
-  </svg>
+  <div className={iconWrapperClass}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      className={iconClass}
+      aria-hidden="true"
+      {...strokeProps}
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01" />
+    </svg>
+  </div>
 );
 
 export default function MigreoProductPage() {
