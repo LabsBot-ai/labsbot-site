@@ -26,7 +26,7 @@ export default function HeroHome() {
                     />
                     <Link
                       className="relative btn group w-full bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:opacity-95 transition sm:w-auto"
-                      href="/products"
+                      href="/#products"
                     >
                       <span className="relative inline-flex items-center">
                         Explore products
