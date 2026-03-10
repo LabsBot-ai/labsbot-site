@@ -141,8 +141,9 @@ export default function MigreoProductPage() {
                           </h3>
                         </div>
                         <p className="text-indigo-200/80">
-                          Navigate immigration processes and create the required
-                          documents in any language with our intelligent tools.
+                          Thanks to intelligent tools, you can navigate
+                          immigration processes and create the required
+                          documents in any language.
                         </p>
                       </div>
                     </div>
@@ -159,7 +160,7 @@ export default function MigreoProductPage() {
                         <p className="text-indigo-200/80">
                           With our platform you can find housing faster,
                           understand rental agreements, and resolve housing
-                          issues in any language.
+                          issues.
                         </p>
                       </div>
                     </div>
@@ -173,6 +174,11 @@ export default function MigreoProductPage() {
                             Work
                           </h3>
                         </div>
+                        <p className="text-indigo-200/80">
+                          Our system helps you prepare your CV, understand
+                          employment contracts, and navigate the job market in a
+                          new country.
+                        </p>
                       </div>
                     </div>
                   </div>
