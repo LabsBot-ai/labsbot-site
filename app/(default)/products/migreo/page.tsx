@@ -41,14 +41,12 @@ export default function MigreoProductPage() {
             <div className="mx-auto max-w-3xl space-y-16 pb-16 md:pb-24">
               <div>
                 <h2 className="pb-6 font-nacelle text-2xl font-semibold text-gray-200 md:text-3xl">
-                  What MIGREO does
+                  Inside MIGREO
                 </h2>
                 <p className="text-lg leading-relaxed text-indigo-200/80">
-                  MIGREO is a Telegram bot that helps you navigate migration and
-                  bureaucratic procedures. It answers questions about visas,
-                  residence permits, citizenship, and official paperwork. The bot
-                  uses AI to provide clear, step-by-step guidance tailored to
-                  your situation.
+                  MIGREO is an intelligent digital platform designed to help
+                  people moving to a new country better understand and navigate
+                  administrative systems and everyday procedures.
                 </p>
               </div>
 
