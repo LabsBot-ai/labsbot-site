@@ -119,9 +119,8 @@ export default function MigreoProductPage() {
                   Inside MIGREO
                 </h2>
                 <p className="text-lg leading-relaxed text-indigo-200/80">
-                  MIGREO is an intelligent digital platform designed to help
-                  people moving to a new country better understand and navigate
-                  administrative systems and everyday procedures.
+                  MIGREO is a technology product designed to solve migration and
+                  everyday challenges.
                 </p>
               </div>
 
