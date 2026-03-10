@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Logo from "./logo";
-import Dropdown from "@/components/dropdown";
 import MobileMenu from "./mobile-menu";
 
 export default function Header() {
@@ -26,18 +25,18 @@ export default function Header() {
             <ul className="flex grow flex-wrap items-center justify-center gap-2">
               <li>
                 <Link
-                  href="/pricing"
+                  href="/#products"
                   className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-2"
                 >
-                  Pricing
+                  Products
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/pricing"
                   className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-2"
                 >
-                  About Us
+                  Pricing
                 </Link>
               </li>
               <li>
@@ -50,40 +49,12 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/help/frequently-asked-questions"
+                  href="/about"
                   className="flex items-center px-2 py-1 text-xl font-semibold tracking-wide text-white transition hover:text-gray-200 lg:px-2"
                 >
-                  Help Centre
+                  About
                 </Link>
               </li>
-              {/* 1st level: hover */}
-              <Dropdown title="Resources">
-                {/* 2nd level: hover */}
-                <li>
-                  <Link
-                    href="/newsletter"
-                    className="flex rounded-lg px-2 py-1.5 text-sm text-white hover:text-indigo-500"
-                  >
-                    Newsletter
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="flex rounded-lg px-2 py-1.5 text-sm text-white hover:text-indigo-500"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/404"
-                    className="flex rounded-lg px-2 py-1.5 text-sm text-white hover:text-indigo-500"
-                  >
-                    404
-                  </Link>
-                </li>
-              </Dropdown>
             </ul>
           </nav>
 
