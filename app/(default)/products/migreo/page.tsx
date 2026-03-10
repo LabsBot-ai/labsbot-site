@@ -11,7 +11,7 @@ import Spotlight from "@/components/spotlight";
 const productCardClass =
   "group/card relative h-full overflow-hidden rounded-2xl p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-0 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-0 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100";
 const cardInnerClass =
-  "relative z-10 h-full overflow-hidden rounded-[inherit] shadow-[inset_0_0_80px_rgba(99,102,241,0.08)]";
+  "relative z-10 h-full overflow-hidden rounded-[inherit]";
 
 const iconWrapperClass =
   "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5";
@@ -137,7 +137,7 @@ export default function MigreoProductPage() {
                   />
                   <Spotlight className="group grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className={productCardClass}>
-                    <div className={cardInnerClass}>
+                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_100%_100%,rgba(99,102,241,0.10),transparent_70%)]`}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
                           {immigrationIcon}
@@ -154,7 +154,7 @@ export default function MigreoProductPage() {
                     </div>
                   </div>
                   <div className={productCardClass}>
-                    <div className={cardInnerClass}>
+                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_0%_100%,rgba(99,102,241,0.10),transparent_70%)]`}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
                           {housingIcon}
@@ -171,7 +171,7 @@ export default function MigreoProductPage() {
                     </div>
                   </div>
                   <div className={productCardClass}>
-                    <div className={cardInnerClass}>
+                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_100%_0%,rgba(99,102,241,0.10),transparent_70%)]`}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
                           {workIcon}
@@ -188,7 +188,7 @@ export default function MigreoProductPage() {
                     </div>
                   </div>
                   <div className={productCardClass}>
-                    <div className={cardInnerClass}>
+                    <div className={`${cardInnerClass} bg-[radial-gradient(circle_at_0%_0%,rgba(99,102,241,0.10),transparent_70%)]`}>
                       <div className="p-8">
                         <div className="mb-2 flex items-start gap-2">
                           {documentIcon}
