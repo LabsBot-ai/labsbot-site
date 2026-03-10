@@ -13,6 +13,32 @@ const productCardClass =
 const cardInnerClass =
   "relative z-10 h-full overflow-hidden rounded-[inherit]";
 
+const iconClass = "shrink-0 w-5 h-5 text-gray-200";
+const passportIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconClass}
+    aria-hidden="true">
+    <path fillRule="evenodd" d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6l-5-5H4zm0 2h4v2h8v2H8v8H6V4H4zm10 0v2h2v9H8v-2h6V4z" clipRule="evenodd" />
+  </svg>
+);
+const idCardIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconClass}
+    aria-hidden="true">
+    <path fillRule="evenodd" d="M2 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4zm2 0h3v12H4V4zm5 0h7v2H9V4zm0 4h7v2H9V8zm0 4h5v2H9v-2z" clipRule="evenodd" />
+  </svg>
+);
+const fileIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconClass}
+    aria-hidden="true">
+    <path fillRule="evenodd" d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6l-5-5H4zm0 2h5v4h6v9H5V4zm7 0v2h4l-4-2z" clipRule="evenodd" />
+  </svg>
+);
+const questionIcon = (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconClass}
+    aria-hidden="true">
+    <path fillRule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm.75-9.5a.75.75 0 0 0-1.5 0v1.5c0 .414.336.75.75.75h1.5a.75.75 0 0 0 0-1.5H11V8.25a1.25 1.25 0 0 1 2.5 0 1 1 0 0 0 2 0 3.25 3.25 0 0 0-6.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5zM10 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" clipRule="evenodd" />
+  </svg>
+);
+
 export default function MigreoProductPage() {
   return (
     <>
@@ -65,9 +91,12 @@ export default function MigreoProductPage() {
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
                       <div className="p-8">
-                        <h3 className="mb-2 font-semibold text-gray-200">
-                          Visa applications
-                        </h3>
+                        <div className="mb-2 flex items-center gap-3">
+                          {passportIcon}
+                          <h3 className="font-semibold text-gray-200">
+                            Visa applications
+                          </h3>
+                        </div>
                         <p className="text-indigo-200/80">
                           Understand requirements, document checklists, and
                           deadlines for short-term and long-term visas. Get
@@ -80,9 +109,12 @@ export default function MigreoProductPage() {
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
                       <div className="p-8">
-                        <h3 className="mb-2 font-semibold text-gray-200">
-                          Residence permits
-                        </h3>
+                        <div className="mb-2 flex items-center gap-3">
+                          {idCardIcon}
+                          <h3 className="font-semibold text-gray-200">
+                            Residence permits
+                          </h3>
+                        </div>
                         <p className="text-indigo-200/80">
                           Learn about different permit types, renewal steps, and
                           conditions. The bot can explain work permits, study
@@ -94,9 +126,12 @@ export default function MigreoProductPage() {
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
                       <div className="p-8">
-                        <h3 className="mb-2 font-semibold text-gray-200">
-                          Document preparation
-                        </h3>
+                        <div className="mb-2 flex items-center gap-3">
+                          {fileIcon}
+                          <h3 className="font-semibold text-gray-200">
+                            Document preparation
+                          </h3>
+                        </div>
                         <p className="text-indigo-200/80">
                           Get help with translations, certifications,
                           apostilles, and other formalities. Know what to bring
@@ -108,9 +143,12 @@ export default function MigreoProductPage() {
                   <div className={productCardClass}>
                     <div className={cardInnerClass}>
                       <div className="p-8">
-                        <h3 className="mb-2 font-semibold text-gray-200">
-                          Procedural questions
-                        </h3>
+                        <div className="mb-2 flex items-center gap-3">
+                          {questionIcon}
+                          <h3 className="font-semibold text-gray-200">
+                            Procedural questions
+                          </h3>
+                        </div>
                         <p className="text-indigo-200/80">
                           Ask about timelines, appeal procedures, and what to
                           expect at appointments. The bot clarifies official
