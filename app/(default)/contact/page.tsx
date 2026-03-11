@@ -83,7 +83,7 @@ export default function Contact() {
                   </a>
                 </p>
                 <div>
-                  <button className="btn group w-full bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] transition-all">
+                  <button className="btn group w-full cursor-pointer bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] transition-all">
                     <span className="relative inline-flex items-center">
                       Send message
                       <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
