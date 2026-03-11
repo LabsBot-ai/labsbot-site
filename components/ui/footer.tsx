@@ -29,7 +29,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
                   Features
                 </a>
@@ -37,7 +37,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
                   Pricing &amp; Plans
                 </a>
@@ -45,7 +45,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
                   Changelog
                 </a>
@@ -59,7 +59,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
                   About us
                 </a>
@@ -67,7 +67,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
                   Blog
                 </a>
@@ -75,7 +75,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
                   Careers
                 </a>
@@ -89,7 +89,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
                   Terms of service
                 </a>
@@ -97,7 +97,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
                   Community
                 </a>
@@ -105,7 +105,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#0"
+                  href="#"
                 >
                   Report a vulnerability
                 </a>
@@ -126,7 +126,7 @@ export default function Footer() {
             <li>
               <a
                 className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                href="#0"
+                href="#"
                 aria-label="Twitter"
               >
                 <svg
@@ -141,7 +141,7 @@ export default function Footer() {
             <li>
               <a
                 className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                href="#0"
+                href="#"
                 aria-label="Medium"
               >
                 <svg
@@ -156,7 +156,7 @@ export default function Footer() {
             <li>
               <a
                 className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
-                href="#0"
+                href="#"
                 aria-label="Github"
               >
                 <svg
