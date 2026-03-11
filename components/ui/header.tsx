@@ -73,7 +73,7 @@ export default function Header() {
               />
               <Link
                 href="/signup"
-                className="relative inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
+                className="relative inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
               >
                 Register
               </Link>
