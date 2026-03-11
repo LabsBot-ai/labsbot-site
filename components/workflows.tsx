@@ -88,7 +88,7 @@ export default function Workflows() {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <a
-                      className="btn-sm group inline-flex bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:opacity-95 transition"
+                      className="btn-sm group inline-flex bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
                       href="https://t.me/MigrantEuroBot?start=site"
                       target="_blank"
                       rel="noopener noreferrer"
