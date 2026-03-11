@@ -23,13 +23,13 @@ export default function Cta() {
               className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl"
               data-aos="fade-up"
             >
-              Join the content-first platform
+              Join LabsBot
             </h2>
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
               <div data-aos="fade-up" data-aos-delay={400}>
                 <a
                   className="btn group mb-4 w-full bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] transition-all sm:mb-0 sm:w-auto"
-                  href="#0"
+                  href="/#products"
                 >
                   <span className="relative inline-flex items-center">
                     Explore Products
