@@ -66,7 +66,7 @@ export default function Header() {
             >
               Sign In
             </Link>
-            <div className="relative shrink-0 inline-flex">
+            <div className="relative shrink-0 inline-flex items-center">
               <div
                 className="absolute -inset-0.5 blur-lg opacity-40 rounded-lg bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600"
                 aria-hidden
