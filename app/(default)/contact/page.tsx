@@ -15,8 +15,8 @@ export default function Contact() {
           <div className="py-12 md:py-20">
             {/* Section header */}
             <div className="pb-12 text-center">
-              <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
-                Contact us
+              <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+                Contact the LabsBot team
               </h1>
               <div className="mx-auto max-w-3xl">
                 <p className="text-xl text-indigo-200/65">
@@ -28,124 +28,43 @@ export default function Contact() {
             {/* Contact form */}
             <form className="mx-auto max-w-[640px]">
               <div className="space-y-5">
-                <div className="flex flex-col gap-x-6 gap-y-4 md:flex-row">
-                  <div className="flex-1">
-                    <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
-                      htmlFor="first-name"
-                    >
-                      Name
-                    </label>
-                    <input
-                      id="first-name"
-                      type="text"
-                      className="form-input w-full"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
-                      htmlFor="last-name"
-                    >
-                      Surname
-                    </label>
-                    <input
-                      id="last-name"
-                      type="text"
-                      className="form-input w-full"
-                      placeholder="Your surname"
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-x-6 gap-y-4 md:flex-row">
-                  <div className="flex-1">
-                    <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
-                      htmlFor="email"
-                    >
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      className="form-input w-full"
-                      placeholder="Enter your email address"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
-                      htmlFor="country"
-                    >
-                      Country
-                    </label>
-                    <select
-                      id="country"
-                      className="form-select w-full text-gray-200"
-                      defaultValue={"default"}
-                    >
-                      <option value={"default"} disabled hidden>
-                        Select a country
-                      </option>
-                      <option>United States</option>
-                      <option>United Kingdom</option>
-                      <option>Germany</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-x-6 gap-y-4 md:flex-row">
-                  <div className="flex-1">
-                    <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
-                      htmlFor="topic"
-                    >
-                      Topic
-                    </label>
-                    <select
-                      id="topic"
-                      className="form-select w-full text-gray-200"
-                      defaultValue={"default"}
-                    >
-                      <option value={"default"} disabled hidden>
-                        Select a topic
-                      </option>
-                      <option>General</option>
-                      <option>Business</option>
-                      <option>Finance</option>
-                      <option>Health</option>
-                      <option>Legal</option>
-                      <option>Marketing</option>
-                      <option>Productivity</option>
-                      <option>Security</option>
-                      <option>Software</option>
-                      <option>Travel</option>
-                    </select>
-                  </div>
-                  <div className="flex-1">
-                    <label
-                      className="mb-1 block text-sm font-medium text-indigo-200/65"
-                      htmlFor="subject"
-                    >
-                      Subject
-                    </label>
-                    <input
-                      id="subject"
-                      type="text"
-                      className="form-input w-full"
-                      placeholder="Let us know how we can help"
-                    />
-                  </div>
+                <div>
+                  <label
+                    className="mb-1 block text-sm font-medium text-indigo-200/65"
+                    htmlFor="name"
+                  >
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    className="form-input w-full"
+                    placeholder="Your name"
+                  />
                 </div>
                 <div>
                   <label
                     className="mb-1 block text-sm font-medium text-indigo-200/65"
-                    htmlFor="description"
+                    htmlFor="email"
                   >
-                    Full description
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    className="form-input w-full"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="mb-1 block text-sm font-medium text-indigo-200/65"
+                    htmlFor="message"
+                  >
+                    Message (Full description)
                   </label>
                   <textarea
-                    id="description"
+                    id="message"
                     rows={5}
                     className="form-textarea w-full text-gray-200"
                     placeholder="Include as much details as you can"
