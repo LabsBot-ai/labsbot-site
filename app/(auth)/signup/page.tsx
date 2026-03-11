@@ -13,7 +13,7 @@ export default function SignUp() {
           {/* Section header */}
           <div className="pb-12 text-center">
             <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              Create an account
+              Create your account
             </h1>
           </div>
           {/* Contact form */}
@@ -30,22 +30,7 @@ export default function SignUp() {
                   id="name"
                   type="text"
                   className="form-input w-full"
-                  placeholder="Your full name"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  className="mb-1 block text-sm font-medium text-indigo-200/65"
-                  htmlFor="name"
-                >
-                  Company Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  id="company"
-                  type="text"
-                  className="form-input w-full"
-                  placeholder="Your company name"
+                  placeholder="Your name"
                   required
                 />
               </div>
@@ -54,13 +39,13 @@ export default function SignUp() {
                   className="mb-1 block text-sm font-medium text-indigo-200/65"
                   htmlFor="email"
                 >
-                  Work Email <span className="text-red-500">*</span>
+                  Email <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="email"
                   type="email"
                   className="form-input w-full"
-                  placeholder="Your work email"
+                  placeholder="Enter your email"
                 />
               </div>
               <div>
@@ -74,13 +59,13 @@ export default function SignUp() {
                   id="password"
                   type="password"
                   className="form-input w-full"
-                  placeholder="Password (at least 10 characters)"
+                  placeholder="Create a password"
                 />
               </div>
             </div>
             <div className="mt-6 space-y-5">
               <button className="btn w-full bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] transition-all">
-                Register
+                Create account
               </button>
               <div className="flex items-center gap-3 text-center text-sm italic text-gray-600 before:h-px before:flex-1 before:bg-linear-to-r before:from-transparent before:via-gray-400/25 after:h-px after:flex-1 after:bg-linear-to-r after:from-transparent after:via-gray-400/25">
                 or
