@@ -20,8 +20,7 @@ export default function Contact() {
               </h1>
               <div className="mx-auto max-w-3xl">
                 <p className="text-xl text-indigo-200/65">
-                  We have custom plans to power your business. Tell us your
-                  needs, and we'll contact you shortly.
+                  Write to us — we read every message.
                 </p>
               </div>
             </div>
