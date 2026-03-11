@@ -3,6 +3,7 @@ export const metadata = {
   description: "Page description",
 };
 
+import Link from "next/link";
 import PageIllustration from "@/components/page-illustration";
 import FooterSeparator from "@/components/footer-separator";
 
@@ -74,13 +75,13 @@ export default function Contact() {
               <div className="mt-8 flex w-full flex-col justify-between gap-5 md:flex-row md:items-center">
                 <p className="text-sm text-indigo-200/65">
                   By continuing, you agree to our{" "}
-                  <a className="underline hover:no-underline" href="#0">
+                  <Link className="underline hover:no-underline" href="/terms">
                     Terms of Use
-                  </a>{" "}
+                  </Link>{" "}
                   and{" "}
-                  <a className="underline hover:no-underline" href="#0">
+                  <Link className="underline hover:no-underline" href="/privacy">
                     Privacy policy
-                  </a>
+                  </Link>
                 </p>
                 <div>
                   <button className="btn group w-full cursor-pointer bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%] transition-all">
