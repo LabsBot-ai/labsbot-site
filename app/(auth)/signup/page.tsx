@@ -64,7 +64,10 @@ export default function SignUp() {
               </div>
             </div>
             <div className="mt-6 space-y-5">
-              <button className="btn w-full cursor-pointer border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition">
+              <button
+                type="button"
+                className="btn w-full cursor-pointer border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+              >
                 Sign In with Google
               </button>
               <div className="flex items-center gap-3 text-center text-sm italic text-gray-600 before:h-px before:flex-1 before:bg-linear-to-r before:from-transparent before:via-gray-400/25 after:h-px after:flex-1 after:bg-linear-to-r after:from-transparent after:via-gray-400/25">
