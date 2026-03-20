@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/lib/supabaseClient";
 
 export default function AccountPage() {
@@ -11,21 +12,39 @@ export default function AccountPage() {
   const [displayName, setDisplayName] = useState<string | null>(null);
 
   useEffect(() => {
-    const loadSession = async () => {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
+    let cancelled = false;
 
-      setUserEmail(session?.user?.email ?? null);
+    const applySession = (session: Session | null) => {
+      if (cancelled) return;
+      if (!session) {
+        setUserEmail(null);
+        setDisplayName(null);
+        router.replace("/");
+        return;
+      }
+      setUserEmail(session.user.email ?? null);
       setDisplayName(
-        session?.user?.user_metadata?.full_name ??
-          session?.user?.user_metadata?.name ??
+        session.user.user_metadata?.full_name ??
+          session.user.user_metadata?.name ??
           null
       );
     };
 
-    void loadSession();
-  }, []);
+    void supabase.auth.getSession().then(({ data: { session } }) => {
+      applySession(session);
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      applySession(session);
+    });
+
+    return () => {
+      cancelled = true;
+      subscription.unsubscribe();
+    };
+  }, [router]);
 
   const handleSignOut = async () => {
     const { error } = await supabase.auth.signOut();
@@ -33,7 +52,6 @@ export default function AccountPage() {
       console.error("Sign out error:", error.message);
       return;
     }
-    router.push("/");
   };
 
   return (
