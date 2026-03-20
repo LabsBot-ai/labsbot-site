@@ -7,6 +7,7 @@ import { supabase } from "@/lib/supabaseClient";
 export default function AccountPage() {
   const router = useRouter();
   const [userEmail, setUserEmail] = useState<string | null>(null);
+  const [displayName, setDisplayName] = useState<string | null>(null);
 
   useEffect(() => {
     const loadSession = async () => {
@@ -15,6 +16,11 @@ export default function AccountPage() {
       } = await supabase.auth.getSession();
 
       setUserEmail(session?.user?.email ?? null);
+      setDisplayName(
+        session?.user?.user_metadata?.full_name ??
+          session?.user?.user_metadata?.name ??
+          null
+      );
     };
 
     void loadSession();
@@ -30,24 +36,27 @@ export default function AccountPage() {
   };
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+    <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
         {/* Sidebar */}
-        <div className="space-y-3">
+        <aside className="space-y-3 lg:col-span-3">
           <div className="text-sm font-medium text-white/60">Settings</div>
-          <div className="space-y-1">
-            <div className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm text-white">
-              Account
+          <div className="space-y-1 rounded-xl border border-white/10 bg-white/5 p-2">
+            <div className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm font-medium text-white">
+              Profile
             </div>
             <div className="cursor-pointer rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/5">
               Billing
             </div>
+            <div className="rounded-lg px-3 py-2 text-sm text-white/50">
+              Actions
+            </div>
           </div>
-        </div>
+        </aside>
 
         {/* Main content */}
-        <div className="space-y-6 md:col-span-3">
-          <div className="space-y-2">
+        <div className="space-y-6 lg:col-span-9">
+          <div className="space-y-2 border-b border-white/10 pb-6">
             <h1 className="text-3xl font-semibold text-white">
               Account settings
             </h1>
@@ -60,15 +69,43 @@ export default function AccountPage() {
             <h2 className="text-base font-medium text-white">Profile</h2>
 
             <div className="space-y-3">
-              <div className="flex items-center justify-between border-b border-white/10 pb-3">
+              <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm text-white/60">Display name</p>
+                <p className="text-sm text-white">{displayName ?? "Not set"}</p>
+              </div>
+              <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-sm text-white/60">Email</p>
                 <p className="text-sm text-white">{userEmail}</p>
               </div>
-              <div className="flex items-center justify-between">
-                <p className="text-sm text-white/60">Status</p>
+              <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm text-white/60">Sign-in method</p>
+                <p className="text-sm text-white">Google</p>
+              </div>
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm text-white/60">Account status</p>
                 <p className="text-sm text-white">Active</p>
               </div>
             </div>
+          </div>
+
+          <div className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
+            <h2 className="text-base font-medium text-white">Billing</h2>
+            <div className="space-y-3">
+              <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm text-white/60">Current plan</p>
+                <p className="text-sm text-white">Free</p>
+              </div>
+              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm text-white/60">Billing status</p>
+                <p className="text-sm text-white">Not configured yet</p>
+              </div>
+            </div>
+            <button
+              type="button"
+              className="cursor-pointer inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
+            >
+              Upgrade plan
+            </button>
           </div>
 
           <div className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
