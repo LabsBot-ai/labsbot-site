@@ -122,7 +122,7 @@ export default function Header() {
                   className="shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
                   aria-label="My account"
                 >
-                  {userEmail}
+                  My account
                 </button>
                 <button
                   type="button"
