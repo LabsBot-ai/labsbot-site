@@ -1,10 +1,44 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "./logo";
 import MobileMenu from "./mobile-menu";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function Header() {
+  const [userEmail, setUserEmail] = useState<string | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const initSession = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (!isMounted) return;
+      setUserEmail(session?.user?.email ?? null);
+    };
+
+    void initSession();
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUserEmail(session?.user?.email ?? null);
+    });
+
+    return () => {
+      isMounted = false;
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  const handleSignOut = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) console.error("Sign out error:", error.message);
+  };
+
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -60,24 +94,45 @@ export default function Header() {
 
           {/* Sign in, Register, Mobile menu */}
           <div className="flex items-center gap-2 ml-auto shrink-0">
-            <Link
-              href="/signin"
-              className="shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
-            >
-              Sign In
-            </Link>
-            <div className="relative shrink-0 inline-flex items-center">
-              <div
-                className="absolute -inset-0.5 blur-lg opacity-40 rounded-lg bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600"
-                aria-hidden
-              />
-              <Link
-                href="/signup"
-                className="relative inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
-              >
-                Register
-              </Link>
-            </div>
+            {!userEmail ? (
+              <>
+                <Link
+                  href="/signin"
+                  className="shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                >
+                  Sign In
+                </Link>
+                <div className="relative shrink-0 inline-flex items-center">
+                  <div
+                    className="absolute -inset-0.5 blur-lg opacity-40 rounded-lg bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600"
+                    aria-hidden
+                  />
+                  <Link
+                    href="/signup"
+                    className="relative inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
+                  >
+                    Register
+                  </Link>
+                </div>
+              </>
+            ) : (
+              <>
+                <button
+                  type="button"
+                  className="shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                  aria-label="My account"
+                >
+                  {userEmail}
+                </button>
+                <button
+                  type="button"
+                  onClick={handleSignOut}
+                  className="shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                >
+                  Sign out
+                </button>
+              </>
+            )}
             <MobileMenu />
           </div>
         </div>
