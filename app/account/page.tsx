@@ -42,11 +42,14 @@ export default function AccountPage() {
         <aside className="space-y-3 lg:sticky lg:top-24 lg:self-start">
           <div className="text-sm font-medium text-white/60">Settings</div>
           <div className="space-y-1 rounded-xl border border-white/10 bg-white/5 p-2">
-            <div className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm font-medium text-white">
-              Profile
-            </div>
             <a
-              href="#billing"
+              href="/account#profile"
+              className="block cursor-pointer rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/5"
+            >
+              Profile
+            </a>
+            <a
+              href="/account#billing"
               className="block cursor-pointer rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/5"
             >
               Billing
@@ -59,34 +62,36 @@ export default function AccountPage() {
 
         {/* Main content */}
         <div className="space-y-6">
-          <div className="space-y-2 border-b border-white/10 pb-6">
-            <h1 className="text-3xl font-semibold text-white">
-              Account settings
-            </h1>
-            <p className="text-sm text-white/50">
-              Manage your profile and account access.
-            </p>
-          </div>
+          <div id="profile" className="space-y-6">
+            <div className="space-y-2 border-b border-white/10 pb-6">
+              <h1 className="text-3xl font-semibold text-white">
+                Account settings
+              </h1>
+              <p className="text-sm text-white/50">
+                Manage your profile and account access.
+              </p>
+            </div>
 
-          <div id="profile" className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
-            <h2 className="text-base font-medium text-white">Profile</h2>
+            <div className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
+              <h2 className="text-base font-medium text-white">Profile</h2>
 
-            <div className="space-y-3">
-              <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm text-white/60">Display name</p>
-                <p className="text-sm text-white">{displayName ?? "Not set"}</p>
-              </div>
-              <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm text-white/60">Email</p>
-                <p className="text-sm text-white">{userEmail}</p>
-              </div>
-              <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm text-white/60">Sign-in method</p>
-                <p className="text-sm text-white">Google</p>
-              </div>
-              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm text-white/60">Account status</p>
-                <p className="text-sm text-white">Active</p>
+              <div className="space-y-3">
+                <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm text-white/60">Display name</p>
+                  <p className="text-sm text-white">{displayName ?? "Not set"}</p>
+                </div>
+                <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm text-white/60">Email</p>
+                  <p className="text-sm text-white">{userEmail}</p>
+                </div>
+                <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm text-white/60">Sign-in method</p>
+                  <p className="text-sm text-white">Google</p>
+                </div>
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm text-white/60">Account status</p>
+                  <p className="text-sm text-white">Active</p>
+                </div>
               </div>
             </div>
           </div>
