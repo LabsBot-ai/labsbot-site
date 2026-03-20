@@ -36,10 +36,17 @@ export default function AccountPage() {
           <h1 className="pb-6 text-center text-3xl font-semibold text-indigo-200/65">
             My account
           </h1>
-          <div className="mx-auto max-w-[400px] space-y-4">
-            <p className="text-center text-sm text-indigo-200/65">
-              {userEmail}
-            </p>
+          <div className="mx-auto max-w-md rounded-xl border border-white/10 bg-white/5 p-6 space-y-4">
+            <div>
+              <p className="text-xs text-white/50">Email</p>
+              <p className="text-sm text-white">{userEmail}</p>
+            </div>
+
+            <div>
+              <p className="text-xs text-white/50">Status</p>
+              <p className="text-sm text-white">Active</p>
+            </div>
+
             <button
               type="button"
               onClick={handleSignOut}
