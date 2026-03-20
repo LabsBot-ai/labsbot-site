@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabaseClient";
 
 export default function AccountPage() {
   const router = useRouter();
+  const [activeTab, setActiveTab] = useState<"profile" | "billing">("profile");
   const [userEmail, setUserEmail] = useState<string | null>(null);
   const [displayName, setDisplayName] = useState<string | null>(null);
 
@@ -42,18 +43,28 @@ export default function AccountPage() {
         <aside className="space-y-3 lg:sticky lg:top-24 lg:self-start">
           <div className="text-sm font-medium text-white/60">Settings</div>
           <div className="space-y-1 rounded-xl border border-white/10 bg-white/5 p-2">
-            <a
-              href="/account#profile"
-              className="block cursor-pointer rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/5"
+            <button
+              type="button"
+              onClick={() => setActiveTab("profile")}
+              className={`block w-full cursor-pointer rounded-lg px-3 py-2 text-left text-sm ${
+                activeTab === "profile"
+                  ? "border border-white/10 bg-white/10 font-medium text-white"
+                  : "text-white/70 hover:bg-white/5"
+              }`}
             >
               Profile
-            </a>
-            <a
-              href="/account#billing"
-              className="block cursor-pointer rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/5"
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab("billing")}
+              className={`block w-full cursor-pointer rounded-lg px-3 py-2 text-left text-sm ${
+                activeTab === "billing"
+                  ? "border border-white/10 bg-white/10 font-medium text-white"
+                  : "text-white/70 hover:bg-white/5"
+              }`}
             >
               Billing
-            </a>
+            </button>
             <div className="rounded-lg px-3 py-2 text-sm text-white/50">
               Actions
             </div>
@@ -62,16 +73,16 @@ export default function AccountPage() {
 
         {/* Main content */}
         <div className="space-y-6">
-          <div id="profile" className="space-y-6">
-            <div className="space-y-2 border-b border-white/10 pb-6">
-              <h1 className="text-3xl font-semibold text-white">
-                Account settings
-              </h1>
-              <p className="text-sm text-white/50">
-                Manage your profile and account access.
-              </p>
-            </div>
+          <div className="space-y-2 border-b border-white/10 pb-6">
+            <h1 className="text-3xl font-semibold text-white">
+              Account settings
+            </h1>
+            <p className="text-sm text-white/50">
+              Manage your profile and account access.
+            </p>
+          </div>
 
+          {activeTab === "profile" && (
             <div className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
               <h2 className="text-base font-medium text-white">Profile</h2>
 
@@ -94,27 +105,29 @@ export default function AccountPage() {
                 </div>
               </div>
             </div>
-          </div>
+          )}
 
-          <div id="billing" className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
-            <h2 className="text-base font-medium text-white">Billing</h2>
-            <div className="space-y-3">
-              <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm text-white/60">Current plan</p>
-                <p className="text-sm text-white">Free</p>
+          {activeTab === "billing" && (
+            <div className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
+              <h2 className="text-base font-medium text-white">Billing</h2>
+              <div className="space-y-3">
+                <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm text-white/60">Current plan</p>
+                  <p className="text-sm text-white">Free</p>
+                </div>
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm text-white/60">Billing status</p>
+                  <p className="text-sm text-white">Not configured yet</p>
+                </div>
               </div>
-              <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm text-white/60">Billing status</p>
-                <p className="text-sm text-white">Not configured yet</p>
-              </div>
+              <button
+                type="button"
+                className="cursor-pointer inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
+              >
+                Upgrade plan
+              </button>
             </div>
-            <button
-              type="button"
-              className="cursor-pointer inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
-            >
-              Upgrade plan
-            </button>
-          </div>
+          )}
 
           <div className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
             <h2 className="text-base font-medium text-white">Actions</h2>
@@ -132,4 +145,3 @@ export default function AccountPage() {
     </section>
   );
 }
-
