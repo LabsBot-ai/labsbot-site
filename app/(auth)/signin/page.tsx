@@ -1,11 +1,16 @@
-export const metadata = {
-  title: "Sign In - Open PRO",
-  description: "Page description",
-};
+"use client";
 
 import Link from "next/link";
+import { supabase } from "@/lib/supabaseClient";
 
 export default function SignIn() {
+  const handleGoogleSignIn = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+    if (error) console.error("Google sign-in error:", error.message);
+  };
+
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -60,6 +65,7 @@ export default function SignIn() {
               <button
                 type="button"
                 className="btn w-full cursor-pointer border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                onClick={handleGoogleSignIn}
               >
                 Sign In with Google
               </button>
