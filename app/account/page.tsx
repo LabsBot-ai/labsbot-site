@@ -36,18 +36,21 @@ export default function AccountPage() {
   };
 
   return (
-    <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
+    <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:py-16">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-12">
         {/* Sidebar */}
-        <aside className="space-y-3 lg:col-span-3">
+        <aside className="space-y-3 lg:sticky lg:top-24 lg:self-start">
           <div className="text-sm font-medium text-white/60">Settings</div>
           <div className="space-y-1 rounded-xl border border-white/10 bg-white/5 p-2">
             <div className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-sm font-medium text-white">
               Profile
             </div>
-            <div className="cursor-pointer rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/5">
+            <a
+              href="#billing"
+              className="block cursor-pointer rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/5"
+            >
               Billing
-            </div>
+            </a>
             <div className="rounded-lg px-3 py-2 text-sm text-white/50">
               Actions
             </div>
@@ -55,7 +58,7 @@ export default function AccountPage() {
         </aside>
 
         {/* Main content */}
-        <div className="space-y-6 lg:col-span-9">
+        <div className="space-y-6">
           <div className="space-y-2 border-b border-white/10 pb-6">
             <h1 className="text-3xl font-semibold text-white">
               Account settings
@@ -65,7 +68,7 @@ export default function AccountPage() {
             </p>
           </div>
 
-          <div className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
+          <div id="profile" className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
             <h2 className="text-base font-medium text-white">Profile</h2>
 
             <div className="space-y-3">
@@ -88,7 +91,7 @@ export default function AccountPage() {
             </div>
           </div>
 
-          <div className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
+          <div id="billing" className="space-y-4 rounded-xl border border-white/10 bg-white/5 p-6">
             <h2 className="text-base font-medium text-white">Billing</h2>
             <div className="space-y-3">
               <div className="flex flex-col gap-1 border-b border-white/10 pb-3 sm:flex-row sm:items-center sm:justify-between">
