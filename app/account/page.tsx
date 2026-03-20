@@ -30,13 +30,26 @@ export default function AccountPage() {
   };
 
   return (
-    <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="py-12 md:py-20">
-          <h1 className="pb-6 text-center text-3xl font-semibold text-indigo-200/65">
-            My account
-          </h1>
-          <div className="mx-auto max-w-md rounded-xl border border-white/10 bg-white/5 p-6 space-y-4">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Sidebar */}
+        <div className="space-y-2">
+          <div className="text-sm text-white/50">Settings</div>
+          <div className="space-y-1">
+            <div className="px-3 py-2 rounded-lg bg-white/10 text-white">
+              Account
+            </div>
+            <div className="px-3 py-2 rounded-lg text-white/70 hover:bg-white/5 cursor-pointer">
+              Billing
+            </div>
+          </div>
+        </div>
+
+        {/* Main content */}
+        <div className="md:col-span-3 space-y-6">
+          <h1 className="text-3xl font-semibold text-white">My account</h1>
+
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6 space-y-4">
             <div>
               <p className="text-xs text-white/50">Email</p>
               <p className="text-sm text-white">{userEmail}</p>
