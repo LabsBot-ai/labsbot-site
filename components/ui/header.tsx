@@ -117,13 +117,13 @@ export default function Header() {
               </>
             ) : (
               <>
-                <button
-                  type="button"
+                <Link
+                  href="/account"
                   className="cursor-pointer shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
                   aria-label="My account"
                 >
                   My account
-                </button>
+                </Link>
                 <button
                   type="button"
                   onClick={handleSignOut}
