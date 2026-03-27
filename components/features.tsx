@@ -64,13 +64,13 @@ export default function Features() {
                 height={384}
                 alt="Features"
               />
-              <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-xl border border-white/10 bg-slate-900/35 p-1.5 shadow-[0_10px_30px_rgba(99,102,241,0.35)] backdrop-blur-sm">
+              <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-xl border border-white/20 bg-[linear-gradient(135deg,rgba(99,102,241,0.36),rgba(139,92,246,0.24),rgba(255,255,255,0.08))] p-1.5 shadow-[0_10px_28px_rgba(99,102,241,0.35),0_0_22px_rgba(129,140,248,0.28),inset_0_1px_0_rgba(255,255,255,0.22)] backdrop-blur-sm">
                 <Image
                   src="/branding/icon.png"
                   alt="LabsBot icon"
                   width={64}
                   height={64}
-                  className="h-full w-full object-contain brightness-125 contrast-125 saturate-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]"
+                  className="h-full w-full object-contain brightness-115 contrast-115 saturate-110 drop-shadow-[0_0_6px_rgba(255,255,255,0.22)]"
                 />
               </div>
             </div>
