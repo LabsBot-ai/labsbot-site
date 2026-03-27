@@ -55,21 +55,22 @@ export default function Features() {
             </h2>
           </div>
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
-            <div className="relative">
-              <Image
-                className="max-w-none"
-                src="/labsbot-hero-bg.png"
-                width={1104}
-                height={384}
-                alt="Why LabsBot"
-              />
-              <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
+            <div className="relative mx-auto w-full max-w-3xl">
+              <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/branding/icon.png"
-                  alt="LabsBot icon"
-                  width={64}
-                  height={64}
-                  className="h-16 w-16 object-contain brightness-150 contrast-150 saturate-120 drop-shadow-[0_0_25px_rgba(99,102,241,0.8)]"
+                  src="/labsbot-hero-bg.png"
+                  width={1104}
+                  height={384}
+                  alt="Why LabsBot"
+                  className="w-full h-auto"
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_85%_100%_at_50%_50%,transparent_35%,rgba(15,23,42,0.45)_100%)]"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 rounded-2xl shadow-[inset_0_0_80px_rgba(15,23,42,0.35)]"
+                  aria-hidden
                 />
               </div>
             </div>
