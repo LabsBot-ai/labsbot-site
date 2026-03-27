@@ -85,10 +85,10 @@ export default function Features() {
                 <path d="M19 6H0v2h17v8H7v-6H5v8h19v-2h-5V6Z" />
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Built for real-world tasks
+                Limitless possibilities
               </h3>
               <p className="text-indigo-200/65">
-                Migration, payments, language and education—practical AI for everyday needs.
+                Our projects use AI to solve everyday tasks and complex processes in immigration, education and business.
               </p>
             </article>
             <article>
