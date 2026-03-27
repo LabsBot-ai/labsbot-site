@@ -55,7 +55,7 @@ export default function Features() {
             </h2>
           </div>
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
-            <div className="w-full max-w-[720px]">
+            <div className="w-full max-w-[480px]">
               <img
                 src="/branding/labsbot-milky-wey.png"
                 alt="LabsBot background"
