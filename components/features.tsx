@@ -88,7 +88,7 @@ export default function Features() {
                 Limitless possibilities
               </h3>
               <p className="text-indigo-200/65">
-                Our projects use AI to solve everyday tasks and complex processes in immigration, education and business.
+                We use AI in our projects to handle everyday tasks and complex processes across immigration, education and business.
               </p>
             </article>
             <article>
