@@ -56,13 +56,24 @@ export default function Features() {
             </h2>
           </div>
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
-            <Image
-              className="max-w-none"
-              src={FeaturesImage}
-              width={1104}
-              height={384}
-              alt="Features"
-            />
+            <div className="relative">
+              <Image
+                className="max-w-none"
+                src={FeaturesImage}
+                width={1104}
+                height={384}
+                alt="Features"
+              />
+              <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-xl border border-white/10 bg-slate-950/80 p-1.5 shadow-[0_10px_30px_rgba(99,102,241,0.35)] backdrop-blur-sm">
+                <Image
+                  src="/branding/labsbot-logo.svg"
+                  alt="LabsBot"
+                  width={80}
+                  height={40}
+                  className="h-8 w-11 object-cover object-left"
+                />
+              </div>
+            </div>
           </div>
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-4">
