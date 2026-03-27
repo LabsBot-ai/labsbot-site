@@ -64,7 +64,7 @@ export default function Features() {
                 height={384}
                 alt="Features"
               />
-              <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-xl border border-white/10 bg-slate-950/80 p-1.5 shadow-[0_10px_30px_rgba(99,102,241,0.35)] backdrop-blur-sm">
+              <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-xl border border-white/10 bg-slate-900/35 p-1.5 shadow-[0_10px_30px_rgba(99,102,241,0.35)] backdrop-blur-sm">
                 <Image
                   src="/branding/icon.png"
                   alt="LabsBot icon"
