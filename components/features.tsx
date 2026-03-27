@@ -70,7 +70,7 @@ export default function Features() {
                   alt="LabsBot icon"
                   width={64}
                   height={64}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-contain brightness-125 contrast-125 saturate-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.25)]"
                 />
               </div>
             </div>
