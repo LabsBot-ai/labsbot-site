@@ -54,12 +54,16 @@ export default function Features() {
               We were the first to bring AI into everyday life
             </h2>
           </div>
-          <div className="relative mx-auto w-full max-w-3xl pb-4 md:pb-12" data-aos="fade-up">
-            <img
-              src="/branding/labsbot-milky-wey.png"
-              alt="LabsBot background"
-              className="w-full h-auto"
-            />
+          <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
+            <div className="relative">
+              <img
+                src="/branding/labsbot-milky-wey.png"
+                alt="LabsBot background"
+                width={1104}
+                height={384}
+                className="max-w-none"
+              />
+            </div>
           </div>
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-4">
