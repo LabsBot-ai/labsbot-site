@@ -1,7 +1,6 @@
 import Image from "next/image";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
-import FeaturesImage from "@/public/images/features.png";
 
 const iconWrapperClass =
   "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5";
@@ -59,10 +58,10 @@ export default function Features() {
             <div className="relative">
               <Image
                 className="max-w-none"
-                src={FeaturesImage}
+                src="/branding/labsbot-hero-bg.png"
                 width={1104}
                 height={384}
-                alt="Features"
+                alt="Why LabsBot"
               />
               <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
                 <Image
