@@ -57,11 +57,14 @@ export default function Features() {
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
             <div className="relative w-full max-w-[480px]">
               <img
-                src="/branding/labsbot-milky-wey.png"
+                src="/branding/labsbot-hero-bg.png"
                 alt="LabsBot background"
                 className="w-full h-auto"
               />
-              <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_55%,#1e1b4b_75%,#0f172a_100%)]" />
+              <div
+                className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.22)_0%,transparent_24%,transparent_76%,rgba(99,102,241,0.1)_100%),radial-gradient(circle_at_50%_50%,transparent_44%,rgba(99,102,241,0.12)_62%,rgba(67,56,202,0.2)_74%,rgba(49,46,129,0.34)_84%,rgba(30,27,75,0.58)_92%,rgba(15,23,42,0.85)_100%)]"
+                aria-hidden
+              />
             </div>
           </div>
           {/* Items */}
