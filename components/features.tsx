@@ -62,7 +62,7 @@ export default function Features() {
                 className="w-full h-auto"
               />
               <div
-                className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.22)_0%,transparent_24%,transparent_76%,rgba(99,102,241,0.1)_100%),radial-gradient(circle_at_50%_50%,transparent_44%,rgba(99,102,241,0.12)_62%,rgba(67,56,202,0.2)_74%,rgba(49,46,129,0.34)_84%,rgba(30,27,75,0.58)_92%,rgba(15,23,42,0.85)_100%)]"
+                className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.92)_0%,transparent_24%),linear-gradient(to_left,rgba(15,23,42,0.92)_0%,transparent_24%),linear-gradient(to_top,rgba(15,23,42,0.82)_0%,rgba(30,27,75,0.5)_18%,transparent_40%)]"
                 aria-hidden
               />
             </div>
