@@ -105,10 +105,10 @@ export default function Features() {
                 />
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Privacy-first approach
+                Privacy comes first
               </h3>
               <p className="text-indigo-200/65">
-                Your data stays under your control with transparent, minimal data handling.
+                We follow strict EU data protection standards, ensuring secure, transparent and minimal processing.
               </p>
             </article>
             <article>
