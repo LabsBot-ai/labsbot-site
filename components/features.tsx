@@ -55,7 +55,7 @@ export default function Features() {
             </h2>
           </div>
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
-            <div className="relative mx-auto w-full max-w-3xl">
+            <div className="relative mx-auto w-full max-w-2xl">
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
                   src="/labsbot-hero-bg.png"
@@ -65,11 +65,11 @@ export default function Features() {
                   className="w-full h-auto"
                 />
                 <div
-                  className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_85%_100%_at_50%_50%,transparent_35%,rgba(15,23,42,0.45)_100%)]"
+                  className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(ellipse_88%_100%_at_50%_50%,transparent_48%,rgba(99,102,241,0.14)_78%,rgba(139,92,246,0.2)_100%)]"
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute inset-0 rounded-2xl shadow-[inset_0_0_80px_rgba(15,23,42,0.35)]"
+                  className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-indigo-500/10 via-transparent to-violet-500/15"
                   aria-hidden
                 />
               </div>
