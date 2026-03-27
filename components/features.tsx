@@ -6,6 +6,7 @@ import FeaturesImage from "@/public/images/features.png";
 const iconWrapperClass =
   "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/5";
 const iconClass = "h-6 w-6 text-gray-100";
+const iconHeadingRowClass = "mb-2 flex items-start gap-2";
 const strokeProps = {
   stroke: "currentColor",
   strokeWidth: 2,
@@ -66,81 +67,89 @@ export default function Features() {
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-4">
             <article>
-              <div className={`${iconWrapperClass} mb-3`}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className={iconClass}
-                  aria-hidden="true"
-                  {...strokeProps}
-                >
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M3 12h18M12 3a14 14 0 0 0 0 18M12 3a14 14 0 0 1 0 18" />
-                </svg>
+              <div className={iconHeadingRowClass}>
+                <div className={iconWrapperClass}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className={iconClass}
+                    aria-hidden="true"
+                    {...strokeProps}
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3a14 14 0 0 0 0 18M12 3a14 14 0 0 1 0 18" />
+                  </svg>
+                </div>
+                <h3 className="font-nacelle text-[1rem] font-semibold text-gray-200">
+                  Language is not a barrier
+                </h3>
               </div>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Language is not a barrier
-              </h3>
               <p className="text-indigo-200/65">
                 Our products operate across multiple languages, ensuring clear interaction in any environment.
               </p>
             </article>
             <article>
-              <div className={`${iconWrapperClass} mb-3`}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className={iconClass}
-                  aria-hidden="true"
-                  {...strokeProps}
-                >
-                  <path d="m12 3 1.8 3.7L18 8.5l-3 2.9.7 4.1L12 13.6l-3.7 1.9.7-4.1-3-2.9 4.2-.8L12 3Z" />
-                </svg>
+              <div className={iconHeadingRowClass}>
+                <div className={iconWrapperClass}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className={iconClass}
+                    aria-hidden="true"
+                    {...strokeProps}
+                  >
+                    <path d="m12 3 1.8 3.7L18 8.5l-3 2.9.7 4.1L12 13.6l-3.7 1.9.7-4.1-3-2.9 4.2-.8L12 3Z" />
+                  </svg>
+                </div>
+                <h3 className="font-nacelle text-[1rem] font-semibold text-gray-200">
+                  Limitless possibilities
+                </h3>
               </div>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Limitless possibilities
-              </h3>
               <p className="text-indigo-200/65">
                 We use AI in our projects to handle everyday tasks and complex processes across immigration, education and business.
               </p>
             </article>
             <article>
-              <div className={`${iconWrapperClass} mb-3`}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className={iconClass}
-                  aria-hidden="true"
-                  {...strokeProps}
-                >
-                  <path d="M12 3 5 6v6c0 5 3.4 8.4 7 9 3.6-.6 7-4 7-9V6l-7-3Z" />
-                  <path d="M9 12.5 11 14.5l4-4" />
-                </svg>
+              <div className={iconHeadingRowClass}>
+                <div className={iconWrapperClass}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className={iconClass}
+                    aria-hidden="true"
+                    {...strokeProps}
+                  >
+                    <path d="M12 3 5 6v6c0 5 3.4 8.4 7 9 3.6-.6 7-4 7-9V6l-7-3Z" />
+                    <path d="M9 12.5 11 14.5l4-4" />
+                  </svg>
+                </div>
+                <h3 className="font-nacelle text-[1rem] font-semibold text-gray-200">
+                  Privacy comes first
+                </h3>
               </div>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Privacy comes first
-              </h3>
               <p className="text-indigo-200/65">
                 We follow strict EU data protection standards, ensuring secure, transparent and minimal processing.
               </p>
             </article>
             <article>
-              <div className={`${iconWrapperClass} mb-3`}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className={iconClass}
-                  aria-hidden="true"
-                  {...strokeProps}
-                >
-                  <path d="M4 6h16M4 18h16M7 6v12M17 6v12" />
-                  <circle cx="7" cy="10" r="1.6" />
-                  <circle cx="17" cy="14" r="1.6" />
-                </svg>
+              <div className={iconHeadingRowClass}>
+                <div className={iconWrapperClass}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className={iconClass}
+                    aria-hidden="true"
+                    {...strokeProps}
+                  >
+                    <path d="M4 6h16M4 18h16M7 6v12M17 6v12" />
+                    <circle cx="7" cy="10" r="1.6" />
+                    <circle cx="17" cy="14" r="1.6" />
+                  </svg>
+                </div>
+                <h3 className="font-nacelle text-[1rem] font-semibold text-gray-200">
+                  Simple to use
+                </h3>
               </div>
-              <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Simple to use
-              </h3>
               <p className="text-indigo-200/65">
                 Intuitive interfaces with minimal setup, so you can start solving your tasks right away.
               </p>
