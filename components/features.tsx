@@ -68,10 +68,10 @@ export default function Features() {
                 />
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Multilingual by design
+                Language is not a barrier
               </h3>
               <p className="text-indigo-200/65">
-                Our tools speak your language and adapt to diverse contexts from day one.
+                Our products operate across multiple languages, ensuring clear interaction in any environment.
               </p>
             </article>
             <article>
