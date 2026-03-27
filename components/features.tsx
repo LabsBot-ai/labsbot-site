@@ -55,13 +55,11 @@ export default function Features() {
             </h2>
           </div>
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
-            <div className="relative">
+            <div className="w-full max-w-[720px]">
               <img
                 src="/branding/labsbot-milky-wey.png"
                 alt="LabsBot background"
-                width={1104}
-                height={384}
-                className="max-w-none"
+                className="w-full h-auto"
               />
             </div>
           </div>
