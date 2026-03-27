@@ -58,7 +58,7 @@ export default function Features() {
             <div className="relative mx-auto w-full max-w-2xl">
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/labsbot-hero-bg.png"
+                  src="/branding/labsbot-milky-wey.png"
                   width={1104}
                   height={384}
                   alt="Why LabsBot"
