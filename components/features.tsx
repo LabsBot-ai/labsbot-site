@@ -58,7 +58,7 @@ export default function Features() {
             <div className="relative">
               <Image
                 className="max-w-none"
-                src="/branding/labsbot-hero-bg.png"
+                src="/labsbot-hero-bg.png"
                 width={1104}
                 height={384}
                 alt="Why LabsBot"
