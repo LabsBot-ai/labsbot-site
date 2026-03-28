@@ -70,7 +70,7 @@ export default function Features() {
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[140px] w-[520px] -translate-x-[48%] -translate-y-[52%] -rotate-[38deg] rounded-full bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.9)_45%,rgba(99,102,241,0.9)_50%,rgba(139,92,246,0.6)_60%,transparent_100%)] blur-[18px] opacity-[0.95] mix-blend-screen"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[140px] w-[520px] -translate-x-[48%] -translate-y-[52%] -rotate-[38deg] rounded-full bg-[linear-gradient(90deg,transparent_0%,rgba(56,189,248,0.55)_45%,rgba(99,102,241,0.9)_50%,rgba(139,92,246,0.6)_60%,transparent_100%)] blur-[22px] opacity-[0.7] mix-blend-screen"
                   aria-hidden
                 />
                 <div
