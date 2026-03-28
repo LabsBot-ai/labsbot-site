@@ -58,45 +58,33 @@ export default function Features() {
             <div className="relative flex min-h-[10rem] w-full max-w-[320px] items-center justify-center py-2 sm:min-h-[11rem]">
               <div className="relative flex items-center justify-center isolate">
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-28 w-36 -translate-x-[58%] -translate-y-[44%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(99_102_241_/_0.14),rgb(139_92_246_/_0.08)_58%,transparent_78%)] blur-3xl opacity-40"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[min(340px,125%)] w-[min(400px,145%)] -translate-x-[62%] -translate-y-[46%] rounded-full bg-[radial-gradient(ellipse_at_35%_45%,rgb(76_29_149_/_0.42),rgb(139_92_246_/_0.22)_52%,transparent_74%)] blur-[70px] opacity-[0.55]"
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-24 w-32 translate-x-[32%] translate-y-[38%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(56_189_248_/_0.08),rgb(99_102_241_/_0.1)_52%,transparent_75%)] blur-3xl opacity-35"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[min(280px,110%)] w-[min(360px,135%)] translate-x-[18%] translate-y-[22%] rounded-full bg-[radial-gradient(ellipse_at_60%_55%,rgb(37_99_235_/_0.28),rgb(56_189_248_/_0.12)_48%,transparent_72%)] blur-[56px] opacity-[0.48]"
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[102px] w-[min(560px,165%)] -translate-x-1/2 -translate-y-1/2 -rotate-[37deg] rounded-full bg-[linear-gradient(90deg,rgba(56,189,248,0)_0%,rgba(34,211,238,0.55)_24%,rgba(255,255,255,0.75)_43%,rgba(224,231,255,0.98)_49.5%,rgba(99,102,241,0.95)_52%,rgba(139,92,246,0.82)_60%,rgba(99,102,241,0.38)_78%,rgba(56,189,248,0)_100%)] blur-[20px] opacity-[0.97] mix-blend-screen"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[min(260px,105%)] w-[min(320px,120%)] -translate-x-[22%] translate-y-[38%] rounded-full bg-[radial-gradient(ellipse_at_70%_50%,rgb(236_72_153_/_0.14),rgb(192_132_252_/_0.2)_45%,rgb(99_102_241_/_0.08)_62%,transparent_78%)] blur-[64px] opacity-[0.42]"
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[52px] w-[min(400px,128%)] -translate-x-[46%] -translate-y-[54%] -rotate-[52deg] rounded-full bg-[linear-gradient(90deg,transparent,rgba(125,211,252,0.5)_38%,rgba(199,210,254,0.75)_50%,rgba(99,102,241,0.55)_62%,rgba(167,139,250,0.35)_78%,transparent)] blur-[14px] opacity-[0.58]"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[min(150px,55%)] w-[min(640px,200%)] -translate-x-[44%] -translate-y-[52%] -rotate-[36deg] rounded-full bg-[linear-gradient(100deg,transparent_4%,rgba(34,211,238,0.45)_18%,rgba(56,189,248,0.55)_32%,rgba(99,102,241,0.88)_48%,rgba(124,58,237,0.78)_58%,rgba(139,92,246,0.55)_72%,rgba(192,132,252,0.22)_88%,transparent_98%)] blur-[32px] opacity-[0.92] mix-blend-screen"
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[5.5rem] w-[5.5rem] -translate-x-[65%] -translate-y-[45%] rounded-full border-[1.5px] border-transparent border-t-cyan-300/45 border-r-violet-400/35 opacity-50 rotate-[15deg]"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[min(100px,38%)] w-[min(520px,175%)] -translate-x-[56%] -translate-y-[44%] -rotate-[44deg] rounded-full bg-[linear-gradient(95deg,rgba(56,189,248,0.08)_0%,rgba(224,231,255,0.35)_42%,rgba(99,102,241,0.4)_55%,transparent_92%)] blur-[22px] opacity-[0.55]"
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[3.75rem] w-[3.75rem] translate-x-[22%] translate-y-[12%] rounded-full border border-transparent border-t-indigo-300/42 border-l-cyan-400/22 opacity-45 -rotate-[38deg]"
-                  aria-hidden
-                />
-                <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[6rem] w-[6rem] -translate-x-[30%] translate-y-[32%] rounded-full border-[1.5px] border-transparent border-b-violet-400/28 border-l-sky-300/25 opacity-40 rotate-[118deg]"
-                  aria-hidden
-                />
-                <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-10 w-32 -translate-x-[52%] translate-y-[8%] rounded-t-full border-t-[1.5px] border-l border-r border-transparent border-t-sky-300/35 border-l-cyan-400/12 border-r-violet-400/20 opacity-38 -rotate-[72deg]"
-                  aria-hidden
-                />
-                <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 z-[5] h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgb(255_255_255_/_0.98)_0%,rgb(238_242_255_/_0.62)_18%,rgb(165_180_252_/_0.42)_36%,rgb(99_102_241_/_0.14)_52%,transparent_70%)] blur-sm opacity-100 mix-blend-plus-lighter"
+                  className="pointer-events-none absolute left-1/2 top-1/2 z-[5] h-11 w-11 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgb(255_255_255_/_1)_0%,rgb(250_250_255_/_0.85)_12%,rgb(224_231_255_/_0.45)_40%,rgb(99_102_241_/_0.12)_58%,transparent_76%)] blur-[3px] opacity-100 mix-blend-plus-lighter"
                   aria-hidden
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1024 1024"
-                  className="relative z-10 h-40 w-auto max-w-[340px] object-contain brightness-[1.08] contrast-[1.06] drop-shadow-[0_0_28px_rgba(99,102,241,0.92),0_0_64px_rgba(139,92,246,0.72),0_0_120px_rgba(56,189,248,0.48),0_0_180px_rgba(15,23,42,0.35)] sm:h-44 md:h-48"
+                  className="relative z-10 h-40 w-auto max-w-[340px] object-contain brightness-[1.18] contrast-[1.14] saturate-[1.1] drop-shadow-[0_0_8px_rgba(255,255,255,0.55),0_0_36px_rgba(99,102,241,0.95),0_0_72px_rgba(139,92,246,0.68),0_0_140px_rgba(56,189,248,0.55),0_0_200px_rgba(15,23,42,0.35)] sm:h-44 md:h-48"
                   aria-hidden
                 >
                   <defs>
