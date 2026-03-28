@@ -54,19 +54,6 @@ export default function Features() {
               We were the first to bring AI into everyday life
             </h2>
           </div>
-          <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
-            <div className="relative w-full max-w-[480px]">
-              <img
-                src="/branding/labsbot-hero-bg.png"
-                alt="LabsBot background"
-                className="w-full h-auto"
-              />
-              <div
-                className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.92)_0%,transparent_24%),linear-gradient(to_left,rgba(15,23,42,0.92)_0%,transparent_24%),linear-gradient(to_top,rgba(15,23,42,0.82)_0%,rgba(30,27,75,0.5)_18%,transparent_40%)]"
-                aria-hidden
-              />
-            </div>
-          </div>
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-4">
             <article>
