@@ -54,6 +54,27 @@ export default function Features() {
               We were the first to bring AI into everyday life
             </h2>
           </div>
+          <div className="flex justify-center pb-8 md:pb-12" data-aos="fade-up">
+            <div className="relative flex min-h-[10rem] w-full max-w-[320px] items-center justify-center py-2 sm:min-h-[11rem]">
+              <div
+                className="pointer-events-none absolute -inset-10 rounded-full bg-indigo-500/20 blur-3xl"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute -inset-4 rounded-full bg-violet-500/15 blur-2xl"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute inset-2 rounded-[40%] bg-indigo-400/10 blur-xl"
+                aria-hidden
+              />
+              <img
+                src="/branding/IMG_1974.svg"
+                alt=""
+                className="relative z-10 h-28 w-auto max-w-[240px] object-contain drop-shadow-[0_0_28px_rgba(99,102,241,0.35)] sm:h-32 md:h-36 md:max-w-[280px]"
+              />
+            </div>
+          </div>
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-4">
             <article>
