@@ -82,7 +82,7 @@ export default function Features() {
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 z-[5] h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgb(255_255_255_/_1)_0%,rgb(250_250_255_/_0.9)_14%,rgb(224_231_255_/_0.5)_40%,rgb(99_102_241_/_0.12)_58%,transparent_76%)] blur-[2px] opacity-100 mix-blend-plus-lighter"
+                  className="pointer-events-none absolute left-1/2 top-1/2 z-[5] h-12 w-12 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.9)_0%,rgba(255,255,255,0.35)_8%,rgba(99,102,241,0.18)_25%,rgba(79,70,229,0.12)_40%,transparent_65%)] blur-[2px] opacity-100 mix-blend-plus-lighter"
                   aria-hidden
                 />
                 <svg
