@@ -56,19 +56,39 @@ export default function Features() {
           </div>
           <div className="flex justify-center pb-8 md:pb-12" data-aos="fade-up">
             <div className="relative flex min-h-[10rem] w-full max-w-[320px] items-center justify-center py-2 sm:min-h-[11rem]">
-              <div
-                className="pointer-events-none absolute left-1/2 top-1/2 h-[min(460px,130%)] w-[min(460px,130%)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgb(99_102_241_/_0.48),rgb(139_92_246_/_0.26)_48%,transparent_72%)] blur-[90px] opacity-85 animate-pulse"
-                aria-hidden
-              />
               <div className="relative flex items-center justify-center isolate">
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-300/40 blur-3xl opacity-90 mix-blend-screen"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-28 w-36 -translate-x-[58%] -translate-y-[44%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(99_102_241_/_0.14),rgb(139_92_246_/_0.08)_58%,transparent_78%)] blur-3xl opacity-40"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-24 w-32 translate-x-[32%] translate-y-[38%] rounded-full bg-[radial-gradient(ellipse_at_center,rgb(56_189_248_/_0.08),rgb(99_102_241_/_0.1)_52%,transparent_75%)] blur-3xl opacity-35"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[102px] w-[min(560px,165%)] -translate-x-1/2 -translate-y-1/2 -rotate-[37deg] rounded-full bg-[linear-gradient(90deg,rgba(56,189,248,0)_0%,rgba(34,211,238,0.55)_24%,rgba(255,255,255,0.75)_43%,rgba(224,231,255,0.98)_49.5%,rgba(99,102,241,0.95)_52%,rgba(139,92,246,0.82)_60%,rgba(99,102,241,0.38)_78%,rgba(56,189,248,0)_100%)] blur-[20px] opacity-[0.97] mix-blend-screen"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[52px] w-[min(400px,128%)] -translate-x-[46%] -translate-y-[54%] -rotate-[52deg] rounded-full bg-[linear-gradient(90deg,transparent,rgba(125,211,252,0.5)_38%,rgba(199,210,254,0.75)_50%,rgba(99,102,241,0.55)_62%,rgba(167,139,250,0.35)_78%,transparent)] blur-[14px] opacity-[0.58]"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[2px] w-44 -translate-x-1/2 -translate-y-1/2 -rotate-[39deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.55)_45%,rgba(125,211,252,0.65)_50%,rgba(255,255,255,0.5)_55%,transparent)] opacity-55"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[2px] w-32 translate-x-3 -translate-y-2 -rotate-[48deg] bg-[linear-gradient(90deg,transparent,rgba(196,181,253,0.65)_48%,rgba(165,180,252,0.85)_50%,transparent)] opacity-45"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 z-[5] h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgb(255_255_255_/_0.98)_0%,rgb(238_242_255_/_0.62)_18%,rgb(165_180_252_/_0.42)_36%,rgb(99_102_241_/_0.14)_52%,transparent_70%)] blur-sm opacity-100 mix-blend-plus-lighter"
                   aria-hidden
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1024 1024"
-                  className="relative z-10 h-40 w-auto max-w-[340px] object-contain drop-shadow-[0_0_28px_rgba(99,102,241,0.78),0_0_70px_rgba(139,92,246,0.62),0_0_130px_rgba(56,189,248,0.5),0_0_180px_rgba(99,102,241,0.52)] sm:h-44 md:h-48"
+                  className="relative z-10 h-40 w-auto max-w-[340px] object-contain brightness-[1.08] contrast-[1.06] drop-shadow-[0_0_28px_rgba(99,102,241,0.92),0_0_64px_rgba(139,92,246,0.72),0_0_120px_rgba(56,189,248,0.48),0_0_180px_rgba(15,23,42,0.35)] sm:h-44 md:h-48"
                   aria-hidden
                 >
                   <defs>
