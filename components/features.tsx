@@ -70,6 +70,10 @@ export default function Features() {
                   aria-hidden
                 />
                 <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[140px] w-[520px] -translate-x-[48%] -translate-y-[52%] -rotate-[38deg] rounded-full bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.9)_45%,rgba(99,102,241,0.9)_50%,rgba(139,92,246,0.6)_60%,transparent_100%)] blur-[18px] opacity-[0.95] mix-blend-screen"
+                  aria-hidden
+                />
+                <div
                   className="pointer-events-none absolute left-1/2 top-1/2 h-[min(150px,55%)] w-[min(640px,200%)] -translate-x-[44%] -translate-y-[52%] -rotate-[36deg] rounded-full bg-[linear-gradient(100deg,transparent_4%,rgba(34,211,238,0.45)_18%,rgba(56,189,248,0.55)_32%,rgba(99,102,241,0.88)_48%,rgba(124,58,237,0.78)_58%,rgba(139,92,246,0.55)_72%,rgba(192,132,252,0.22)_88%,transparent_98%)] blur-[32px] opacity-[0.92] mix-blend-screen"
                   aria-hidden
                 />
@@ -78,7 +82,7 @@ export default function Features() {
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 z-[5] h-11 w-11 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgb(255_255_255_/_1)_0%,rgb(250_250_255_/_0.85)_12%,rgb(224_231_255_/_0.45)_40%,rgb(99_102_241_/_0.12)_58%,transparent_76%)] blur-[3px] opacity-100 mix-blend-plus-lighter"
+                  className="pointer-events-none absolute left-1/2 top-1/2 z-[5] h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgb(255_255_255_/_1)_0%,rgb(250_250_255_/_0.9)_14%,rgb(224_231_255_/_0.5)_40%,rgb(99_102_241_/_0.12)_58%,transparent_76%)] blur-[2px] opacity-100 mix-blend-plus-lighter"
                   aria-hidden
                 />
                 <svg
