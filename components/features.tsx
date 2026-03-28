@@ -61,7 +61,16 @@ export default function Features() {
                 aria-hidden
               />
               <div className="relative flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" className="relative z-10 h-28 w-auto max-w-[240px] object-contain drop-shadow-[0_0_20px_rgba(99,102,241,0.55),0_0_50px_rgba(139,92,246,0.45),0_0_90px_rgba(56,189,248,0.35)] sm:h-32 md:h-36 md:max-w-[280px]" aria-hidden>
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400/30 blur-2xl"
+                  aria-hidden
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 1024 1024"
+                  className="relative z-10 h-32 w-auto max-w-[280px] object-contain drop-shadow-[0_0_22px_rgba(99,102,241,0.65),0_0_55px_rgba(139,92,246,0.5),0_0_100px_rgba(56,189,248,0.42),0_0_140px_rgba(99,102,241,0.45)] sm:h-36 md:h-40"
+                  aria-hidden
+                >
                   <defs>
                     <linearGradient
                       id="labsbotNeonCore"
