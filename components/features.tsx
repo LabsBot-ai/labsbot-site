@@ -74,11 +74,19 @@ export default function Features() {
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[2px] w-44 -translate-x-1/2 -translate-y-1/2 -rotate-[39deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.55)_45%,rgba(125,211,252,0.65)_50%,rgba(255,255,255,0.5)_55%,transparent)] opacity-55"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[5.5rem] w-[5.5rem] -translate-x-[65%] -translate-y-[45%] rounded-full border-[1.5px] border-transparent border-t-cyan-300/45 border-r-violet-400/35 opacity-50 rotate-[15deg]"
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[2px] w-32 translate-x-3 -translate-y-2 -rotate-[48deg] bg-[linear-gradient(90deg,transparent,rgba(196,181,253,0.65)_48%,rgba(165,180,252,0.85)_50%,transparent)] opacity-45"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[3.75rem] w-[3.75rem] translate-x-[22%] translate-y-[12%] rounded-full border border-transparent border-t-indigo-300/42 border-l-cyan-400/22 opacity-45 -rotate-[38deg]"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[6rem] w-[6rem] -translate-x-[30%] translate-y-[32%] rounded-full border-[1.5px] border-transparent border-b-violet-400/28 border-l-sky-300/25 opacity-40 rotate-[118deg]"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-10 w-32 -translate-x-[52%] translate-y-[8%] rounded-t-full border-t-[1.5px] border-l border-r border-transparent border-t-sky-300/35 border-l-cyan-400/12 border-r-violet-400/20 opacity-38 -rotate-[72deg]"
                   aria-hidden
                 />
                 <div
