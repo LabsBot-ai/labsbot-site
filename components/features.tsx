@@ -57,18 +57,18 @@ export default function Features() {
           <div className="flex justify-center pb-8 md:pb-12" data-aos="fade-up">
             <div className="relative flex min-h-[10rem] w-full max-w-[320px] items-center justify-center py-2 sm:min-h-[11rem]">
               <div
-                className="pointer-events-none absolute left-1/2 top-1/2 h-[min(380px,110%)] w-[min(380px,110%)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgb(99_102_241_/_0.35),rgb(139_92_246_/_0.18)_50%,transparent_70%)] blur-3xl opacity-70 animate-pulse"
+                className="pointer-events-none absolute left-1/2 top-1/2 h-[min(460px,130%)] w-[min(460px,130%)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgb(99_102_241_/_0.48),rgb(139_92_246_/_0.26)_48%,transparent_72%)] blur-[90px] opacity-85 animate-pulse"
                 aria-hidden
               />
-              <div className="relative flex items-center justify-center">
+              <div className="relative flex items-center justify-center isolate">
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400/30 blur-2xl"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-300/40 blur-3xl opacity-90 mix-blend-screen"
                   aria-hidden
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 1024 1024"
-                  className="relative z-10 h-32 w-auto max-w-[280px] object-contain drop-shadow-[0_0_22px_rgba(99,102,241,0.65),0_0_55px_rgba(139,92,246,0.5),0_0_100px_rgba(56,189,248,0.42),0_0_140px_rgba(99,102,241,0.45)] sm:h-36 md:h-40"
+                  className="relative z-10 h-40 w-auto max-w-[340px] object-contain drop-shadow-[0_0_28px_rgba(99,102,241,0.78),0_0_70px_rgba(139,92,246,0.62),0_0_130px_rgba(56,189,248,0.5),0_0_180px_rgba(99,102,241,0.52)] sm:h-44 md:h-48"
                   aria-hidden
                 >
                   <defs>
