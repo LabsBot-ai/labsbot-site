@@ -16,7 +16,7 @@ export default function PaytablePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="py-12 md:py-20">
             <div className="text-center">
-              <div className="relative mx-auto mb-4 inline-block max-w-full">
+              <div className="relative mx-auto mb-0 inline-block max-w-full">
                 <img
                   src="/branding/icon.png"
                   alt=""
@@ -26,7 +26,7 @@ export default function PaytablePage() {
                   Paytable is coming soon
                 </h1>
               </div>
-              <div className="relative mt-4">
+              <div className="relative mt-1">
                 <p className="mx-auto max-w-2xl pb-10 text-indigo-200/65">
                   We&apos;re building a powerful tool for data, tables and
                   structured information.
