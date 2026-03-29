@@ -113,16 +113,17 @@ export default function Workflows() {
               </div>
             </div>
             {/* Paytable (Coming soon) */}
-            <Link href="/products" className={productCardClass}>
+            <div className={productCardClass}>
               <div className={cardInnerClass}>
-                {arrowIcon}
-                <Image
-                  className="inline-flex"
-                  src={WorflowImg02}
-                  width={350}
-                  height={288}
-                  alt="Paytable"
-                />
+                <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
+                  <Image
+                    className="max-h-24 w-auto object-contain"
+                    src={WorflowImg02}
+                    width={350}
+                    height={288}
+                    alt="Paytable"
+                  />
+                </div>
                 <div className="p-6">
                   <div className="mb-3">
                     <span className="btn-sm relative rounded-full bg-gray-800/40 px-3 py-1 text-sm font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
@@ -134,12 +135,26 @@ export default function Workflows() {
                   <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
                     Paytable
                   </h3>
-                  <p className="text-indigo-200/65">
+                  <p className="mb-4 text-indigo-200/65">
                     AI-powered table and payment assistant.
                   </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Link
+                      className="btn-sm group inline-flex bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
+                      href="/products"
+                    >
+                      Open in browser
+                    </Link>
+                    <Link
+                      className="inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                      href="/products"
+                    >
+                      Learn more
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </Link>
+            </div>
             {/* LingvoBot (Coming soon) */}
             <Link
               href="/products"
