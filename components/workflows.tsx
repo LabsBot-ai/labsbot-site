@@ -60,7 +60,7 @@ export default function Workflows() {
                   <img
                     src="/branding/migreo-symbol.svg"
                     alt=""
-                    className="absolute -bottom-[4%] -right-[6%] w-[min(72%,260px)] rotate-[-24deg] object-contain opacity-[0.085] mix-blend-soft-light select-none"
+                    className="absolute bottom-[-18%] left-[-22%] w-[min(300%,48rem)] max-w-none origin-bottom-left rotate-[36deg] object-contain opacity-[0.078] mix-blend-soft-light select-none"
                   />
                 </div>
                 <a
