@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import WorflowImg01 from "@/public/images/workflow-01.png";
 import WorflowImg02 from "@/public/images/workflow-02.png";
 import WorflowImg03 from "@/public/images/workflow-03.png";
@@ -26,6 +29,8 @@ const arrowIcon = (
 );
 
 export default function Workflows() {
+  const [moreProductsOpen, setMoreProductsOpen] = useState(false);
+
   return (
     <section id="products">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -41,8 +46,10 @@ export default function Workflows() {
               The LabsBot Ecosystem
             </h2>
           </div>
-          {/* Spotlight items - 4 product cards */}
-          <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-4">
+          {/* Spotlight items - 4 product cards (LingvoBot & SchoolBot collapsible) */}
+          <Spotlight
+            className={`group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none grid-cols-1 ${moreProductsOpen ? "sm:grid-cols-2 lg:grid-cols-4" : "lg:grid-cols-2"}`}
+          >
             {/* Migreo (Live) - spotlight; logo container has no background so no black panel */}
             <div className={productCardClass}>
               <div className={cardInnerClass}>
@@ -134,7 +141,10 @@ export default function Workflows() {
               </div>
             </Link>
             {/* LingvoBot (Coming soon) */}
-            <Link href="/products" className={productCardClass}>
+            <Link
+              href="/products"
+              className={`${productCardClass} ${moreProductsOpen ? "" : "hidden"}`}
+            >
               <div className={cardInnerClass}>
                 {arrowIcon}
                 <Image
@@ -162,7 +172,10 @@ export default function Workflows() {
               </div>
             </Link>
             {/* SchoolBot (Coming soon) */}
-            <Link href="/products" className={productCardClass}>
+            <Link
+              href="/products"
+              className={`${productCardClass} ${moreProductsOpen ? "" : "hidden"}`}
+            >
               <div className={cardInnerClass}>
                 {arrowIcon}
                 <Image
@@ -190,6 +203,29 @@ export default function Workflows() {
               </div>
             </Link>
           </Spotlight>
+          <div className="mt-6 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setMoreProductsOpen((o) => !o)}
+              className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-indigo-200/80 transition hover:border-white/15 hover:bg-white/[0.06] hover:text-indigo-100"
+              aria-expanded={moreProductsOpen}
+            >
+              <span>{moreProductsOpen ? "Show fewer products" : "Show more products"}</span>
+              <svg
+                className={`h-4 w-4 shrink-0 text-indigo-300/70 transition-transform ${moreProductsOpen ? "rotate-180" : ""}`}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
