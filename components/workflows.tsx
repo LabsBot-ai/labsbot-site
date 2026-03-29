@@ -9,7 +9,7 @@ import WorflowImg03 from "@/public/images/workflow-03.png";
 import Spotlight from "@/components/spotlight";
 
 const productCardClass =
-  "group/card relative h-full overflow-hidden rounded-2xl p-px bg-[radial-gradient(ellipse_95%_80%_at_0%_0%,rgba(255,255,255,0.03),transparent_62%),radial-gradient(ellipse_95%_80%_at_100%_0%,rgba(255,255,255,0.022),transparent_62%),radial-gradient(ellipse_95%_80%_at_100%_100%,rgba(167,139,250,0.038),transparent_64%),radial-gradient(ellipse_95%_80%_at_0%_100%,rgba(255,255,255,0.02),transparent_62%)] after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-0 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 group-hover:after:opacity-100";
+  "mobile-glow group/card relative h-full overflow-hidden rounded-2xl p-px bg-[radial-gradient(ellipse_95%_80%_at_0%_0%,rgba(255,255,255,0.03),transparent_62%),radial-gradient(ellipse_95%_80%_at_100%_0%,rgba(255,255,255,0.022),transparent_62%),radial-gradient(ellipse_95%_80%_at_100%_100%,rgba(167,139,250,0.038),transparent_64%),radial-gradient(ellipse_95%_80%_at_0%_100%,rgba(255,255,255,0.02),transparent_62%)] after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-0 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 group-hover:after:opacity-100";
 const productCardClassNoSpotlight =
   "group/card relative h-full overflow-hidden rounded-2xl p-px";
 const cardInnerClass =
