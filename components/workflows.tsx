@@ -204,35 +204,29 @@ export default function Workflows() {
             </Link>
           </Spotlight>
           <div className="mt-6 flex justify-center">
-            <div className="group relative inline-flex items-center">
-              <div
-                className="absolute -inset-0.5 blur-lg opacity-40 transition-opacity duration-300 group-hover:opacity-[0.58] rounded-lg bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600"
+            <button
+              type="button"
+              onClick={() => setMoreProductsOpen((o) => !o)}
+              className="group btn-sm cursor-pointer inline-flex items-center gap-2 rounded-lg border border-white/10 bg-transparent text-white/80 transition-all hover:bg-white/5 hover:text-white"
+              aria-expanded={moreProductsOpen}
+            >
+              <span className="relative">
+                {moreProductsOpen ? "Show fewer products" : "Show more products"}
+              </span>
+              <svg
+                className={`relative h-4 w-4 shrink-0 text-white/80 transition-all duration-200 ease-out group-hover:text-white ${moreProductsOpen ? "rotate-180 group-hover:-translate-y-0.5" : "group-hover:translate-y-0.5"}`}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
                 aria-hidden
-              />
-              <button
-                type="button"
-                onClick={() => setMoreProductsOpen((o) => !o)}
-                className="relative btn-sm cursor-pointer inline-flex items-center gap-2 bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
-                aria-expanded={moreProductsOpen}
               >
-                <span className="relative">
-                  {moreProductsOpen ? "Show fewer products" : "Show more products"}
-                </span>
-                <svg
-                  className={`relative h-4 w-4 shrink-0 text-white/90 transition-transform duration-200 ease-out ${moreProductsOpen ? "rotate-180 group-hover:-translate-y-0.5" : "group-hover:translate-y-0.5"}`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
