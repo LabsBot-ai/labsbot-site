@@ -96,9 +96,10 @@ export default function Features() {
                       y2="100%"
                       gradientUnits="objectBoundingBox"
                     >
-                      <stop offset="0%" stopColor="#22d3ee" />
-                      <stop offset="50%" stopColor="#6366f1" />
-                      <stop offset="100%" stopColor="#8b5cf6" />
+                      <stop offset="0%" stopColor="#06b6d4" />
+                      <stop offset="40%" stopColor="#4f46e5" />
+                      <stop offset="72%" stopColor="#a855f7" />
+                      <stop offset="100%" stopColor="#c084fc" />
                     </linearGradient>
                   </defs>
                   <g transform="translate(-518.91044,-52.770551)">
@@ -109,7 +110,7 @@ export default function Features() {
                     <path
                       fill="none"
                       stroke="url(#labsbotNeonCore)"
-                      strokeWidth={5}
+                      strokeWidth={6}
                       strokeLinejoin="round"
                       strokeLinecap="round"
                       d="m 727.96197,513.02577 v -305 h 311.50013 311.5 v 305 305 h -311.5 -311.50013 z"
