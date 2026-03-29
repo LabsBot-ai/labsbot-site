@@ -30,10 +30,11 @@ export default function PaytablePage() {
                   structured information.
                 </p>
                 <Link
-                  className="btn-sm bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]"
-                  href="/#products"
+                  href="/products"
+                  className="flex items-center justify-center gap-2 text-sm text-gray-400 transition transition-transform duration-200 hover:-translate-x-1 hover:text-gray-200"
                 >
-                  Back to products
+                  <span>←</span>
+                  <span>Back to products</span>
                 </Link>
               </div>
             </div>
