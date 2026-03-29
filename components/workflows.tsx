@@ -115,6 +115,19 @@ export default function Workflows() {
             {/* Paytable (Coming soon) */}
             <div className={productCardClass}>
               <div className={cardInnerClass}>
+                <a
+                  href="/products"
+                  className="absolute right-6 top-6 z-10 pointer-events-auto flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-100"
+                  style={{ zIndex: 50 }}
+                  aria-label="Open Paytable"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={9} height={8} fill="none">
+                    <path
+                      fill="#F4F4F5"
+                      d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
+                    />
+                  </svg>
+                </a>
                 <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
                   <Image
                     className="max-h-24 w-auto object-contain"
