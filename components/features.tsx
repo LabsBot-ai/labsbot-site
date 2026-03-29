@@ -74,7 +74,7 @@ export default function Features() {
                   aria-hidden
                 />
                 <div
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-[min(150px,55%)] w-[min(640px,200%)] -translate-x-[44%] -translate-y-[52%] -rotate-[36deg] rounded-full bg-[linear-gradient(100deg,transparent_4%,rgba(34,211,238,0.45)_18%,rgba(56,189,248,0.55)_32%,rgba(99,102,241,0.88)_48%,rgba(124,58,237,0.78)_58%,rgba(139,92,246,0.55)_72%,rgba(192,132,252,0.22)_88%,transparent_98%)] blur-[32px] opacity-[0.92] mix-blend-screen"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-[min(150px,55%)] w-[min(640px,200%)] -translate-x-[44%] -translate-y-[52%] -rotate-[36deg] rounded-full bg-[linear-gradient(100deg,transparent_4%,rgba(34,211,238,0.45)_18%,rgba(56,189,248,0.55)_32%,rgba(99,102,241,0.88)_48%,rgba(124,58,237,0.78)_58%,rgba(139,92,246,0.55)_72%,rgba(192,132,252,0.22)_88%,transparent_98%)] blur-[24px] opacity-[0.72] mix-blend-screen"
                   aria-hidden
                 />
                 <div
