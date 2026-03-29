@@ -91,7 +91,7 @@ export default function Workflows() {
                     MIGREO
                   </h3>
                   <p className="mb-4 text-indigo-200/65">
-                    AI assistant for migration and bureaucracy.
+                    AI tools to solve immigration problems
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <a
