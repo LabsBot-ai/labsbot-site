@@ -96,8 +96,9 @@ export default function Features() {
                       y2="100%"
                       gradientUnits="objectBoundingBox"
                     >
-                      <stop offset="0%" stopColor="#06b6d4" />
-                      <stop offset="40%" stopColor="#4f46e5" />
+                      <stop offset="0%" stopColor="#00c8f4" />
+                      <stop offset="22%" stopColor="#0ea5e9" />
+                      <stop offset="42%" stopColor="#4f46e5" />
                       <stop offset="72%" stopColor="#a855f7" />
                       <stop offset="100%" stopColor="#c084fc" />
                     </linearGradient>
