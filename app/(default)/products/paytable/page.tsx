@@ -26,8 +26,8 @@ export default function PaytablePage() {
                   Paytable is coming soon
                 </h1>
               </div>
-              <div className="relative mt-1">
-                <p className="mx-auto max-w-2xl pb-10 text-indigo-200/65">
+              <div className="relative mt-0">
+                <p className="text-lg leading-relaxed text-indigo-200/80 mx-auto max-w-2xl pb-10">
                   We&apos;re building a powerful tool for data, tables and
                   structured information.
                 </p>
