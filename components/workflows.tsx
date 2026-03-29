@@ -60,9 +60,13 @@ export default function Workflows() {
                   <img
                     src="/branding/migreo-symbol.svg"
                     alt=""
-                    className="absolute bottom-[-10%] right-[-12%] h-[min(460px,140%)] w-[min(580px,220%)] max-w-none origin-bottom-right -rotate-[20deg] object-cover object-[4%_22%] opacity-[0.052] mix-blend-soft-light select-none"
+                    className="absolute bottom-[-10%] right-[-12%] h-[min(460px,140%)] w-[min(580px,220%)] max-w-none origin-bottom-right -rotate-[20deg] object-cover object-[14%_30%] opacity-[0.062] mix-blend-soft-light select-none"
                   />
                 </div>
+                <div
+                  className="pointer-events-none absolute inset-0 z-[2] overflow-hidden rounded-[inherit] [background:radial-gradient(ellipse_75%_60%_at_0%_0%,rgba(99,102,241,0.09),transparent_62%),radial-gradient(ellipse_75%_60%_at_100%_0%,rgba(139,92,246,0.065),transparent_62%),radial-gradient(ellipse_75%_60%_at_100%_100%,rgba(99,102,241,0.075),transparent_64%),radial-gradient(ellipse_75%_60%_at_0%_100%,rgba(129,140,248,0.06),transparent_62%)]"
+                  aria-hidden
+                />
                 <a
                   href="https://t.me/MigrantEuroBot?start=site"
                   target="_blank"
