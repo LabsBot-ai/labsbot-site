@@ -30,7 +30,7 @@ export default function PaytablePage() {
                   structured information.
                 </p>
                 <Link
-                  href="/products"
+                  href="/#products"
                   className="flex items-center justify-center gap-2 text-sm text-gray-400 transition transition-transform duration-200 hover:-translate-x-1 hover:text-gray-200"
                 >
                   <span>←</span>
