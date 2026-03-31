@@ -87,14 +87,21 @@ export default function Workflows() {
                   </svg>
                 </a>
                 <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
-                  <img
-                    src="/branding/migreo-logo-new.svg"
-                    alt="Migreo logo"
-                    className="max-h-24 w-auto object-contain"
+                  <div
+                    className="h-24 w-[100px]"
                     style={{
-                      filter: "none",
-                      opacity: 1,
+                      WebkitMaskImage: "url('/branding/migreo-logo-new.svg')",
+                      maskImage: "url('/branding/migreo-logo-new.svg')",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskPosition: "center",
+                      maskPosition: "center",
+                      WebkitMaskSize: "contain",
+                      maskSize: "contain",
+                      backgroundImage:
+                        "linear-gradient(90deg, #6366f1 0%, #818cf8 35%, #a5b4fc 65%, #c4b5fd 100%)",
                     }}
+                    aria-hidden="true"
                   />
                 </div>
                 <div className="relative z-10 p-6">
