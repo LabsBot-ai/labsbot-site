@@ -154,12 +154,21 @@ export default function Workflows() {
                   </svg>
                 </a>
                 <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
-                  <Image
-                    className="max-h-24 w-auto object-contain"
-                    src={WorflowImg02}
-                    width={350}
-                    height={288}
-                    alt="Paytable"
+                  <div
+                    className="h-24 w-[100px]"
+                    style={{
+                      WebkitMaskImage: "url('/branding/paytable-logo-new2.svg')",
+                      maskImage: "url('/branding/paytable-logo-new2.svg')",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskPosition: "center",
+                      maskPosition: "center",
+                      WebkitMaskSize: "contain",
+                      maskSize: "contain",
+                      backgroundImage:
+                        "linear-gradient(90deg, #6366f1 0%, #818cf8 35%, #a5b4fc 65%, #c4b5fd 100%)",
+                    }}
+                    aria-hidden="true"
                   />
                 </div>
                 <div className="p-6">
