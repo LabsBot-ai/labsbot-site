@@ -113,7 +113,7 @@ export default function Workflows() {
                     </span>
                   </div>
                   <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                    MIGREO
+                    Migreo
                   </h3>
                   <p className="mb-4 text-indigo-200/65">
                     AI tools to solve immigration problems

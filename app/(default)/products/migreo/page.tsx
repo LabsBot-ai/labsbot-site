@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "MIGREO - LabsBot",
+  title: "Migreo - LabsBot",
   description:
     "AI assistant for migration and bureaucracy. Get help with visas, residence permits, and official procedures.",
 };
@@ -100,10 +100,21 @@ export default function MigreoProductPage() {
                   <span>Back to products</span>
                 </Link>
                 <div className="relative z-20 mb-8 flex h-20 items-center justify-center">
-                  <img
-                    src="/branding/migreo.svg"
-                    alt="Migreo logo"
-                    className="max-h-16 w-auto object-contain"
+                  <div
+                    className="h-24 w-[100px]"
+                    style={{
+                      WebkitMaskImage: "url('/branding/migreo-logo-new.svg')",
+                      maskImage: "url('/branding/migreo-logo-new.svg')",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskPosition: "center",
+                      maskPosition: "center",
+                      WebkitMaskSize: "contain",
+                      maskSize: "contain",
+                      backgroundImage:
+                        "linear-gradient(90deg, #6366f1 0%, #818cf8 35%, #a5b4fc 65%, #c4b5fd 100%)",
+                    }}
+                    aria-hidden="true"
                   />
                 </div>
                 <p className="max-w-2xl animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
@@ -116,10 +127,10 @@ export default function MigreoProductPage() {
             <div className="mx-auto max-w-3xl space-y-16 pb-16 md:pb-24">
               <div>
                 <h2 className="pb-6 font-nacelle text-2xl font-semibold text-transparent md:text-3xl animate-[gradient_12s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text">
-                  Inside MIGREO
+                  Inside Migreo
                 </h2>
                 <p className="text-lg leading-relaxed text-indigo-200/80">
-                  MIGREO is a technology product designed to solve migration and
+                  Migreo is a technology product designed to solve migration and
                   everyday challenges.
                 </p>
               </div>
@@ -127,7 +138,7 @@ export default function MigreoProductPage() {
               {/* Use cases */}
               <div>
                 <h2 className="pb-6 font-nacelle text-2xl font-semibold text-transparent md:text-3xl animate-[gradient_12s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text">
-                  MIGREO Capabilities
+                  Migreo Capabilities
                 </h2>
                 <div className="relative">
                   <img
@@ -213,7 +224,7 @@ export default function MigreoProductPage() {
             <div className="relative mx-auto max-w-3xl mt-16 rounded-3xl border border-indigo-500/20 bg-gradient-to-b from-indigo-900/30 via-indigo-800/20 to-transparent px-10 py-14 text-center backdrop-blur-sm shadow-[0_0_80px_rgba(99,102,241,0.15)]">
               <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/10 blur-3xl"></div>
               <h2 className="pb-4 font-nacelle text-2xl font-semibold text-gray-200">
-                Get started with MIGREO
+                Get started with Migreo
               </h2>
               <div className="flex justify-center">
                 <a
