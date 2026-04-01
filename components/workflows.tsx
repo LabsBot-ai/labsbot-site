@@ -67,14 +67,16 @@ export default function Workflows() {
                   className="pointer-events-none absolute inset-0 z-[1] overflow-hidden rounded-[inherit]"
                   aria-hidden
                 >
-                  <div
-                    className="pointer-events-none absolute top-[16%] right-[-44%] h-[138%] w-[min(175%,46rem)] max-w-none origin-top-right -rotate-[12deg] bg-no-repeat opacity-[0.09] blur-[0.5px] mix-blend-soft-light select-none"
-                    style={{
-                      backgroundImage: "url('/branding/migreo-symbol.svg')",
-                      ...migreoBgStyle,
-                    }}
-                    aria-hidden
-                  />
+                  {!moreProductsOpen && (
+                    <div
+                      className="pointer-events-none absolute top-[16%] right-[-44%] h-[138%] w-[min(175%,46rem)] max-w-none origin-top-right -rotate-[12deg] bg-no-repeat opacity-[0.09] blur-[0.5px] mix-blend-soft-light select-none"
+                      style={{
+                        backgroundImage: "url('/branding/migreo-symbol.svg')",
+                        ...migreoBgStyle,
+                      }}
+                      aria-hidden
+                    />
+                  )}
                 </div>
                 <div
                   className="pointer-events-none absolute inset-0 z-[2] overflow-hidden rounded-[inherit] [background:radial-gradient(ellipse_75%_60%_at_0%_0%,rgba(99,102,241,0.09),transparent_62%),radial-gradient(ellipse_75%_60%_at_100%_0%,rgba(139,92,246,0.065),transparent_62%),radial-gradient(ellipse_75%_60%_at_100%_100%,rgba(99,102,241,0.075),transparent_64%),radial-gradient(ellipse_75%_60%_at_0%_100%,rgba(129,140,248,0.06),transparent_62%)]"
