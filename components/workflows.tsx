@@ -88,7 +88,7 @@ export default function Workflows() {
                 </a>
                 <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
                   <div
-                    className="h-28 w-[116px] mt-5"
+                    className="h-28 w-[116px] mt-6"
                     style={{
                       WebkitMaskImage: "url('/branding/migreo-logo-new.svg')",
                       maskImage: "url('/branding/migreo-logo-new.svg')",
@@ -155,7 +155,7 @@ export default function Workflows() {
                 </a>
                 <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
                   <div
-                    className="h-28 w-[116px] mt-5"
+                    className="h-28 w-[116px] mt-6"
                     style={{
                       WebkitMaskImage: "url('/branding/paytable-logo-new2.svg')",
                       maskImage: "url('/branding/paytable-logo-new2.svg')",
