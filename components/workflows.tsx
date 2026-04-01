@@ -54,7 +54,7 @@ export default function Workflows() {
             <div className={productCardClass}>
               <div className={cardInnerClass}>
                 <div
-                  className="pointer-events-none absolute inset-0 z-[1] overflow-hidden rounded-[inherit]"
+                  className="pointer-events-none absolute inset-0 z-[1] rounded-[inherit]"
                   aria-hidden
                 >
                   <div
