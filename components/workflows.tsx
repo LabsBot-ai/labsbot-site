@@ -156,11 +156,11 @@ export default function Workflows() {
                   aria-hidden
                 >
                   <div
-                    className="pointer-events-none absolute bottom-[-10%] right-[-18%] h-[140%] w-[min(180%,46rem)] max-w-none origin-bottom-right -rotate-[10deg] bg-no-repeat opacity-[0.08] blur-[1px] mix-blend-soft-light select-none"
+                    className="pointer-events-none absolute bottom-[-6%] right-[-8%] h-[80%] w-[min(120%,30rem)] max-w-none origin-bottom-right -rotate-[8deg] bg-no-repeat opacity-[0.08] blur-[1px] mix-blend-soft-light select-none"
                     style={{
                       backgroundImage: "url('/branding/icon-paytable.svg')",
-                      backgroundSize: "90%",
-                      backgroundPosition: "96% 110%",
+                      backgroundSize: "60%",
+                      backgroundPosition: "100% 115%",
                     }}
                     aria-hidden
                   />
