@@ -33,8 +33,8 @@ export default function Workflows() {
 
   const migreoBgStyle = moreProductsOpen
     ? {
-        backgroundSize: "76%",
-        backgroundPosition: "96% 86%",
+        backgroundSize: "70%",
+        backgroundPosition: "96% 80%",
       }
     : {
         backgroundSize: "80%",
