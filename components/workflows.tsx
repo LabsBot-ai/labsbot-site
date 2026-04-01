@@ -86,7 +86,7 @@ export default function Workflows() {
                     />
                   </svg>
                 </a>
-                <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
+                <div className="relative z-20 flex items-center justify-center h-44 mb-6 overflow-hidden">
                   <div
                     className="h-28 w-[116px] mt-14"
                     style={{
