@@ -68,14 +68,27 @@ export default function Workflows() {
                   aria-hidden
                 >
                   {!moreProductsOpen && (
-                    <div
-                      className="pointer-events-none absolute top-[16%] right-[-44%] h-[138%] w-[min(175%,46rem)] max-w-none origin-top-right -rotate-[12deg] bg-no-repeat opacity-[0.09] blur-[0.5px] mix-blend-soft-light select-none"
-                      style={{
-                        backgroundImage: "url('/branding/migreo-symbol.svg')",
-                        ...migreoBgStyle,
-                      }}
-                      aria-hidden
-                    />
+                    <>
+                      {/* Desktop / wider ornament */}
+                      <div
+                        className="pointer-events-none absolute top-[16%] right-[-44%] hidden h-[138%] w-[min(175%,46rem)] max-w-none origin-top-right -rotate-[12deg] bg-no-repeat opacity-[0.09] blur-[0.5px] mix-blend-soft-light select-none sm:block"
+                        style={{
+                          backgroundImage: "url('/branding/migreo-symbol.svg')",
+                          ...migreoBgStyle,
+                        }}
+                        aria-hidden
+                      />
+                      {/* Mobile-only ornament */}
+                      <div
+                        className="pointer-events-none absolute top-[16%] right-[-44%] block h-[138%] w-[min(175%,46rem)] max-w-none origin-top-right -rotate-[12deg] bg-no-repeat opacity-[0.09] blur-[0.5px] mix-blend-soft-light select-none sm:hidden"
+                        style={{
+                          backgroundImage: "url('/branding/migreo-symbol.svg')",
+                          backgroundSize: "78%",
+                          backgroundPosition: "96% 84%",
+                        }}
+                        aria-hidden
+                      />
+                    </>
                   )}
                 </div>
                 <div
