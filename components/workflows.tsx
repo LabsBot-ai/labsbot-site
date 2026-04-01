@@ -153,7 +153,7 @@ export default function Workflows() {
                     />
                   </svg>
                 </a>
-                <div className="relative z-20 flex items-center justify-center h-40 mb-6 overflow-hidden">
+                <div className="relative z-20 flex items-center justify-center h-44 mb-6 overflow-hidden">
                   <div
                     className="h-28 w-[132px] mt-14"
                     style={{
@@ -171,7 +171,7 @@ export default function Workflows() {
                     aria-hidden="true"
                   />
                 </div>
-                <div className="p-6 mt-2">
+                <div className="p-6 mt-4">
                   <div className="mb-3">
                     <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
