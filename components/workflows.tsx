@@ -51,7 +51,7 @@ export default function Workflows() {
             className={`group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none grid-cols-1 ${moreProductsOpen ? "sm:grid-cols-2 lg:grid-cols-4" : "lg:grid-cols-2"}`}
           >
             {/* Migreo (Live) - spotlight; logo container has no background so no black panel */}
-            <div className={productCardClass}>
+            <div className={`${productCardClass} overflow-visible`}>
               <div className={cardInnerClass}>
                 <div
                   className="pointer-events-none absolute inset-0 z-[1] overflow-visible rounded-[inherit]"
