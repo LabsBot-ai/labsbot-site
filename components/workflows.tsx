@@ -151,20 +151,22 @@ export default function Workflows() {
             {/* Paytable (Coming soon) */}
             <div className={productCardClass}>
               <div className={cardInnerClass}>
-                <div
-                  className="pointer-events-none absolute inset-0 z-[1] overflow-hidden rounded-[inherit]"
-                  aria-hidden
-                >
+                {!moreProductsOpen && (
                   <div
-                    className="pointer-events-none absolute bottom-[-3%] right-[-4%] h-[80%] w-[min(120%,30rem)] max-w-none origin-bottom-right rotate-[0deg] bg-no-repeat opacity-[0.08] blur-[1px] mix-blend-soft-light select-none"
-                    style={{
-                      backgroundImage: "url('/branding/icon-paytable.svg')",
-                      backgroundSize: "60%",
-                      backgroundPosition: "100% 110%",
-                    }}
+                    className="pointer-events-none absolute inset-0 z-[1] overflow-hidden rounded-[inherit]"
                     aria-hidden
-                  />
-                </div>
+                  >
+                    <div
+                      className="pointer-events-none absolute bottom-[-3%] right-[-4%] hidden lg:block h-[80%] w-[min(120%,30rem)] max-w-none origin-bottom-right rotate-[0deg] bg-no-repeat opacity-[0.08] blur-[1px] mix-blend-soft-light select-none"
+                      style={{
+                        backgroundImage: "url('/branding/icon-paytable.svg')",
+                        backgroundSize: "60%",
+                        backgroundPosition: "100% 110%",
+                      }}
+                      aria-hidden
+                    />
+                  </div>
+                )}
                 <a
                   href="/products/paytable"
                   className="absolute right-6 top-6 z-10 pointer-events-auto flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-100"
