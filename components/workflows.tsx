@@ -58,11 +58,11 @@ export default function Workflows() {
                   aria-hidden
                 >
                   <div
-                    className="pointer-events-none absolute bottom-[-6%] right-[-10%] h-[132%] w-[min(168%,46rem)] max-w-none origin-bottom-right -rotate-[16deg] bg-no-repeat opacity-[0.09] blur-[0.5px] mix-blend-soft-light select-none"
+                    className="pointer-events-none absolute top-[-18%] right-[-18%] h-[150%] w-[min(185%,50rem)] max-w-none origin-top-right -rotate-[12deg] bg-no-repeat opacity-[0.09] blur-[0.5px] mix-blend-soft-light select-none"
                     style={{
                       backgroundImage: "url('/branding/migreo-symbol.svg')",
-                      backgroundSize: "90%",
-                      backgroundPosition: "40% 140%",
+                      backgroundSize: "92%",
+                      backgroundPosition: "80% 0%",
                     }}
                     aria-hidden
                   />
