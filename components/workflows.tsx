@@ -62,7 +62,7 @@ export default function Workflows() {
                     style={{
                       backgroundImage: "url('/branding/migreo-symbol.svg')",
                       backgroundSize: "88%",
-                      backgroundPosition: "96% 96%",
+                      backgroundPosition: "96% 88%",
                     }}
                     aria-hidden
                   />
