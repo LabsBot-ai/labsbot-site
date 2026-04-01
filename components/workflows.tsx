@@ -31,6 +31,16 @@ const arrowIcon = (
 export default function Workflows() {
   const [moreProductsOpen, setMoreProductsOpen] = useState(false);
 
+  const migreoBgStyle = moreProductsOpen
+    ? {
+        backgroundSize: "76%",
+        backgroundPosition: "96% 86%",
+      }
+    : {
+        backgroundSize: "80%",
+        backgroundPosition: "96% 88%",
+      };
+
   return (
     <section id="products">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -61,8 +71,7 @@ export default function Workflows() {
                     className="pointer-events-none absolute top-[16%] right-[-44%] h-[138%] w-[min(175%,46rem)] max-w-none origin-top-right -rotate-[12deg] bg-no-repeat opacity-[0.09] blur-[0.5px] mix-blend-soft-light select-none"
                     style={{
                       backgroundImage: "url('/branding/migreo-symbol.svg')",
-                      backgroundSize: "80%",
-                      backgroundPosition: "96% 88%",
+                      ...migreoBgStyle,
                     }}
                     aria-hidden
                   />
