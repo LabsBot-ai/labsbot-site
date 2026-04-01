@@ -52,7 +52,7 @@ export default function Workflows() {
           >
             {/* Migreo (Live) - spotlight; logo container has no background so no black panel */}
             <div className={productCardClass}>
-              <div className={cardInnerClass}>
+              <div className={`${cardInnerClass} overflow-visible`}>
                 <div
                   className="pointer-events-none absolute inset-0 z-[1] rounded-[inherit]"
                   aria-hidden
