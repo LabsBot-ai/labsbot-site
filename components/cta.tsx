@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import BlurredShape from "@/public/images/blurred-shape.svg";
+import { useLandingLang } from "@/components/landing-language-provider";
 
 export default function Cta() {
+  const { t } = useLandingLang();
   return (
     <section className="relative overflow-hidden">
       <div
@@ -24,7 +28,7 @@ export default function Cta() {
               className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl"
               data-aos="fade-up"
             >
-              Join LabsBot
+              {t("joinLabsBot")}
             </h2>
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
               <div data-aos="fade-up" data-aos-delay={400}>
@@ -33,7 +37,7 @@ export default function Cta() {
                   href="/#products"
                 >
                   <span className="relative inline-flex items-center">
-                    Explore Products
+                    {t("heroExploreProducts")}
                     <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                       -&gt;
                     </span>
@@ -45,7 +49,7 @@ export default function Cta() {
                   className="inline-flex items-center justify-center w-full rounded-xl border border-white/20 px-6 py-3 text-sm font-medium text-white/90 bg-transparent hover:bg-white/10 transition sm:ml-4 sm:w-auto"
                   href="/contact"
                 >
-                  Contact
+                  {t("heroContact")}
                 </Link>
               </div>
             </div>

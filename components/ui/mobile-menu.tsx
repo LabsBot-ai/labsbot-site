@@ -3,8 +3,17 @@
 import { useState, useRef, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
+import { useLandingLang } from "@/components/landing-language-provider";
+import type { LandingLang } from "@/lib/landing-translations";
+
+const LANG_OPTIONS: { code: LandingLang; label: string }[] = [
+  { code: "en", label: "EN" },
+  { code: "de", label: "DE" },
+  { code: "ru", label: "RU" },
+];
 
 export default function MobileMenu() {
+  const { lang, setLang } = useLandingLang();
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
   const trigger = useRef<HTMLButtonElement>(null);
@@ -58,75 +67,101 @@ export default function MobileMenu() {
       <div ref={mobileNav}>
         <Transition
           show={mobileNavOpen}
-          as="nav"
+          as="div"
           id="mobile-nav"
-          className="absolute left-0 top-full z-20 mt-2 w-full rounded-xl bg-gray-900/90 backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] transform transition ease-out duration-200 data-enter:data-closed:-translate-y-2 data-closed:opacity-0"
+          role="navigation"
+          className="absolute left-0 top-full z-[60] mt-2 w-full min-w-[12rem] rounded-xl bg-gray-900/95 backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] transform transition ease-out duration-200 data-enter:data-closed:-translate-y-2 data-closed:opacity-0"
         >
-          <ul className="p-2 text-sm">
-            <li>
-              <Link
-                href="/pricing"
-                className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Pricing
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blog"
-                className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/help/frequently-asked-questions"
-                className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Help Centre
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/newsletter"
-                className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Newsletter
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/404"
-                className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                onClick={() => setMobileNavOpen(false)}
-              >
-                404
-              </Link>
-            </li>
-          </ul>
+          <div className="flex flex-col">
+            <ul className="p-2 text-sm">
+              <li>
+                <Link
+                  href="/pricing"
+                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/help/frequently-asked-questions"
+                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  Help Centre
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/newsletter"
+                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  Newsletter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/404"
+                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  404
+                </Link>
+              </li>
+            </ul>
+
+            <div className="mt-6 pt-4 border-t border-gray-700 px-2 pb-3">
+              <div className="text-sm text-gray-400 mb-2">Language</div>
+              <div className="flex flex-wrap gap-2" role="group" aria-label="Language">
+                {LANG_OPTIONS.map(({ code, label }) => (
+                  <button
+                    key={code}
+                    type="button"
+                    onClick={() => {
+                      setLang(code);
+                      setMobileNavOpen(false);
+                    }}
+                    className={`min-w-[2.75rem] rounded-md border px-3 py-2 text-sm font-semibold transition ${
+                      lang === code
+                        ? "border-indigo-400 bg-white/15 text-white"
+                        : "border-white/20 text-gray-200 hover:bg-white/10 hover:text-white"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
         </Transition>
       </div>
     </div>

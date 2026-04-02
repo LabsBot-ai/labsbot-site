@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useLandingLang } from "@/components/landing-language-provider";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 
@@ -15,6 +18,7 @@ const strokeProps = {
 };
 
 export default function Features() {
+  const { t } = useLandingLang();
   return (
     <section className="relative">
       <div
@@ -47,11 +51,11 @@ export default function Features() {
           <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
               <span className="inline-flex text-base md:text-2xl bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                Why LabsBot
+                {t("whyLabel")}
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              We bring AI into everyday life
+              {t("whyTitle")}
             </h2>
           </div>
           <div className="flex justify-center pb-8 md:pb-12" data-aos="fade-up">
@@ -137,12 +141,12 @@ export default function Features() {
                     <path d="M3 12h18M12 3a14 14 0 0 0 0 18M12 3a14 14 0 0 1 0 18" />
                   </svg>
                 </div>
-                <h3 className="font-nacelle text-[1rem] font-semibold text-gray-200">
-                  Language is not a barrier
+                <h3 className="min-h-[3rem] font-nacelle text-[1rem] font-semibold text-gray-200">
+                  {t("feature1Title")}
                 </h3>
               </div>
               <p className="text-indigo-200/65">
-                Our products operate across multiple languages, ensuring clear interaction in any environment.
+                {t("feature1Body")}
               </p>
             </article>
             <article>
@@ -158,12 +162,12 @@ export default function Features() {
                     <path d="m12 3 1.8 3.7L18 8.5l-3 2.9.7 4.1L12 13.6l-3.7 1.9.7-4.1-3-2.9 4.2-.8L12 3Z" />
                   </svg>
                 </div>
-                <h3 className="font-nacelle text-[1rem] font-semibold text-gray-200">
-                  Handles complex tasks
+                <h3 className="min-h-[3rem] font-nacelle text-[1rem] font-semibold text-gray-200">
+                  {t("feature2Title")}
                 </h3>
               </div>
               <p className="text-indigo-200/65">
-                We use AI in our projects to handle everyday tasks and complex processes across immigration, education and business.
+                {t("feature2Body")}
               </p>
             </article>
             <article>
@@ -180,12 +184,12 @@ export default function Features() {
                     <path d="M9 12.5 11 14.5l4-4" />
                   </svg>
                 </div>
-                <h3 className="font-nacelle text-[1rem] font-semibold text-gray-200">
-                  Privacy comes first
+                <h3 className="min-h-[3rem] font-nacelle text-[1rem] font-semibold text-gray-200">
+                  {t("feature3Title")}
                 </h3>
               </div>
               <p className="text-indigo-200/65">
-                We follow strict EU data protection standards, ensuring secure, transparent and minimal processing.
+                {t("feature3Body")}
               </p>
             </article>
             <article>
@@ -203,12 +207,12 @@ export default function Features() {
                     <circle cx="17" cy="14" r="1.6" />
                   </svg>
                 </div>
-                <h3 className="font-nacelle text-[1rem] font-semibold text-gray-200">
-                  Simple to use
+                <h3 className="min-h-[3rem] font-nacelle text-[1rem] font-semibold text-gray-200">
+                  {t("feature4Title")}
                 </h3>
               </div>
               <p className="text-indigo-200/65">
-                Intuitive interfaces with minimal setup, so you can start solving your tasks right away.
+                {t("feature4Body")}
               </p>
             </article>
           </div>

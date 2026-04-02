@@ -1,8 +1,12 @@
+"use client";
+
 import Logo from "./logo";
 import Image from "next/image";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
+import { useLandingLang } from "@/components/landing-language-provider";
 
 export default function Footer() {
+  const { t } = useLandingLang();
   return (
     <footer>
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
@@ -24,14 +28,14 @@ export default function Footer() {
         <div className="mx-auto max-w-2xl grid grid-cols-2 gap-10 py-8 md:grid-cols-3 md:py-12 text-center">
           {/* Product */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Product</h3>
+            <h3 className="text-sm font-medium text-gray-200">{t("footerProduct")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#"
                 >
-                  Features
+                  {t("footerFeatures")}
                 </a>
               </li>
               <li>
@@ -39,7 +43,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#"
                 >
-                  Pricing &amp; Plans
+                  {t("footerPricingPlans")}
                 </a>
               </li>
               <li>
@@ -47,21 +51,29 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#"
                 >
-                  Changelog
+                  {t("footerChangelog")}
+                </a>
+              </li>
+              <li>
+                <a
+                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  href="#"
+                >
+                  {t("footerTariffs")}
                 </a>
               </li>
             </ul>
           </div>
           {/* Company */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Company</h3>
+            <h3 className="text-sm font-medium text-gray-200">{t("footerCompany")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#"
                 >
-                  About us
+                  {t("footerAboutUs")}
                 </a>
               </li>
               <li>
@@ -69,7 +81,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#"
                 >
-                  Blog
+                  {t("footerBlog")}
                 </a>
               </li>
               <li>
@@ -77,21 +89,21 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#"
                 >
-                  Careers
+                  {t("footerCareers")}
                 </a>
               </li>
             </ul>
           </div>
           {/* Resources */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-200">Resources</h3>
+            <h3 className="text-sm font-medium text-gray-200">{t("footerResources")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#"
                 >
-                  Terms of service
+                  {t("footerTerms")}
                 </a>
               </li>
               <li>
@@ -99,7 +111,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#"
                 >
-                  Community
+                  {t("footerCommunity")}
                 </a>
               </li>
               <li>
@@ -107,7 +119,7 @@ export default function Footer() {
                   className="text-indigo-200/65 transition hover:text-indigo-500"
                   href="#"
                 >
-                  Report a vulnerability
+                  {t("footerReportVuln")}
                 </a>
               </li>
             </ul>
@@ -118,9 +130,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-4 border-t border-gray-700/50 py-8 sm:flex-row sm:justify-between sm:py-6">
           <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
             <Logo />
-            <p className="text-sm text-indigo-200/65">
-              © 2026 LabsBot.ai. All rights reserved.
-            </p>
+            <p className="text-sm text-indigo-200/65">{t("footerRights")}</p>
           </div>
           <ul className="inline-flex gap-1">
             <li>

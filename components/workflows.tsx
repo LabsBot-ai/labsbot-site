@@ -7,6 +7,7 @@ import WorflowImg01 from "@/public/images/workflow-01.png";
 import WorflowImg02 from "@/public/images/workflow-02.png";
 import WorflowImg03 from "@/public/images/workflow-03.png";
 import Spotlight from "@/components/spotlight";
+import { useLandingLang } from "@/components/landing-language-provider";
 
 const productCardClass =
   "mobile-glow group/card relative h-full overflow-hidden rounded-2xl p-px bg-[radial-gradient(ellipse_95%_80%_at_0%_0%,rgba(255,255,255,0.03),transparent_62%),radial-gradient(ellipse_95%_80%_at_100%_0%,rgba(255,255,255,0.022),transparent_62%),radial-gradient(ellipse_95%_80%_at_100%_100%,rgba(167,139,250,0.038),transparent_64%),radial-gradient(ellipse_95%_80%_at_0%_100%,rgba(255,255,255,0.02),transparent_62%)] after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-0 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 group-hover:after:opacity-100";
@@ -29,6 +30,7 @@ const arrowIcon = (
 );
 
 export default function Workflows() {
+  const { t } = useLandingLang();
   const [moreProductsOpen, setMoreProductsOpen] = useState(false);
 
   const migreoBgStyle = moreProductsOpen
@@ -49,11 +51,11 @@ export default function Workflows() {
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
               <span className="inline-flex text-base md:text-2xl bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                Products
+                {t("productsLabel")}
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              The LabsBot Ecosystem
+              {t("productsTitle")}
             </h2>
           </div>
           {/* Spotlight items - 4 product cards (LingvoBot & SchoolBot collapsible) */}
@@ -119,7 +121,7 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Live
+                        {t("badgeLive")}
                       </span>
                     </span>
                   </div>
@@ -127,7 +129,7 @@ export default function Workflows() {
                     Migreo
                   </h3>
                   <p className="mb-4 text-indigo-200/65">
-                    AI tools to solve immigration problems
+                    {t("migreoDesc")}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <a
@@ -136,13 +138,13 @@ export default function Workflows() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Open Telegram
+                      {t("openTelegram")}
                     </a>
                     <Link
                       className="inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
                       href="/products/migreo"
                     >
-                      Learn more
+                      {t("learnMore")}
                     </Link>
                   </div>
                 </div>
@@ -202,7 +204,7 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Coming soon
+                        {t("badgeComingSoon")}
                       </span>
                     </span>
                   </div>
@@ -210,20 +212,20 @@ export default function Workflows() {
                     Paytable
                   </h3>
                   <p className="mb-4 text-indigo-200/65">
-                    AI-powered table and payment assistant.
+                    {t("paytableDesc")}
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <Link
                       className="btn-sm group inline-flex bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
                       href="/products/paytable"
                     >
-                      Open in browser
+                      {t("openInBrowser")}
                     </Link>
                     <Link
                       className="inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
                       href="/products/paytable"
                     >
-                      Learn more
+                      {t("learnMore")}
                     </Link>
                   </div>
                 </div>
@@ -247,7 +249,7 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Coming soon
+                        {t("badgeComingSoon")}
                       </span>
                     </span>
                   </div>
@@ -255,7 +257,7 @@ export default function Workflows() {
                     LingvoBot
                   </h3>
                   <p className="text-indigo-200/65">
-                    Language explanations made simple.
+                    {t("lingvoDesc")}
                   </p>
                 </div>
               </div>
@@ -278,7 +280,7 @@ export default function Workflows() {
                   <div className="mb-3">
                     <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                       <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        Coming soon
+                        {t("badgeComingSoon")}
                       </span>
                     </span>
                   </div>
@@ -286,7 +288,7 @@ export default function Workflows() {
                     SchoolBot
                   </h3>
                   <p className="text-indigo-200/65">
-                    AI assistant for structured learning.
+                    {t("schoolDesc")}
                   </p>
                 </div>
               </div>
@@ -300,7 +302,7 @@ export default function Workflows() {
               aria-expanded={moreProductsOpen}
             >
               <span className="relative">
-                {moreProductsOpen ? "Show fewer products" : "Show more products"}
+                {moreProductsOpen ? t("showFewerProducts") : t("showMoreProducts")}
               </span>
               <svg
                 className={`relative h-4 w-4 shrink-0 text-white/80 transition-all duration-200 ease-out group-hover:text-white ${moreProductsOpen ? "rotate-180 group-hover:-translate-y-0.5" : "group-hover:translate-y-0.5"}`}
