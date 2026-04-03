@@ -1,0 +1,47 @@
+export const metadata = {
+  title: "SchoolBot - LabsBot",
+  description:
+    "SchoolBot — a service for structured learning with AI assistance.",
+};
+
+import Link from "next/link";
+import PageIllustration from "@/components/page-illustration";
+import FooterSeparator from "@/components/footer-separator";
+
+export default function SchoolBotProductPage() {
+  return (
+    <>
+      <PageIllustration multiple />
+      <section>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="py-12 md:py-20">
+            <div className="text-center">
+              <div className="relative mx-auto mb-0 inline-block max-w-full">
+                <img
+                  src="/images/workflow-01.png"
+                  alt=""
+                  className="z-0 mx-auto block max-w-full w-[400px] rounded-2xl opacity-[0.14] grayscale brightness-[0.82] contrast-95 blur-[0.5px] md:w-[480px]"
+                />
+                <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
+                  <h1 className="text-center drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+                    SchoolBot is coming soon
+                  </h1>
+                </div>
+              </div>
+              <div className="relative pt-10">
+                <Link
+                  href="/#products"
+                  className="flex items-center justify-center gap-2 text-sm text-gray-400 transition transition-transform duration-200 hover:-translate-x-1 hover:text-gray-200"
+                >
+                  <span>←</span>
+                  <span>Back to products</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <FooterSeparator />
+    </>
+  );
+}

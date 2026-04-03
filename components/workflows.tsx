@@ -15,19 +15,6 @@ const productCardClassNoSpotlight =
   "group/card relative h-full overflow-hidden rounded-2xl p-px";
 const cardInnerClass =
   "relative z-10 h-full overflow-hidden rounded-[inherit]";
-const arrowIcon = (
-  <div
-    className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-0 transition-opacity group-hover/card:opacity-100"
-    aria-hidden="true"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" width={9} height={8} fill="none">
-      <path
-        fill="#F4F4F5"
-        d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
-      />
-    </svg>
-  </div>
-);
 
 export default function Workflows() {
   const { t } = useLandingLang();
@@ -101,7 +88,7 @@ export default function Workflows() {
                     />
                   </svg>
                 </a>
-                <div className="relative z-20 flex shrink-0 items-center justify-center h-44 mb-6 overflow-hidden">
+                <div className="relative z-20 flex shrink-0 items-center justify-center h-44 mb-6 overflow-hidden lg:mb-4">
                   <div
                     className="h-28 w-[116px] mt-14"
                     style={{
@@ -119,23 +106,23 @@ export default function Workflows() {
                     aria-hidden="true"
                   />
                 </div>
-                <div className="relative z-10 p-6 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
-                  <div className="lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
-                    <div className="mb-3">
+                <div className="relative z-10 p-6 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:gap-y-6">
+                  <div className="lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:gap-y-3">
+                    <div className="mb-3 lg:mb-0">
                       <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                         <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
                           {t("badgeLive")}
                         </span>
                       </span>
                     </div>
-                    <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
+                    <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200 lg:mb-0">
                       Migreo
                     </h3>
                     <p className="mb-4 text-indigo-200/65 lg:mb-0 lg:min-h-0 lg:flex-1">
                       {t("migreoDesc")}
                     </p>
                   </div>
-                  <div className="flex flex-wrap gap-2 lg:mt-auto lg:shrink-0">
+                  <div className="flex flex-wrap gap-2 lg:shrink-0">
                     <a
                       className="btn-sm group inline-flex bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
                       href="https://t.me/MigrantEuroBot?start=site"
@@ -188,7 +175,7 @@ export default function Workflows() {
                     />
                   </svg>
                 </a>
-                <div className="relative z-20 flex shrink-0 items-center justify-center h-44 mb-6 overflow-hidden">
+                <div className="relative z-20 flex shrink-0 items-center justify-center h-44 mb-6 overflow-hidden lg:mb-4">
                   <div
                     className="h-28 w-[132px] mt-14"
                     style={{
@@ -206,23 +193,23 @@ export default function Workflows() {
                     aria-hidden="true"
                   />
                 </div>
-                <div className="mt-4 p-6 lg:mt-0 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
-                  <div className="lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
-                    <div className="mb-3">
+                <div className="mt-4 p-6 lg:mt-0 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:gap-y-6">
+                  <div className="lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:gap-y-3">
+                    <div className="mb-3 lg:mb-0">
                       <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                         <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
                           {t("badgeComingSoon")}
                         </span>
                       </span>
                     </div>
-                    <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
+                    <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200 lg:mb-0">
                       Paytable
                     </h3>
                     <p className="mb-4 text-indigo-200/65 lg:mb-0 lg:min-h-0 lg:flex-1">
                       {t("paytableDesc")}
                     </p>
                   </div>
-                  <div className="flex flex-wrap gap-2 lg:mt-auto lg:shrink-0">
+                  <div className="flex flex-wrap gap-2 lg:shrink-0">
                     <Link
                       className="btn-sm group inline-flex bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
                       href="/products/paytable"
@@ -239,68 +226,130 @@ export default function Workflows() {
                 </div>
               </div>
             </div>
-            {/* LingvoBot (Coming soon) */}
-            <Link
-              href="/products"
-              className={`${productCardClass} ${moreProductsOpen ? "" : "hidden"}`}
+            {/* LingvaBot (Coming soon) */}
+            <div
+              className={`${productCardClass} lg:min-h-0 ${moreProductsOpen ? "" : "hidden"}`}
             >
-              <div className={cardInnerClass}>
-                {arrowIcon}
-                <Image
-                  className="inline-flex"
-                  src={WorflowImg03}
-                  width={350}
-                  height={288}
-                  alt="LingvoBot"
-                />
-                <div className="p-6">
-                  <div className="mb-3">
-                    <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
-                      <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        {t("badgeComingSoon")}
+              <div
+                className={`${cardInnerClass} lg:flex lg:min-h-0 lg:flex-col`}
+              >
+                <Link
+                  href="/products"
+                  className="absolute right-6 top-6 z-10 pointer-events-auto flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-100"
+                  style={{ zIndex: 50 }}
+                  aria-label="Open products"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={9} height={8} fill="none" aria-hidden>
+                    <path
+                      fill="#F4F4F5"
+                      d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
+                    />
+                  </svg>
+                </Link>
+                <div className="relative z-20 w-full shrink-0 overflow-hidden lg:mb-4 lg:flex lg:h-44 lg:items-center lg:justify-center">
+                  <Image
+                    className="inline-flex max-lg:w-full lg:max-h-full lg:w-auto lg:object-contain"
+                    src={WorflowImg03}
+                    width={350}
+                    height={288}
+                    alt="LingvaBot"
+                  />
+                </div>
+                <div className="p-6 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:gap-y-6">
+                  <div className="lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:gap-y-3">
+                    <div className="mb-3 lg:mb-0">
+                      <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
+                        <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+                          {t("badgeComingSoon")}
+                        </span>
                       </span>
-                    </span>
+                    </div>
+                    <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200 lg:mb-0">
+                      LingvaBot
+                    </h3>
+                    <p className="mb-4 text-indigo-200/65 lg:mb-0 lg:min-h-0 lg:flex-1">
+                      {t("lingvoDesc")}
+                    </p>
                   </div>
-                  <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                    LingvoBot
-                  </h3>
-                  <p className="text-indigo-200/65">
-                    {t("lingvoDesc")}
-                  </p>
+                  <div className="flex flex-wrap gap-2 lg:shrink-0">
+                    <Link
+                      className="btn-sm group inline-flex bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
+                      href="/products"
+                    >
+                      {t("openInBrowser")}
+                    </Link>
+                    <Link
+                      className="inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                      href="/products/lingvabot"
+                    >
+                      {t("learnMore")}
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </Link>
+            </div>
             {/* SchoolBot (Coming soon) */}
-            <Link
-              href="/products"
-              className={`${productCardClass} ${moreProductsOpen ? "" : "hidden"}`}
+            <div
+              className={`${productCardClass} lg:min-h-0 ${moreProductsOpen ? "" : "hidden"}`}
             >
-              <div className={cardInnerClass}>
-                {arrowIcon}
-                <Image
-                  className="inline-flex"
-                  src={WorflowImg01}
-                  width={350}
-                  height={288}
-                  alt="SchoolBot"
-                />
-                <div className="p-6">
-                  <div className="mb-3">
-                    <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
-                      <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                        {t("badgeComingSoon")}
+              <div
+                className={`${cardInnerClass} lg:flex lg:min-h-0 lg:flex-col`}
+              >
+                <Link
+                  href="/products"
+                  className="absolute right-6 top-6 z-10 pointer-events-auto flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-100"
+                  style={{ zIndex: 50 }}
+                  aria-label="Open products"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width={9} height={8} fill="none" aria-hidden>
+                    <path
+                      fill="#F4F4F5"
+                      d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
+                    />
+                  </svg>
+                </Link>
+                <div className="relative z-20 w-full shrink-0 overflow-hidden lg:mb-4 lg:flex lg:h-44 lg:items-center lg:justify-center">
+                  <Image
+                    className="inline-flex max-lg:w-full lg:max-h-full lg:w-auto lg:object-contain"
+                    src={WorflowImg01}
+                    width={350}
+                    height={288}
+                    alt="SchoolBot"
+                  />
+                </div>
+                <div className="p-6 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:gap-y-6">
+                  <div className="lg:flex lg:min-h-0 lg:flex-1 lg:flex-col lg:gap-y-3">
+                    <div className="mb-3 lg:mb-0">
+                      <span className="inline-flex items-center relative rounded-full bg-gray-800/40 px-4 py-1.5 text-base font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
+                        <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+                          {t("badgeComingSoon")}
+                        </span>
                       </span>
-                    </span>
+                    </div>
+                    <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200 lg:mb-0">
+                      SchoolBot
+                    </h3>
+                    <p className="mb-4 text-indigo-200/65 lg:mb-0 lg:min-h-0 lg:flex-1">
+                      {t("schoolDesc")}
+                    </p>
                   </div>
-                  <h3 className="mb-2 font-nacelle text-lg font-semibold text-gray-200">
-                    SchoolBot
-                  </h3>
-                  <p className="text-indigo-200/65">
-                    {t("schoolDesc")}
-                  </p>
+                  <div className="flex flex-wrap gap-2 lg:shrink-0">
+                    <Link
+                      className="btn-sm group inline-flex bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
+                      href="/products"
+                    >
+                      {t("openInBrowser")}
+                    </Link>
+                    <Link
+                      className="inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                      href="/products/schoolbot"
+                    >
+                      {t("learnMore")}
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </Spotlight>
           <div className="mt-6 flex justify-center">
             <button
