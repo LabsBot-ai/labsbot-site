@@ -23,16 +23,25 @@ const FLAG_CLASS: Record<LandingLang, string> = {
 function HeaderLanguageMenu() {
   const { lang, setLang } = useLandingLang();
   const [open, setOpen] = useState(false);
+  const [isCoarsePointer, setIsCoarsePointer] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handlePointerDown(event: MouseEvent) {
+    const mq = window.matchMedia("(pointer: coarse)");
+    const apply = () => setIsCoarsePointer(mq.matches);
+    apply();
+    mq.addEventListener("change", apply);
+    return () => mq.removeEventListener("change", apply);
+  }, []);
+
+  useEffect(() => {
+    function handlePointerDown(event: PointerEvent) {
       if (rootRef.current && !rootRef.current.contains(event.target as Node)) {
         setOpen(false);
       }
     }
-    document.addEventListener("mousedown", handlePointerDown);
-    return () => document.removeEventListener("mousedown", handlePointerDown);
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
   }, []);
 
   const currentLabel =
@@ -42,13 +51,13 @@ function HeaderLanguageMenu() {
   return (
     <div
       ref={rootRef}
-      className="relative shrink-0"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      className="relative z-[100] shrink-0"
+      onMouseEnter={() => !isCoarsePointer && setOpen(true)}
+      onMouseLeave={() => !isCoarsePointer && setOpen(false)}
     >
       <button
         type="button"
-        className="inline-flex shrink-0 cursor-pointer items-center justify-center gap-1 rounded-lg px-2 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition md:px-3 max-md:max-w-[3.5rem] max-md:truncate"
+        className="inline-flex shrink-0 cursor-pointer touch-manipulation items-center justify-center gap-1 rounded-lg px-2 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition md:px-3 max-md:max-w-[3.2rem] max-md:gap-0.5 max-md:px-1.5 max-md:truncate"
         aria-expanded={open}
         aria-haspopup="listbox"
         aria-label="Language"
@@ -71,7 +80,7 @@ function HeaderLanguageMenu() {
         </svg>
       </button>
       {open ? (
-        <div className="absolute right-0 top-full z-50 pt-1">
+        <div className="absolute right-0 top-full z-[110] pt-1">
           <ul
             className="min-w-[10.5rem] rounded-lg border border-white/10 bg-slate-900/95 py-1 shadow-lg backdrop-blur-xl max-md:min-w-0 max-md:w-max"
             role="listbox"
@@ -142,7 +151,7 @@ export default function Header() {
   return (
     <header className="z-30 mt-2 w-full md:mt-5">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900/70 backdrop-blur-xl border border-white/10">
+        <div className="relative flex min-w-0 items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900/70 backdrop-blur-xl border border-white/10">
           {/* Site branding */}
           <div className="flex items-center shrink-0">
             <div className="md:hidden shrink-0">
@@ -193,24 +202,24 @@ export default function Header() {
           </nav>
 
           {/* Sign in, Register, Mobile menu */}
-          <div className="flex items-center gap-2 ml-auto shrink-0">
+          <div className="flex min-w-0 flex-1 items-center justify-end gap-1 ml-auto md:flex-none md:shrink-0 md:gap-2">
             <HeaderLanguageMenu />
             {!userEmail ? (
               <>
                 <Link
                   href="/signin"
-                  className="shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                  className="inline-flex w-fit shrink-0 items-center justify-center whitespace-nowrap rounded-lg border border-white/20 bg-transparent px-4 py-2.5 text-sm font-medium text-white/90 transition hover:bg-white/10 max-md:px-1.5 md:shrink-0"
                 >
                   {t("btn_signin")}
                 </Link>
-                <div className="relative shrink-0 inline-flex items-center">
+                <div className="relative flex min-w-0 max-md:flex-1 max-md:min-w-0 items-center md:inline-flex md:shrink-0">
                   <div
                     className="absolute -inset-0.5 blur-lg opacity-40 rounded-lg bg-gradient-to-r from-indigo-500 via-violet-500 to-purple-600"
                     aria-hidden
                   />
                   <Link
                     href="/signup"
-                    className="relative inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] hover:bg-[length:100%_150%] transition-all"
+                    className="relative inline-flex w-full min-w-0 items-center justify-center rounded-lg bg-linear-to-t from-indigo-500 via-violet-500 to-purple-600 bg-[length:100%_100%] bg-[bottom] px-4 py-2.5 text-sm font-medium text-white shadow-[inset_0px_1px_0px_0px_rgba(255,255,255,.16)] transition-all hover:bg-[length:100%_150%] max-md:truncate max-md:px-2 md:inline-flex md:w-auto md:max-w-none md:shrink-0"
                   >
                     {t("btn_register")}
                   </Link>
@@ -220,7 +229,7 @@ export default function Header() {
               <>
                 <Link
                   href="/account"
-                  className="cursor-pointer shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                  className="inline-flex min-w-0 max-w-[min(100%,7rem)] shrink cursor-pointer items-center justify-center rounded-lg border border-white/20 bg-transparent px-4 py-2.5 text-sm font-medium text-white/90 transition hover:bg-white/10 max-md:flex-1 max-md:truncate md:max-w-none md:flex-none md:shrink-0"
                   aria-label="My account"
                 >
                   My account
@@ -228,7 +237,7 @@ export default function Header() {
                 <button
                   type="button"
                   onClick={handleSignOut}
-                  className="cursor-pointer shrink-0 inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+                  className="inline-flex min-w-0 max-w-[min(100%,7rem)] shrink cursor-pointer items-center justify-center rounded-lg border border-white/20 bg-transparent px-4 py-2.5 text-sm font-medium text-white/90 transition hover:bg-white/10 max-md:flex-1 max-md:truncate md:max-w-none md:flex-none md:shrink-0"
                 >
                   Sign out
                 </button>

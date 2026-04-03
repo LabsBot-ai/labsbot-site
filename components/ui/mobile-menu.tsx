@@ -3,37 +3,23 @@
 import { useState, useRef, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
-import { useLandingLang } from "@/components/landing-language-provider";
-import type { LandingLang } from "@/lib/landing-translations";
-
-const LANG_OPTIONS: { code: LandingLang; label: string }[] = [
-  { code: "en", label: "EN" },
-  { code: "de", label: "DE" },
-  { code: "ru", label: "RU" },
-];
-
 export default function MobileMenu() {
-  const { lang, setLang } = useLandingLang();
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);
 
-  // close the mobile menu on click outside
+  // close the mobile menu on tap/click outside (pointerdown works reliably on iOS)
   useEffect(() => {
-    const clickHandler = ({ target }: { target: EventTarget | null }): void => {
-      if (!mobileNav.current || !trigger.current) return;
-      if (
-        !mobileNavOpen ||
-        mobileNav.current.contains(target as Node) ||
-        trigger.current.contains(target as Node)
-      )
-        return;
+    const closeIfOutside = (e: PointerEvent): void => {
+      if (!mobileNavOpen || !mobileNav.current || !trigger.current) return;
+      const target = e.target as Node;
+      if (mobileNav.current.contains(target) || trigger.current.contains(target)) return;
       setMobileNavOpen(false);
     };
-    document.addEventListener("click", clickHandler);
-    return () => document.removeEventListener("click", clickHandler);
-  });
+    document.addEventListener("pointerdown", closeIfOutside, true);
+    return () => document.removeEventListener("pointerdown", closeIfOutside, true);
+  }, [mobileNavOpen]);
 
   // close the mobile menu if the esc key is pressed
   useEffect(() => {
@@ -46,14 +32,15 @@ export default function MobileMenu() {
   });
 
   return (
-    <div className="flex md:hidden">
+    <div className="flex shrink-0 md:hidden">
       {/* Hamburger button */}
       <button
+        type="button"
         ref={trigger}
-        className={`group inline-flex h-8 w-8 items-center justify-center text-center text-gray-200 transition ${mobileNavOpen && "active"}`}
+        className={`group inline-flex h-8 w-8 touch-manipulation items-center justify-center text-center text-gray-200 transition ${mobileNavOpen && "active"}`}
         aria-controls="mobile-nav"
         aria-expanded={mobileNavOpen}
-        onClick={() => setMobileNavOpen(!mobileNavOpen)}
+        onClick={() => setMobileNavOpen((o) => !o)}
       >
         <span className="sr-only">Menu</span>
         <svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none">
@@ -70,7 +57,7 @@ export default function MobileMenu() {
           as="div"
           id="mobile-nav"
           role="navigation"
-          className="absolute left-0 top-full z-[60] mt-2 w-full min-w-[12rem] rounded-xl bg-gray-900/95 backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] transform transition ease-out duration-200 data-enter:data-closed:-translate-y-2 data-closed:opacity-0"
+          className="absolute left-0 right-0 top-full z-[100] mt-2 w-full min-w-[12rem] rounded-xl bg-gray-900/95 shadow-lg backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] transform transition ease-out duration-200 data-enter:data-closed:-translate-y-2 data-closed:opacity-0"
         >
           <div className="flex flex-col">
             <ul className="p-2 text-sm">
@@ -138,29 +125,6 @@ export default function MobileMenu() {
                 </Link>
               </li>
             </ul>
-
-            <div className="mt-6 pt-4 border-t border-gray-700 px-2 pb-3">
-              <div className="text-sm text-gray-400 mb-2">Language</div>
-              <div className="flex flex-wrap gap-2" role="group" aria-label="Language">
-                {LANG_OPTIONS.map(({ code, label }) => (
-                  <button
-                    key={code}
-                    type="button"
-                    onClick={() => {
-                      setLang(code);
-                      setMobileNavOpen(false);
-                    }}
-                    className={`min-w-[2.75rem] rounded-md border px-3 py-2 text-sm font-semibold transition ${
-                      lang === code
-                        ? "border-indigo-400 bg-white/15 text-white"
-                        : "border-white/20 text-gray-200 hover:bg-white/10 hover:text-white"
-                    }`}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
         </Transition>
       </div>
