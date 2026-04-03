@@ -1,4 +1,5 @@
 import "./css/style.css";
+import "flag-icons/css/flag-icons.min.css";
 
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";

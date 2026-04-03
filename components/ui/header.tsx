@@ -14,6 +14,12 @@ const LANG_OPTIONS: { code: LandingLang; label: string }[] = [
   { code: "ru", label: "Русский" },
 ];
 
+const FLAG_CLASS: Record<LandingLang, string> = {
+  en: "fi fi-gb",
+  de: "fi fi-de",
+  ru: "fi fi-ru",
+};
+
 function HeaderLanguageMenu() {
   const { lang, setLang } = useLandingLang();
   const [open, setOpen] = useState(false);
@@ -42,7 +48,7 @@ function HeaderLanguageMenu() {
     >
       <button
         type="button"
-        className="inline-flex shrink-0 cursor-pointer items-center justify-center gap-1 rounded-lg px-2 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition md:px-3"
+        className="inline-flex shrink-0 cursor-pointer items-center justify-center gap-1 rounded-lg px-2 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition md:px-3 max-md:max-w-[3.5rem] max-md:truncate"
         aria-expanded={open}
         aria-haspopup="listbox"
         aria-label="Language"
@@ -67,10 +73,10 @@ function HeaderLanguageMenu() {
       {open ? (
         <div className="absolute right-0 top-full z-50 pt-1">
           <ul
-            className="min-w-[10.5rem] rounded-lg border border-white/10 bg-slate-900/95 py-1 shadow-lg backdrop-blur-xl"
+            className="min-w-[10.5rem] rounded-lg border border-white/10 bg-slate-900/95 py-1 shadow-lg backdrop-blur-xl max-md:min-w-0 max-md:w-max"
             role="listbox"
           >
-            {LANG_OPTIONS.map(({ code, label }) => (
+            {LANG_OPTIONS.map(({ code }) => (
               <li key={code} role="presentation">
                 <button
                   type="button"
@@ -84,8 +90,10 @@ function HeaderLanguageMenu() {
                     setOpen(false);
                   }}
                 >
-                  <span className="md:hidden">{code.toUpperCase()}</span>
-                  <span className="hidden md:inline">{label}</span>
+                  <span className="inline-flex w-full items-center gap-1.5">
+                    <span className={`${FLAG_CLASS[code]} w-5 h-5 rounded-sm`} aria-hidden />
+                    <span>{code.toUpperCase()}</span>
+                  </span>
                 </button>
               </li>
             ))}
