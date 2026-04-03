@@ -18,7 +18,7 @@ export default function PaytablePage() {
             <div className="text-center">
               <div className="relative mx-auto mb-0 inline-block max-w-full">
                 <img
-                  src="/branding/icon.png"
+                  src="/branding/icon-paytable.svg"
                   alt=""
                   className="z-0 mx-auto block max-w-full w-[400px] rounded-2xl opacity-[0.14] grayscale brightness-[0.82] contrast-95 blur-[0.5px] md:w-[480px]"
                 />
