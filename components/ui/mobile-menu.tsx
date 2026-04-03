@@ -3,7 +3,12 @@
 import { useState, useRef, useEffect } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
+import { useLandingLang } from "@/components/landing-language-provider";
+import { translations } from "@/lib/landing-translations";
+
 export default function MobileMenu() {
+  const { lang } = useLandingLang();
+  const t = (key: keyof typeof translations["en"]) => translations[lang][key];
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
 
   const trigger = useRef<HTMLButtonElement>(null);
@@ -63,20 +68,20 @@ export default function MobileMenu() {
             <ul className="p-2 text-sm">
               <li>
                 <Link
-                  href="/pricing"
+                  href="/#products"
                   className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
                   onClick={() => setMobileNavOpen(false)}
                 >
-                  Pricing
+                  {t("nav_products")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/pricing"
                   className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
                   onClick={() => setMobileNavOpen(false)}
                 >
-                  About Us
+                  {t("nav_pricing")}
                 </Link>
               </li>
               <li>
@@ -85,43 +90,16 @@ export default function MobileMenu() {
                   className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
                   onClick={() => setMobileNavOpen(false)}
                 >
-                  Blog
+                  {t("nav_blog")}
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/help/frequently-asked-questions"
+                  href="/about"
                   className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
                   onClick={() => setMobileNavOpen(false)}
                 >
-                  Help Centre
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/newsletter"
-                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                  onClick={() => setMobileNavOpen(false)}
-                >
-                  Newsletter
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                  onClick={() => setMobileNavOpen(false)}
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/404"
-                  className="flex rounded-lg px-2 py-1.5 text-white hover:text-indigo-500"
-                  onClick={() => setMobileNavOpen(false)}
-                >
-                  404
+                  {t("nav_about")}
                 </Link>
               </li>
             </ul>
