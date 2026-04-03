@@ -31,6 +31,7 @@ function HeaderLanguageMenu() {
 
   const currentLabel =
     LANG_OPTIONS.find((o) => o.code === lang)?.label ?? "English";
+  const currentShort = lang.toUpperCase();
 
   return (
     <div
@@ -41,13 +42,14 @@ function HeaderLanguageMenu() {
     >
       <button
         type="button"
-        className="inline-flex cursor-pointer items-center justify-center gap-1 rounded-lg px-3 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition"
+        className="inline-flex shrink-0 cursor-pointer items-center justify-center gap-1 rounded-lg px-2 py-2.5 text-sm font-medium border border-white/20 text-white/90 bg-transparent hover:bg-white/10 transition md:px-3"
         aria-expanded={open}
         aria-haspopup="listbox"
         aria-label="Language"
         onClick={() => setOpen((o) => !o)}
       >
-        <span className="max-w-[6.5rem] truncate sm:max-w-none">{currentLabel}</span>
+        <span className="block md:hidden">{currentShort}</span>
+        <span className="hidden max-w-[6.5rem] truncate md:block md:max-w-none">{currentLabel}</span>
         <svg
           className={`h-3.5 w-3.5 shrink-0 text-white/60 transition-transform ${open ? "rotate-180" : ""}`}
           xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +84,8 @@ function HeaderLanguageMenu() {
                     setOpen(false);
                   }}
                 >
-                  {label}
+                  <span className="md:hidden">{code.toUpperCase()}</span>
+                  <span className="hidden md:inline">{label}</span>
                 </button>
               </li>
             ))}
