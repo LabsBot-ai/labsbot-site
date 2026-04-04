@@ -10,9 +10,6 @@ const whereGoingEuLayerMask: CSSProperties = {
   WebkitMaskImage: whereGoingMaskHorizontal,
 };
 
-/** Mobile-only: same horizontal edge fade as shared mask — stronger outer suppression than the previous softened variant. */
-const whereGoingStarsOuterMaskMobile = whereGoingMaskHorizontal;
-
 /** Map silhouette + horizontal fade — for tonal overlay clipped to landmass only. */
 const whereGoingMapTonalOverlayMask: CSSProperties = {
   maskImage: `${whereGoingMaskHorizontal}, url(/branding/maps-eu.svg)`,
@@ -41,24 +38,6 @@ const heroAboutWhereGoingMaskStyles = `
     -webkit-mask-composite: source-in;
     mask-composite: intersect;
   }
-  .hero-about-wg-stars-img {
-    -webkit-mask-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 10%, rgba(255,255,255,0.12) 24%, rgba(255,255,255,0.38) 42%, rgba(255,255,255,0.72) 58%, rgba(255,255,255,0.95) 74%, rgba(255,255,255,1) 82%, rgba(255,255,255,1) 100%);
-    mask-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 10%, rgba(255,255,255,0.12) 24%, rgba(255,255,255,0.38) 42%, rgba(255,255,255,0.72) 58%, rgba(255,255,255,0.95) 74%, rgba(255,255,255,1) 82%, rgba(255,255,255,1) 100%);
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-mode: luminance;
-    mask-mode: luminance;
-  }
-  .hero-about-wg-stars-clip {
-    -webkit-mask-image: ${whereGoingStarsOuterMaskMobile} !important;
-    mask-image: ${whereGoingStarsOuterMaskMobile} !important;
-    -webkit-mask-size: 100% 100% !important;
-    mask-size: 100% 100% !important;
-    -webkit-mask-repeat: no-repeat !important;
-    mask-repeat: no-repeat !important;
-  }
 }
 @media (min-width: 768px) {
   .hero-about-wg-map {
@@ -73,16 +52,11 @@ const heroAboutWhereGoingMaskStyles = `
     -webkit-mask-composite: source-in;
     mask-composite: intersect;
   }
-  .hero-about-wg-stars-img {
-    -webkit-mask-image: linear-gradient(to right, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.26) 34%, rgba(255,255,255,0.74) 70%, rgba(255,255,255,1) 100%);
-    mask-image: linear-gradient(to right, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.26) 34%, rgba(255,255,255,0.74) 70%, rgba(255,255,255,1) 100%);
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-mode: luminance;
-    mask-mode: luminance;
-  }
+}
+/* Stars wrapper: no CSS mask — inline whereGoingEuLayerMask suppressed; SVG-only L→R fade. */
+.hero-about-wg-stars-clip {
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
 }
 `;
 
