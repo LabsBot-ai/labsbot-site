@@ -38,6 +38,16 @@ const heroAboutWhereGoingMaskStyles = `
     -webkit-mask-composite: source-in;
     mask-composite: intersect;
   }
+  .hero-about-wg-stars-img {
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0.05) 36%, rgba(0,0,0,0.22) 46%, rgba(0,0,0,0.52) 56%, rgba(0,0,0,0.85) 68%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 26%, rgba(0,0,0,0.05) 36%, rgba(0,0,0,0.22) 46%, rgba(0,0,0,0.52) 56%, rgba(0,0,0,0.85) 68%, rgba(0,0,0,1) 80%, rgba(0,0,0,1) 100%);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
 }
 @media (min-width: 768px) {
   .hero-about-wg-map {
