@@ -78,12 +78,40 @@ export default function HeroAbout() {
                 width={1462}
                 height={1443}
                 decoding="async"
-                className="absolute left-1/2 top-[52%] w-[45%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain object-center opacity-[0.13] [filter:brightness(0)_saturate(100%)_invert(34%)_sepia(100%)_saturate(1500%)_hue-rotate(222deg)_brightness(1.1)_contrast(0.92)]"
+                className="absolute left-1/2 top-[52%] z-0 w-[45%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain object-center opacity-[0.13] [filter:brightness(0)_saturate(100%)_invert(34%)_sepia(100%)_saturate(1500%)_hue-rotate(222deg)_brightness(1.1)_contrast(0.92)]"
                 style={{
                   maskImage: whereGoingMapMask,
                   WebkitMaskImage: whereGoingMapMask,
                 }}
               />
+              {/* Star shapes only (SVG as mask) — no full-viewport img rectangle */}
+              <div
+                className="pointer-events-none absolute left-1/2 top-[52%] z-[1] w-[45%] max-w-none -translate-x-1/2 -translate-y-1/2 [aspect-ratio:1462/1443]"
+                style={{
+                  maskImage: whereGoingMapMask,
+                  WebkitMaskImage: whereGoingMapMask,
+                }}
+                aria-hidden
+              >
+                <div
+                  className="absolute inset-0 [filter:drop-shadow(0_0_6px_rgba(214,219,255,0.38))_drop-shadow(0_0_18px_rgba(99,102,241,0.16))]"
+                  style={{
+                    WebkitMaskImage: "url(/branding/icon-star-ue.svg)",
+                    maskImage: "url(/branding/icon-star-ue.svg)",
+                    WebkitMaskSize: "88% 88%",
+                    maskSize: "88% 88%",
+                    WebkitMaskPosition: "center",
+                    maskPosition: "center",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskMode: "luminance",
+                    maskMode: "luminance",
+                    background:
+                      "radial-gradient(ellipse 75% 75% at 50% 50%, rgb(244 245 255) 0%, rgb(214 219 255 / 0.88) 45%, rgb(165 180 252 / 0.35) 72%, transparent 100%)",
+                    opacity: 0.44,
+                  }}
+                />
+              </div>
             </div>
             <svg
               className="pointer-events-none absolute inset-0 -z-0 h-full min-h-[14rem] w-full select-none"
