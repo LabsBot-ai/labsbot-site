@@ -104,7 +104,6 @@ export default function HeroAbout() {
                     maskPosition: "center",
                     WebkitMaskRepeat: "no-repeat",
                     maskRepeat: "no-repeat",
-                    WebkitMaskMode: "luminance",
                     maskMode: "luminance",
                     background:
                       "radial-gradient(ellipse 75% 75% at 50% 50%, rgb(244 245 255) 0%, rgb(214 219 255 / 0.88) 45%, rgb(165 180 252 / 0.35) 72%, transparent 100%)",
