@@ -168,7 +168,7 @@ export default function HeroAbout() {
                 className="hero-about-wg-map absolute left-1/2 top-[47%] z-0 w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 object-contain object-center opacity-0 md:w-[52%] md:-translate-x-1/2 md:opacity-[0.24]"
               />
               <div
-                className="pointer-events-none absolute left-1/2 top-[47%] z-[1] w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 [aspect-ratio:1462/1443] mix-blend-normal md:mix-blend-soft-light opacity-[0.9] bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(244,248,255,0.88)_28%,rgba(234,242,252,0.78)_58%,rgba(220,234,248,0.56)_82%,rgba(220,234,248,0.28)_100%)] md:w-[52%] md:-translate-x-1/2 md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)]"
+                className="pointer-events-none absolute left-1/2 top-[47%] z-[1] w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 [aspect-ratio:1462/1443] mix-blend-normal md:mix-blend-soft-light opacity-[0.3] bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(244,248,255,0.88)_28%,rgba(234,242,252,0.78)_58%,rgba(220,234,248,0.56)_82%,rgba(220,234,248,0.28)_100%)] md:w-[52%] md:-translate-x-1/2 md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)]"
                 style={whereGoingMapTonalOverlayMask}
                 aria-hidden
               />
