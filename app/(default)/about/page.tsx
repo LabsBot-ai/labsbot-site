@@ -1,15 +1,11 @@
 export const metadata = {
-  title: "About us - Open PRO",
-  description: "Page description",
+  title: "About - LabsBot",
+  description:
+    "LabsBot builds practical AI tools for real-life use — simple, fast, and focused on real problems.",
 };
 
 import PageIllustration from "@/components/page-illustration";
 import Hero from "@/components/hero-about";
-import Timeline from "@/components/timeline";
-import Team from "@/components/team";
-import Benefits from "@/components/benefits";
-import Career from "@/components/career";
-import Clients from "@/components/clients";
 import Cta from "@/components/cta";
 
 export default function About() {
@@ -17,11 +13,6 @@ export default function About() {
     <>
       <PageIllustration multiple />
       <Hero />
-      <Timeline />
-      <Team />
-      <Benefits />
-      <Career />
-      <Clients />
       <Cta />
     </>
   );

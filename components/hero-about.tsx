@@ -1,107 +1,204 @@
-import Image from "next/image";
-
-import TeamImg01 from "@/public/images/team-mosaic-01.jpg";
-import TeamImg02 from "@/public/images/team-mosaic-02.jpg";
-import TeamImg03 from "@/public/images/team-mosaic-03.jpg";
-import TeamImg04 from "@/public/images/team-mosaic-04.jpg";
-
 export default function HeroAbout() {
   return (
-    <section>
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Hero content */}
-        <div className="py-12 md:py-20">
-          {/* Section header */}
-          <div className="pb-12 text-center md:pb-20">
-            <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-5 font-nacelle text-4xl font-semibold text-transparent md:text-5xl">
-              The story behind the project
-            </h1>
-            <div className="mx-auto max-w-3xl">
-              <p className="text-xl text-indigo-200/65">
-                Developers are trusted to create an engaging experience for
-                their companies, so we build tools to help them.
-              </p>
-            </div>
-          </div>
-          <div className="mx-auto max-w-3xl">
-            <div className="relative aspect-4/3 w-full">
-              <figure
-                className="absolute h-auto"
-                style={{ top: "45%", width: "41.67%", maxWidth: 320 }}
-                data-aos="fade-right"
-              >
-                <div className="relative -rotate-2 overflow-hidden rounded-2xl before:absolute before:inset-0 before:bg-linear-to-br before:from-gray-900 before:via-indigo-500 before:to-gray-900">
-                  <Image
-                    className="opacity-80 grayscale"
-                    src={TeamImg02}
-                    width={320}
-                    height={240}
-                    alt="Team mosaic 02"
-                  />
+    <>
+      {/* Section 1 — Who we are */}
+      <section>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="py-12 md:py-20">
+            <div className="pb-12 text-center md:pb-20">
+              <div className="mx-auto max-w-3xl">
+                <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+                  Who we are
+                </h2>
+                <div className="space-y-4 text-lg leading-relaxed text-indigo-200/65">
+                  <p>
+                    We are a small team building applied AI tools focused on
+                    real-world use.
+                  </p>
+                  <p>
+                    LabsBot started as an internal project while working with
+                    different AI solutions. We quickly realized that most tools
+                    were either too complex or not designed for practical use.
+                  </p>
+                  <p>
+                    So we began building our own — simple, focused tools that can
+                    be used immediately without unnecessary setup or friction.
+                  </p>
                 </div>
-              </figure>
-              <figure
-                className="relative mx-auto"
-                style={{ width: "78.13%", maxWidth: 600 }}
-                data-aos="fade-down"
-                data-aos-delay={100}
-              >
-                <div className="relative -rotate-2 overflow-hidden rounded-2xl before:absolute before:inset-0 before:bg-linear-to-br before:from-gray-900 before:via-indigo-500 before:to-gray-900">
-                  <Image
-                    className="opacity-90 grayscale"
-                    src={TeamImg01}
-                    width={600}
-                    height={338}
-                    alt="Team mosaic 01"
-                  />
-                </div>
-              </figure>
-              <figure
-                className="absolute h-auto"
-                style={{
-                  top: "8.5%",
-                  right: 0,
-                  width: "32.56%",
-                  maxWidth: 250,
-                }}
-                data-aos="fade-left"
-                data-aos-delay={200}
-              >
-                <div className="relative rotate-2 overflow-hidden rounded-2xl before:absolute before:inset-0 before:bg-linear-to-br before:from-gray-900 before:via-indigo-500 before:to-gray-900">
-                  <Image
-                    className="opacity-90 grayscale"
-                    src={TeamImg03}
-                    width={250}
-                    height={188}
-                    alt="Team mosaic 03"
-                  />
-                </div>
-              </figure>
-              <figure
-                className="absolute h-auto"
-                style={{
-                  bottom: 0,
-                  right: "20%",
-                  width: "25.53%",
-                  maxWidth: 196,
-                }}
-                data-aos="fade-up"
-                data-aos-delay={300}
-              >
-                <div className="relative rotate-2 overflow-hidden rounded-2xl before:absolute before:inset-0 before:bg-linear-to-br before:from-gray-900 before:via-indigo-500 before:to-gray-900 before:opacity-10">
-                  <Image
-                    className="opacity-20 grayscale"
-                    src={TeamImg04}
-                    width={196}
-                    height={196}
-                    alt="Team mosaic 04"
-                  />
-                </div>
-              </figure>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Section 2 — Why */}
+      <section>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
+            <div className="mx-auto max-w-3xl pb-12 text-center md:pb-0">
+              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+                Why we&apos;re building this
+              </h2>
+              <div className="space-y-4 text-lg leading-relaxed text-indigo-200/65">
+                <p>
+                  Most AI tools today are either too complex or not practical for
+                  real-world use.
+                </p>
+                <p>
+                  We saw this firsthand while working with different systems —
+                  tools looked powerful, but required too much setup, context, or
+                  technical knowledge.
+                </p>
+                <p>
+                  We focus on solving real problems directly — without
+                  unnecessary layers, abstractions, or friction.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3 — Where we're going */}
+      <section>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="relative overflow-hidden border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
+            <svg
+              className="pointer-events-none absolute inset-0 -z-0 h-full min-h-[14rem] w-full select-none"
+              viewBox="0 0 800 320"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid meet"
+              aria-hidden
+            >
+              <defs>
+                <radialGradient
+                  id="about-where-glow-core"
+                  cx="50%"
+                  cy="48%"
+                  r="65%"
+                  fx="48%"
+                  fy="46%"
+                >
+                  <stop offset="0%" stopColor="#6366f1" stopOpacity="0.38" />
+                  <stop offset="40%" stopColor="#7c6fd4" stopOpacity="0.14" />
+                  <stop offset="75%" stopColor="#4f46e5" stopOpacity="0.05" />
+                  <stop offset="100%" stopColor="#312e81" stopOpacity="0" />
+                </radialGradient>
+                <radialGradient
+                  id="about-where-glow-violet"
+                  cx="55%"
+                  cy="52%"
+                  r="55%"
+                >
+                  <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.28" />
+                  <stop offset="50%" stopColor="#6d28d9" stopOpacity="0.1" />
+                  <stop offset="100%" stopColor="#4c1d95" stopOpacity="0" />
+                </radialGradient>
+                <radialGradient
+                  id="about-where-glow-cool"
+                  cx="45%"
+                  cy="55%"
+                  r="50%"
+                >
+                  <stop offset="0%" stopColor="#818cf8" stopOpacity="0.22" />
+                  <stop offset="60%" stopColor="#6366f1" stopOpacity="0.08" />
+                  <stop offset="100%" stopColor="#3730a3" stopOpacity="0" />
+                </radialGradient>
+                <radialGradient
+                  id="about-where-vignette"
+                  cx="50%"
+                  cy="50%"
+                  r="72%"
+                >
+                  <stop offset="0%" stopColor="#fff" stopOpacity="1" />
+                  <stop offset="55%" stopColor="#fff" stopOpacity="0.65" />
+                  <stop offset="100%" stopColor="#fff" stopOpacity="0" />
+                </radialGradient>
+                <filter
+                  id="about-where-blur-deep"
+                  x="-45%"
+                  y="-45%"
+                  width="190%"
+                  height="190%"
+                  colorInterpolationFilters="sRGB"
+                >
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="48" />
+                </filter>
+                <filter
+                  id="about-where-blur-mid"
+                  x="-35%"
+                  y="-35%"
+                  width="170%"
+                  height="170%"
+                  colorInterpolationFilters="sRGB"
+                >
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="32" />
+                </filter>
+                <mask
+                  id="about-where-soft-edge"
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="800"
+                  height="320"
+                >
+                  <rect width="800" height="320" fill="url(#about-where-vignette)" />
+                </mask>
+              </defs>
+              {/* Soft atmospheric glow — fills only, no strokes / paths */}
+              <g mask="url(#about-where-soft-edge)" opacity={0.92}>
+                <ellipse
+                  cx={400}
+                  cy={152}
+                  rx={340}
+                  ry={165}
+                  fill="url(#about-where-glow-core)"
+                  filter="url(#about-where-blur-deep)"
+                  opacity={0.85}
+                />
+                <ellipse
+                  cx={380}
+                  cy={168}
+                  rx={260}
+                  ry={200}
+                  fill="url(#about-where-glow-violet)"
+                  filter="url(#about-where-blur-mid)"
+                  opacity={0.75}
+                />
+                <ellipse
+                  cx={430}
+                  cy={145}
+                  rx={220}
+                  ry={150}
+                  fill="url(#about-where-glow-cool)"
+                  filter="url(#about-where-blur-mid)"
+                  opacity={0.7}
+                />
+              </g>
+            </svg>
+            <div className="relative z-10 mx-auto max-w-3xl text-center md:pb-0">
+              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+                Where we&apos;re going
+              </h2>
+              <div className="space-y-4 text-lg leading-relaxed text-indigo-200/65">
+                <p>
+                  We are building tools that can scale beyond individual users —
+                  into systems that support real processes and communities.
+                </p>
+                <p>
+                  One of the key directions is migration — helping people
+                  navigate complex systems across different countries.
+                </p>
+                <p>
+                  Over time, we aim to move beyond individual tools and build
+                  solutions that can operate at the level of regions,
+                  institutions, and public systems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
