@@ -1,6 +1,75 @@
-/** Right-edge only: crisp left/center, smooth horizontal fade where the SVG is clipped. */
-const whereGoingMapMask =
-  "linear-gradient(to right, #000 0%, #000 48%, rgba(0,0,0,0.97) 58%, rgba(0,0,0,0.78) 70%, rgba(0,0,0,0.42) 82%, rgba(0,0,0,0.14) 92%, transparent 100%)";
+import type { CSSProperties } from "react";
+
+/** Right-edge: smooth dissolve — no hard corner; full fade into background. */
+const whereGoingMaskHorizontal =
+  "linear-gradient(to right, #000 0%, #000 38%, rgba(0,0,0,0.94) 46%, rgba(0,0,0,0.72) 56%, rgba(0,0,0,0.42) 68%, rgba(0,0,0,0.18) 80%, rgba(0,0,0,0.05) 90%, transparent 100%)";
+
+/** Map + stars: horizontal fade only (full composition visible; section handoff uses CTA bridge). */
+const whereGoingEuLayerMask: CSSProperties = {
+  maskImage: whereGoingMaskHorizontal,
+  WebkitMaskImage: whereGoingMaskHorizontal,
+};
+
+/** Map silhouette + horizontal fade — for tonal overlay clipped to landmass only. */
+const whereGoingMapTonalOverlayMask: CSSProperties = {
+  maskImage: `${whereGoingMaskHorizontal}, url(/branding/maps-eu.svg)`,
+  WebkitMaskImage: `${whereGoingMaskHorizontal}, url(/branding/maps-eu.svg)`,
+  maskSize: "100% 100%, contain",
+  WebkitMaskSize: "100% 100%, contain",
+  maskPosition: "center, center",
+  WebkitMaskPosition: "center, center",
+  maskRepeat: "no-repeat, no-repeat",
+  WebkitMaskRepeat: "no-repeat, no-repeat",
+  maskComposite: "intersect",
+};
+
+/** Mobile star img mask — duplicated in scoped CSS so desktop can diverge. */
+const starUeLuminanceMaskMobile =
+  "linear-gradient(to left, #ffffff 0%, rgba(255,255,255,0.88) 16%, rgba(255,255,255,0.45) 45%, rgba(255,255,255,0.12) 78%, rgba(255,255,255,0.03) 100%)";
+
+/** Desktop-only: map L→R (lighter left, fade right); stars R→L (lighter right, fade left). Mobile unchanged. */
+const heroAboutWhereGoingMaskStyles = `
+@media (max-width: 767.98px) {
+  .hero-about-wg-map {
+    -webkit-mask-image: ${whereGoingMaskHorizontal};
+    mask-image: ${whereGoingMaskHorizontal};
+  }
+  .hero-about-wg-stars-img {
+    -webkit-mask-image: ${starUeLuminanceMaskMobile};
+    mask-image: ${starUeLuminanceMaskMobile};
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-mode: luminance;
+    mask-mode: luminance;
+  }
+}
+@media (min-width: 768px) {
+  .hero-about-wg-map {
+    -webkit-mask-image: ${whereGoingMaskHorizontal}, linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.78) 24%, rgba(255,255,255,0.36) 56%, rgba(255,255,255,0.09) 86%, rgba(255,255,255,0.02) 100%);
+    mask-image: ${whereGoingMaskHorizontal}, linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.78) 24%, rgba(255,255,255,0.36) 56%, rgba(255,255,255,0.09) 86%, rgba(255,255,255,0.02) 100%);
+    -webkit-mask-size: 100% 100%, 100% 100%;
+    mask-size: 100% 100%, 100% 100%;
+    -webkit-mask-position: center, center;
+    mask-position: center, center;
+    -webkit-mask-repeat: no-repeat, no-repeat;
+    mask-repeat: no-repeat, no-repeat;
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+  }
+  .hero-about-wg-stars-img {
+    -webkit-mask-image: linear-gradient(to right, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.26) 34%, rgba(255,255,255,0.74) 70%, rgba(255,255,255,1) 100%);
+    mask-image: linear-gradient(to right, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.26) 34%, rgba(255,255,255,0.74) 70%, rgba(255,255,255,1) 100%);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-mode: luminance;
+    mask-mode: luminance;
+  }
+}
+`;
 
 export default function HeroAbout() {
   return (
@@ -38,7 +107,7 @@ export default function HeroAbout() {
       {/* Section 2 — Why */}
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
+          <div className="py-12 md:py-20">
             <div className="mx-auto max-w-3xl pb-12 text-center md:pb-0">
               <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
                 Why we&apos;re building this
@@ -66,10 +135,13 @@ export default function HeroAbout() {
       {/* Section 3 — Where we're going */}
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="relative overflow-hidden border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
+          <div className="relative overflow-hidden py-12 md:py-20">
+            <style
+              dangerouslySetInnerHTML={{ __html: heroAboutWhereGoingMaskStyles }}
+            />
             {/* EU map — faint hint, slightly wider than text; tinted + masked */}
             <div
-              className="pointer-events-none absolute inset-0 -z-0 overflow-hidden"
+              className="pointer-events-none absolute inset-0 z-[1] overflow-hidden"
               aria-hidden
             >
               <img
@@ -78,42 +150,35 @@ export default function HeroAbout() {
                 width={1462}
                 height={1443}
                 decoding="async"
-                className="absolute left-1/2 top-[52%] z-0 w-[45%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain object-center opacity-[0.13] [filter:brightness(0)_saturate(100%)_invert(34%)_sepia(100%)_saturate(1500%)_hue-rotate(222deg)_brightness(1.1)_contrast(0.92)]"
-                style={{
-                  maskImage: whereGoingMapMask,
-                  WebkitMaskImage: whereGoingMapMask,
-                }}
+                className="hero-about-wg-map absolute left-1/2 top-[47%] z-0 w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 object-contain object-center opacity-[0.36] md:w-[52%] md:-translate-x-1/2 md:opacity-[0.24]"
+              />
+              <div
+                className="pointer-events-none absolute left-1/2 top-[47%] z-[1] w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 [aspect-ratio:1462/1443] mix-blend-soft-light opacity-[0.34] bg-[linear-gradient(to_right,rgba(248,250,252,0.5)_0%,rgba(226,232,240,0.28)_42%,rgba(203,213,225,0.1)_76%,rgba(15,23,42,0)_100%)] md:w-[52%] md:-translate-x-1/2 md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)]"
+                style={whereGoingMapTonalOverlayMask}
+                aria-hidden
               />
               {/* Star shapes only (SVG as mask) — no full-viewport img rectangle */}
               <div
-                className="pointer-events-none absolute left-1/2 top-[52%] z-[1] w-[45%] max-w-none -translate-x-1/2 -translate-y-1/2 [aspect-ratio:1462/1443]"
-                style={{
-                  maskImage: whereGoingMapMask,
-                  WebkitMaskImage: whereGoingMapMask,
-                }}
+                className="pointer-events-none absolute left-1/2 top-[48%] translate-x-[calc(-50%_+_74px)] md:translate-x-[calc(-50%_+_112px)] z-[2] w-[82%] max-w-none -translate-y-1/2 [aspect-ratio:1462/1443] md:w-[52%]"
+                style={whereGoingEuLayerMask}
                 aria-hidden
               >
                 <div
-                  className="absolute inset-0 [filter:drop-shadow(0_0_6px_rgba(214,219,255,0.38))_drop-shadow(0_0_18px_rgba(99,102,241,0.16))]"
-                  style={{
-                    WebkitMaskImage: "url(/branding/icon-star-ue.svg)",
-                    maskImage: "url(/branding/icon-star-ue.svg)",
-                    WebkitMaskSize: "88% 88%",
-                    maskSize: "88% 88%",
-                    WebkitMaskPosition: "center",
-                    maskPosition: "center",
-                    WebkitMaskRepeat: "no-repeat",
-                    maskRepeat: "no-repeat",
-                    maskMode: "luminance",
-                    background:
-                      "radial-gradient(ellipse 75% 75% at 50% 50%, rgb(244 245 255) 0%, rgb(214 219 255 / 0.88) 45%, rgb(165 180 252 / 0.35) 72%, transparent 100%)",
-                    opacity: 0.44,
-                  }}
-                />
+                  className="absolute inset-0 [filter:drop-shadow(0_0_10px_rgba(148,163,184,0.32))_drop-shadow(0_0_22px_rgba(203,213,225,0.18))]"
+                >
+                  <img
+                    src="/branding/icon-star-ue.svg"
+                    alt=""
+                    width={887}
+                    height={883}
+                    decoding="async"
+                    className="hero-about-wg-stars-img pointer-events-none absolute left-1/2 top-1/2 max-h-[68%] max-w-[68%] -translate-x-1/2 -translate-y-1/2 object-contain object-center opacity-[0.44] md:opacity-[0.34]"
+                  />
+                </div>
               </div>
             </div>
             <svg
-              className="pointer-events-none absolute inset-0 -z-0 h-full min-h-[14rem] w-full select-none"
+              className="pointer-events-none absolute inset-0 z-0 h-full min-h-[14rem] w-full select-none"
               viewBox="0 0 800 320"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid meet"
@@ -128,10 +193,10 @@ export default function HeroAbout() {
                   fx="48%"
                   fy="46%"
                 >
-                  <stop offset="0%" stopColor="#6366f1" stopOpacity="0.38" />
-                  <stop offset="40%" stopColor="#7c6fd4" stopOpacity="0.14" />
-                  <stop offset="75%" stopColor="#4f46e5" stopOpacity="0.05" />
-                  <stop offset="100%" stopColor="#312e81" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.14" />
+                  <stop offset="40%" stopColor="#4338ca" stopOpacity="0.08" />
+                  <stop offset="75%" stopColor="#312e81" stopOpacity="0.04" />
+                  <stop offset="100%" stopColor="#1e1b4b" stopOpacity="0" />
                 </radialGradient>
                 <radialGradient
                   id="about-where-glow-violet"
@@ -139,9 +204,9 @@ export default function HeroAbout() {
                   cy="52%"
                   r="55%"
                 >
-                  <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.28" />
-                  <stop offset="50%" stopColor="#6d28d9" stopOpacity="0.1" />
-                  <stop offset="100%" stopColor="#4c1d95" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#6366f1" stopOpacity="0.1" />
+                  <stop offset="50%" stopColor="#4f46e5" stopOpacity="0.06" />
+                  <stop offset="100%" stopColor="#312e81" stopOpacity="0" />
                 </radialGradient>
                 <radialGradient
                   id="about-where-glow-cool"
@@ -149,9 +214,9 @@ export default function HeroAbout() {
                   cy="55%"
                   r="50%"
                 >
-                  <stop offset="0%" stopColor="#818cf8" stopOpacity="0.22" />
-                  <stop offset="60%" stopColor="#6366f1" stopOpacity="0.08" />
-                  <stop offset="100%" stopColor="#3730a3" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#6366f1" stopOpacity="0.09" />
+                  <stop offset="60%" stopColor="#4338ca" stopOpacity="0.05" />
+                  <stop offset="100%" stopColor="#1e3a8a" stopOpacity="0" />
                 </radialGradient>
                 <radialGradient
                   id="about-where-vignette"
@@ -195,7 +260,7 @@ export default function HeroAbout() {
                 </mask>
               </defs>
               {/* Soft atmospheric glow — fills only, no strokes / paths */}
-              <g mask="url(#about-where-soft-edge)" opacity={0.92}>
+              <g mask="url(#about-where-soft-edge)" opacity={0.55}>
                 <ellipse
                   cx={400}
                   cy={152}
@@ -203,7 +268,7 @@ export default function HeroAbout() {
                   ry={165}
                   fill="url(#about-where-glow-core)"
                   filter="url(#about-where-blur-deep)"
-                  opacity={0.85}
+                  opacity={0.55}
                 />
                 <ellipse
                   cx={380}
@@ -212,7 +277,7 @@ export default function HeroAbout() {
                   ry={200}
                   fill="url(#about-where-glow-violet)"
                   filter="url(#about-where-blur-mid)"
-                  opacity={0.75}
+                  opacity={0.45}
                 />
                 <ellipse
                   cx={430}
@@ -221,7 +286,7 @@ export default function HeroAbout() {
                   ry={150}
                   fill="url(#about-where-glow-cool)"
                   filter="url(#about-where-blur-mid)"
-                  opacity={0.7}
+                  opacity={0.42}
                 />
               </g>
             </svg>
