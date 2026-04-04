@@ -1,3 +1,7 @@
+/** Right-edge only: crisp left/center, smooth horizontal fade where the SVG is clipped. */
+const whereGoingMapMask =
+  "linear-gradient(to right, #000 0%, #000 48%, rgba(0,0,0,0.97) 58%, rgba(0,0,0,0.78) 70%, rgba(0,0,0,0.42) 82%, rgba(0,0,0,0.14) 92%, transparent 100%)";
+
 export default function HeroAbout() {
   return (
     <>
@@ -63,6 +67,24 @@ export default function HeroAbout() {
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="relative overflow-hidden border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
+            {/* EU map — faint hint, slightly wider than text; tinted + masked */}
+            <div
+              className="pointer-events-none absolute inset-0 -z-0 overflow-hidden"
+              aria-hidden
+            >
+              <img
+                src="/branding/maps-eu.svg"
+                alt=""
+                width={1462}
+                height={1443}
+                decoding="async"
+                className="absolute left-1/2 top-[52%] w-[45%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain object-center opacity-[0.13] [filter:brightness(0)_saturate(100%)_invert(34%)_sepia(100%)_saturate(1500%)_hue-rotate(222deg)_brightness(1.1)_contrast(0.92)]"
+                style={{
+                  maskImage: whereGoingMapMask,
+                  WebkitMaskImage: whereGoingMapMask,
+                }}
+              />
+            </div>
             <svg
               className="pointer-events-none absolute inset-0 -z-0 h-full min-h-[14rem] w-full select-none"
               viewBox="0 0 800 320"
