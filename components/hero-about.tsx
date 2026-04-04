@@ -10,6 +10,9 @@ const whereGoingEuLayerMask: CSSProperties = {
   WebkitMaskImage: whereGoingMaskHorizontal,
 };
 
+/** Mobile-only: same horizontal edge fade as shared mask — stronger outer suppression than the previous softened variant. */
+const whereGoingStarsOuterMaskMobile = whereGoingMaskHorizontal;
+
 /** Map silhouette + horizontal fade — for tonal overlay clipped to landmass only. */
 const whereGoingMapTonalOverlayMask: CSSProperties = {
   maskImage: `${whereGoingMaskHorizontal}, url(/branding/maps-eu.svg)`,
@@ -23,26 +26,38 @@ const whereGoingMapTonalOverlayMask: CSSProperties = {
   maskComposite: "intersect",
 };
 
-/** Mobile star img mask — duplicated in scoped CSS so desktop can diverge. */
-const starUeLuminanceMaskMobile =
-  "linear-gradient(to left, #ffffff 0%, rgba(255,255,255,0.88) 16%, rgba(255,255,255,0.45) 45%, rgba(255,255,255,0.12) 78%, rgba(255,255,255,0.03) 100%)";
-
-/** Desktop-only: map L→R (lighter left, fade right); stars R→L (lighter right, fade left). Mobile unchanged. */
+/** Map L→R + stars R→L: mobile uses softer stops than desktop; desktop block must stay in sync logically, not numerically. */
 const heroAboutWhereGoingMaskStyles = `
 @media (max-width: 767.98px) {
   .hero-about-wg-map {
-    -webkit-mask-image: ${whereGoingMaskHorizontal};
-    mask-image: ${whereGoingMaskHorizontal};
+    -webkit-mask-image: ${whereGoingMaskHorizontal}, linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.98) 30%, rgba(255,255,255,0.92) 54%, rgba(255,255,255,0.72) 78%, rgba(255,255,255,0.52) 100%);
+    mask-image: ${whereGoingMaskHorizontal}, linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.98) 30%, rgba(255,255,255,0.92) 54%, rgba(255,255,255,0.72) 78%, rgba(255,255,255,0.52) 100%);
+    -webkit-mask-size: 100% 100%, 100% 100%;
+    mask-size: 100% 100%, 100% 100%;
+    -webkit-mask-position: center, center;
+    mask-position: center, center;
+    -webkit-mask-repeat: no-repeat, no-repeat;
+    mask-repeat: no-repeat, no-repeat;
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
   }
   .hero-about-wg-stars-img {
-    -webkit-mask-image: ${starUeLuminanceMaskMobile};
-    mask-image: ${starUeLuminanceMaskMobile};
+    -webkit-mask-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 10%, rgba(255,255,255,0.12) 24%, rgba(255,255,255,0.38) 42%, rgba(255,255,255,0.72) 58%, rgba(255,255,255,0.95) 74%, rgba(255,255,255,1) 82%, rgba(255,255,255,1) 100%);
+    mask-image: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 10%, rgba(255,255,255,0.12) 24%, rgba(255,255,255,0.38) 42%, rgba(255,255,255,0.72) 58%, rgba(255,255,255,0.95) 74%, rgba(255,255,255,1) 82%, rgba(255,255,255,1) 100%);
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-mode: luminance;
     mask-mode: luminance;
+  }
+  .hero-about-wg-stars-clip {
+    -webkit-mask-image: ${whereGoingStarsOuterMaskMobile} !important;
+    mask-image: ${whereGoingStarsOuterMaskMobile} !important;
+    -webkit-mask-size: 100% 100% !important;
+    mask-size: 100% 100% !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
   }
 }
 @media (min-width: 768px) {
@@ -150,21 +165,21 @@ export default function HeroAbout() {
                 width={1462}
                 height={1443}
                 decoding="async"
-                className="hero-about-wg-map absolute left-1/2 top-[47%] z-0 w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 object-contain object-center opacity-[0.36] md:w-[52%] md:-translate-x-1/2 md:opacity-[0.24]"
+                className="hero-about-wg-map absolute left-1/2 top-[47%] z-0 w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 object-contain object-center opacity-0 md:w-[52%] md:-translate-x-1/2 md:opacity-[0.24]"
               />
               <div
-                className="pointer-events-none absolute left-1/2 top-[47%] z-[1] w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 [aspect-ratio:1462/1443] mix-blend-soft-light opacity-[0.34] bg-[linear-gradient(to_right,rgba(248,250,252,0.5)_0%,rgba(226,232,240,0.28)_42%,rgba(203,213,225,0.1)_76%,rgba(15,23,42,0)_100%)] md:w-[52%] md:-translate-x-1/2 md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)]"
+                className="pointer-events-none absolute left-1/2 top-[47%] z-[1] w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 [aspect-ratio:1462/1443] mix-blend-normal md:mix-blend-soft-light opacity-[0.9] bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(244,248,255,0.88)_28%,rgba(234,242,252,0.78)_58%,rgba(220,234,248,0.56)_82%,rgba(220,234,248,0.28)_100%)] md:w-[52%] md:-translate-x-1/2 md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)]"
                 style={whereGoingMapTonalOverlayMask}
                 aria-hidden
               />
               {/* Star shapes only (SVG as mask) — no full-viewport img rectangle */}
               <div
-                className="pointer-events-none absolute left-1/2 top-[48%] translate-x-[calc(-50%_+_74px)] md:translate-x-[calc(-50%_+_112px)] z-[2] w-[82%] max-w-none -translate-y-1/2 [aspect-ratio:1462/1443] md:w-[52%]"
+                className="hero-about-wg-stars-clip pointer-events-none absolute left-1/2 top-[48%] translate-x-[calc(-50%_+_74px)] md:translate-x-[calc(-50%_+_112px)] z-[2] w-[82%] max-w-none -translate-y-1/2 [aspect-ratio:1462/1443] md:w-[52%]"
                 style={whereGoingEuLayerMask}
                 aria-hidden
               >
                 <div
-                  className="absolute inset-0 [filter:drop-shadow(0_0_10px_rgba(148,163,184,0.32))_drop-shadow(0_0_22px_rgba(203,213,225,0.18))]"
+                  className="absolute inset-0 md:[filter:drop-shadow(0_0_10px_rgba(148,163,184,0.32))_drop-shadow(0_0_22px_rgba(203,213,225,0.18))]"
                 >
                   <img
                     src="/branding/icon-star-ue.svg"
@@ -172,7 +187,7 @@ export default function HeroAbout() {
                     width={887}
                     height={883}
                     decoding="async"
-                    className="hero-about-wg-stars-img pointer-events-none absolute left-1/2 top-1/2 max-h-[68%] max-w-[68%] -translate-x-1/2 -translate-y-1/2 object-contain object-center opacity-[0.44] md:opacity-[0.34]"
+                    className="hero-about-wg-stars-img pointer-events-none absolute left-1/2 top-1/2 max-h-[68%] max-w-[68%] -translate-x-1/2 -translate-y-1/2 object-contain object-center opacity-[0.68] md:opacity-[0.34]"
                   />
                 </div>
               </div>
