@@ -81,9 +81,13 @@ const aboutWhyShift = "translate-y-[160px] md:translate-y-[200px]";
 const aboutWhereCopyCol =
   "absolute left-1/2 top-[36%] z-10 w-full max-w-[1100px] px-4 text-center [transform:translateX(-50%)_translateY(28px)] md:[transform:translateX(-50%)_translateY(36px)] sm:px-0";
 
-/** WHERE body: single line; overflow-x for narrow viewports. */
+/** WHERE body: wrapped on mobile; single line from md (desktop unchanged). */
 const aboutWhereBodyOneLine =
-  "w-full text-lg leading-relaxed text-indigo-200/65 whitespace-nowrap text-center overflow-x-auto overflow-y-hidden [overflow-wrap:normal] [word-break:normal]";
+  "w-full text-lg leading-relaxed text-indigo-200/65 text-center [overflow-wrap:break-word] [word-break:normal] md:whitespace-nowrap md:overflow-x-auto md:overflow-y-hidden md:[overflow-wrap:normal]";
+
+/** Section h2 shimmer: mobile-only tighter stops + dual band (same palette); md+ matches previous single 5-stop gradient. */
+const aboutSectionHeadingClassName =
+  "animate-[gradient_6s_linear_infinite] max-md:bg-[linear-gradient(to_right,var(--color-gray-200)_0%,var(--color-indigo-200)_8%,var(--color-gray-50)_15%,var(--color-indigo-300)_22%,var(--color-gray-200)_30%,var(--color-indigo-200)_44%,var(--color-gray-50)_57%,var(--color-indigo-300)_70%,var(--color-gray-200)_100%)] md:bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-3xl font-semibold text-transparent md:text-4xl";
 
 export default function HeroAbout() {
   return (
@@ -93,7 +97,7 @@ export default function HeroAbout() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="pb-3 pt-[48px] text-center md:pb-3 md:pt-[56px]">
             <div className={`${aboutCopyCol} ${aboutWhoShift}`}>
-              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+              <h2 className={aboutSectionHeadingClassName}>
                 Who we are
               </h2>
               <div className="space-y-2 text-lg leading-relaxed text-indigo-200/65 whitespace-normal [word-break:normal] [overflow-wrap:break-word]">
@@ -112,7 +116,7 @@ export default function HeroAbout() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="pb-7 pt-6 md:pb-6 md:pt-6">
             <div className={`${aboutCopyCol} ${aboutWhyShift}`}>
-              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+              <h2 className={aboutSectionHeadingClassName}>
                 Why we&apos;re building this
               </h2>
               <div className="space-y-2 text-lg leading-relaxed text-indigo-200/65 whitespace-normal [word-break:normal] [overflow-wrap:break-word]">
@@ -149,10 +153,10 @@ export default function HeroAbout() {
                 width={1462}
                 height={1443}
                 decoding="async"
-                className="hero-about-wg-map absolute left-1/2 top-[56%] z-0 w-[82%] max-w-none object-contain object-center opacity-0 md:w-[52%] md:opacity-[0.24] [transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_20px))_scale(1.08)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
+                className="hero-about-wg-map absolute left-1/2 top-[56%] z-0 w-[82%] max-w-none object-contain object-center opacity-0 md:w-[52%] md:opacity-[0.24] max-md:[transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_36px))_scale(1.12)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
               />
               <div
-                className="pointer-events-none absolute left-1/2 top-[56%] z-[1] w-[82%] max-w-none [aspect-ratio:1462/1443] mix-blend-normal md:mix-blend-soft-light opacity-[0.3] bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(244,248,255,0.88)_28%,rgba(234,242,252,0.78)_58%,rgba(220,234,248,0.56)_82%,rgba(220,234,248,0.28)_100%)] md:w-[52%] md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)] [transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_20px))_scale(1.08)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
+                className="pointer-events-none absolute left-1/2 top-[56%] z-[1] w-[82%] max-w-none [aspect-ratio:1462/1443] mix-blend-normal md:mix-blend-soft-light opacity-[0.3] bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(244,248,255,0.88)_28%,rgba(234,242,252,0.78)_58%,rgba(220,234,248,0.56)_82%,rgba(220,234,248,0.28)_100%)] md:w-[52%] md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)] max-md:[transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_36px))_scale(1.12)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
                 style={whereGoingMapTonalOverlayMask}
                 aria-hidden
               />
@@ -290,7 +294,9 @@ export default function HeroAbout() {
               </g>
             </svg>
             <div className={aboutWhereCopyCol}>
-              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+              <h2
+                className={`max-md:translate-y-3 ${aboutSectionHeadingClassName}`}
+              >
                 Where we&apos;re going
               </h2>
               <div className={aboutWhereBodyOneLine}>
