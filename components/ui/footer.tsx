@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Logo from "./logo";
 import Image from "next/image";
 import FooterIllustration from "@/public/images/footer-illustration.svg";
@@ -31,36 +32,20 @@ export default function Footer() {
             <h3 className="text-sm font-medium text-gray-200">{t("footerProduct")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#"
+                  href="/products/migreo"
                 >
-                  {t("footerFeatures")}
-                </a>
+                  {t("footerProductMigreo")}
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#"
+                  href="/products/paytable"
                 >
-                  {t("footerPricingPlans")}
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#"
-                >
-                  {t("footerChangelog")}
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
-                  href="#"
-                >
-                  {t("footerTariffs")}
-                </a>
+                  {t("footerProductPaytable")}
+                </Link>
               </li>
             </ul>
           </div>
