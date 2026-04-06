@@ -149,10 +149,10 @@ export default function HeroAbout() {
                 width={1462}
                 height={1443}
                 decoding="async"
-                className="hero-about-wg-map absolute left-1/2 top-[56%] z-0 w-[82%] max-w-none object-contain object-center opacity-0 md:w-[52%] md:opacity-[0.24] max-md:[transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_36px))_scale(1.12)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
+                className="hero-about-wg-map absolute left-1/2 top-[56%] z-0 w-[82%] max-w-none object-contain object-center opacity-0 md:w-[52%] md:opacity-[0.24] max-md:[transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_52px))_scale(1.2)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
               />
               <div
-                className="pointer-events-none absolute left-1/2 top-[56%] z-[1] w-[82%] max-w-none [aspect-ratio:1462/1443] mix-blend-normal md:mix-blend-soft-light opacity-[0.3] bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(244,248,255,0.88)_28%,rgba(234,242,252,0.78)_58%,rgba(220,234,248,0.56)_82%,rgba(220,234,248,0.28)_100%)] md:w-[52%] md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)] max-md:[transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_36px))_scale(1.12)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
+                className="pointer-events-none absolute left-1/2 top-[56%] z-[1] w-[82%] max-w-none [aspect-ratio:1462/1443] mix-blend-normal md:mix-blend-soft-light opacity-[0.3] bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(244,248,255,0.88)_28%,rgba(234,242,252,0.78)_58%,rgba(220,234,248,0.56)_82%,rgba(220,234,248,0.28)_100%)] md:w-[52%] md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)] max-md:[transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_52px))_scale(1.2)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
                 style={whereGoingMapTonalOverlayMask}
                 aria-hidden
               />
@@ -171,7 +171,7 @@ export default function HeroAbout() {
                     width={887}
                     height={883}
                     decoding="async"
-                    className="hero-about-wg-stars-img pointer-events-none absolute left-1/2 top-1/2 max-h-[68%] max-w-[68%] -translate-x-1/2 -translate-y-1/2 object-contain object-center opacity-[0.68] md:opacity-[0.34]"
+                    className="hero-about-wg-stars-img pointer-events-none absolute left-1/2 top-1/2 max-h-[68%] max-w-[68%] -translate-x-1/2 -translate-y-1/2 object-contain object-center opacity-[0.68] md:opacity-[0.34] max-md:scale-[1.08] md:scale-100"
                   />
                 </div>
               </div>
