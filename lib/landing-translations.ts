@@ -122,17 +122,17 @@ export const LANDING_TRANSLATIONS: Record<LandingLang, Record<LandingMsgKey, str
     footerCommunity: "Community",
     footerReportVuln: "Schwachstelle melden",
     footerRights: "© 2026 LabsBot.ai. Alle Rechte vorbehalten.",
-    aboutWhoTitle: "Who we are",
+    aboutWhoTitle: "Wer wir sind",
     aboutWhoP1:
-      "We live and work in the Black Forest, Baden-Württemberg — where technology is part of everyday life and downtime.",
-    aboutWhyTitle: "Why we're building this",
+      "Wir leben und arbeiten im Schwarzwald, Baden-Württemberg — wo Technologie Teil des Lebens und der Erholung ist.",
+    aboutWhyTitle: "Warum wir das machen",
     aboutWhyP1:
-      "We're developers who've experienced firsthand the challenges of starting life in a new country.",
+      "Wir sind Entwickler mit Migrationshintergrund und kennen die Herausforderungen in einem neuen Land aus eigener Erfahrung.",
     aboutWhyP2:
-      "That's why we focus on simplifying integration and build products that help people find their way faster and feel more confident.",
-    aboutWhereTitle: "Where we're going",
+      "Deshalb wissen wir, wie man Integration einfacher macht, und entwickeln Projekte, die helfen, sich schneller zurechtzufinden und sich sicherer zu fühlen.",
+    aboutWhereTitle: "Wohin wir gehen",
     aboutWhereP1:
-      "As part of the Northern Black Forest technology cluster, we create and develop projects across Europe.",
+      "Als Teil des Technologieclusters Nördlicher Schwarzwald entwickeln und skalieren wir Projekte in ganz Europa.",
   },
   ru: {
     navProducts: "Продукты",
