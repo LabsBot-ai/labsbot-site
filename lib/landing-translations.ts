@@ -52,6 +52,17 @@ const en = {
   footerCommunity: "Community",
   footerReportVuln: "Report a vulnerability",
   footerRights: "© 2026 LabsBot.ai. All rights reserved.",
+  aboutWhoTitle: "Who we are",
+  aboutWhoP1:
+    "We live and work in the Black Forest, Baden-Württemberg — where technology is part of everyday life and downtime.",
+  aboutWhyTitle: "Why we're building this",
+  aboutWhyP1:
+    "We're developers who've experienced firsthand the challenges of starting life in a new country.",
+  aboutWhyP2:
+    "That's why we focus on simplifying integration and build products that help people find their way faster and feel more confident.",
+  aboutWhereTitle: "Where we're going",
+  aboutWhereP1:
+    "As part of the Northern Black Forest technology cluster, we create and develop projects across Europe.",
 } as const;
 
 export type LandingMsgKey = keyof typeof en;
@@ -111,6 +122,17 @@ export const LANDING_TRANSLATIONS: Record<LandingLang, Record<LandingMsgKey, str
     footerCommunity: "Community",
     footerReportVuln: "Schwachstelle melden",
     footerRights: "© 2026 LabsBot.ai. Alle Rechte vorbehalten.",
+    aboutWhoTitle: "Who we are",
+    aboutWhoP1:
+      "We live and work in the Black Forest, Baden-Württemberg — where technology is part of everyday life and downtime.",
+    aboutWhyTitle: "Why we're building this",
+    aboutWhyP1:
+      "We're developers who've experienced firsthand the challenges of starting life in a new country.",
+    aboutWhyP2:
+      "That's why we focus on simplifying integration and build products that help people find their way faster and feel more confident.",
+    aboutWhereTitle: "Where we're going",
+    aboutWhereP1:
+      "As part of the Northern Black Forest technology cluster, we create and develop projects across Europe.",
   },
   ru: {
     navProducts: "Продукты",
@@ -165,6 +187,17 @@ export const LANDING_TRANSLATIONS: Record<LandingLang, Record<LandingMsgKey, str
     footerCommunity: "Сообщество",
     footerReportVuln: "Сообщить об уязвимости",
     footerRights: "© 2026 LabsBot.ai. Все права защищены.",
+    aboutWhoTitle: "Кто мы",
+    aboutWhoP1:
+      "Мы живем и работаем в Шварцвальде, Баден-Вюртемберг — где технологии — это часть жизни и отдыха.",
+    aboutWhyTitle: "Почему мы это создаём",
+    aboutWhyP1:
+      "Мы — разработчики-мигранты и сами столкнулись с неизбежными сложностями в новой стране.",
+    aboutWhyP2:
+      "Поэтому знаем, как упростить процесс интеграции, и разрабатываем проекты, которые помогают быстрее во всем разобраться и чувствовать себя увереннее.",
+    aboutWhereTitle: "Куда мы идём",
+    aboutWhereP1:
+      "Являясь частью технологического кластера Северный Шварцвальд, мы создаем и развиваем проекты по всей Европе.",
   },
 };
 

@@ -1,4 +1,8 @@
+"use client";
+
 import type { CSSProperties } from "react";
+
+import { useLandingLang } from "@/components/landing-language-provider";
 
 /** Right-edge: smooth dissolve — no hard corner; full fade into background. */
 const whereGoingMaskHorizontal =
@@ -90,6 +94,8 @@ const aboutSectionHeadingClassName =
   "animate-[gradient_6s_linear_infinite] max-md:bg-[linear-gradient(to_right,var(--color-gray-200)_0%,var(--color-indigo-200)_8%,var(--color-gray-50)_15%,var(--color-indigo-300)_22%,var(--color-gray-200)_30%,var(--color-indigo-200)_44%,var(--color-gray-50)_57%,var(--color-indigo-300)_70%,var(--color-gray-200)_100%)] md:bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-3xl font-semibold text-transparent md:text-4xl";
 
 export default function HeroAbout() {
+  const { t } = useLandingLang();
+
   return (
     <>
       {/* Section 1 — Who we are */}
@@ -98,13 +104,10 @@ export default function HeroAbout() {
           <div className="pb-3 pt-[48px] text-center md:pb-3 md:pt-[56px]">
             <div className={`${aboutCopyCol} ${aboutWhoShift}`}>
               <h2 className={aboutSectionHeadingClassName}>
-                Who we are
+                {t("aboutWhoTitle")}
               </h2>
               <div className="space-y-2 text-lg leading-relaxed text-indigo-200/65 whitespace-normal [word-break:normal] [overflow-wrap:break-word]">
-                <p>
-                  We live and work in the Black Forest, Baden-Württemberg —
-                  where technology is part of everyday life, not separate from it.
-                </p>
+                <p>{t("aboutWhoP1")}</p>
               </div>
             </div>
           </div>
@@ -117,18 +120,11 @@ export default function HeroAbout() {
           <div className="pb-7 pt-6 md:pb-6 md:pt-6">
             <div className={`${aboutCopyCol} ${aboutWhyShift}`}>
               <h2 className={aboutSectionHeadingClassName}>
-                Why we&apos;re building this
+                {t("aboutWhyTitle")}
               </h2>
               <div className="space-y-2 text-lg leading-relaxed text-indigo-200/65 whitespace-normal [word-break:normal] [overflow-wrap:break-word]">
-                <p>
-                  We&apos;re developers who&apos;ve experienced firsthand the
-                  challenges of starting life in a new country.
-                </p>
-                <p>
-                  That&apos;s why we focus on simplifying integration and build
-                  products that help people find their way faster and feel more
-                  confident.
-                </p>
+                <p>{t("aboutWhyP1")}</p>
+                <p>{t("aboutWhyP2")}</p>
               </div>
             </div>
           </div>
@@ -297,13 +293,10 @@ export default function HeroAbout() {
               <h2
                 className={`max-md:translate-y-3 ${aboutSectionHeadingClassName}`}
               >
-                Where we&apos;re going
+                {t("aboutWhereTitle")}
               </h2>
               <div className={aboutWhereBodyOneLine}>
-                <p>
-                  As part of the Northern Black Forest technology cluster, we
-                  build and scale products across Europe.
-                </p>
+                <p>{t("aboutWhereP1")}</p>
               </div>
             </div>
           </div>
