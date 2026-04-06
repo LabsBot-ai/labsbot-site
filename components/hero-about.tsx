@@ -70,33 +70,37 @@ const heroAboutWhereGoingMaskStyles = `
 }
 `;
 
+/** Shared copy column: 900px max, centered. */
+const aboutCopyCol = "mx-auto w-full max-w-[900px] text-center";
+
+/** Who / Why: translateY only on copy column (no extra layout height). */
+const aboutWhoShift = "translate-y-[10px] md:translate-y-[16px]";
+const aboutWhyShift = "translate-y-[160px] md:translate-y-[200px]";
+
+/** “Where” block: position via transform (no extra section padding). */
+const aboutWhereCopyCol =
+  "absolute left-1/2 top-[36%] z-10 w-full max-w-[1100px] px-4 text-center [transform:translateX(-50%)_translateY(28px)] md:[transform:translateX(-50%)_translateY(36px)] sm:px-0";
+
+/** WHERE body: single line; overflow-x for narrow viewports. */
+const aboutWhereBodyOneLine =
+  "w-full text-lg leading-relaxed text-indigo-200/65 whitespace-nowrap text-center overflow-x-auto overflow-y-hidden [overflow-wrap:normal] [word-break:normal]";
+
 export default function HeroAbout() {
   return (
     <>
       {/* Section 1 — Who we are */}
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="py-12 md:py-20">
-            <div className="pb-12 text-center md:pb-20">
-              <div className="mx-auto max-w-3xl">
-                <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-                  Who we are
-                </h2>
-                <div className="space-y-4 text-lg leading-relaxed text-indigo-200/65">
-                  <p>
-                    We are a small team building applied AI tools focused on
-                    real-world use.
-                  </p>
-                  <p>
-                    LabsBot started as an internal project while working with
-                    different AI solutions. We quickly realized that most tools
-                    were either too complex or not designed for practical use.
-                  </p>
-                  <p>
-                    So we began building our own — simple, focused tools that can
-                    be used immediately without unnecessary setup or friction.
-                  </p>
-                </div>
+          <div className="pb-3 pt-[48px] text-center md:pb-3 md:pt-[56px]">
+            <div className={`${aboutCopyCol} ${aboutWhoShift}`}>
+              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+                Who we are
+              </h2>
+              <div className="space-y-2 text-lg leading-relaxed text-indigo-200/65 whitespace-normal [word-break:normal] [overflow-wrap:break-word]">
+                <p>
+                  We live and work in the Black Forest, Baden-Württemberg —
+                  where technology is part of everyday life, not separate from it.
+                </p>
               </div>
             </div>
           </div>
@@ -106,24 +110,20 @@ export default function HeroAbout() {
       {/* Section 2 — Why */}
       <section>
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="py-12 md:py-20">
-            <div className="mx-auto max-w-3xl pb-12 text-center md:pb-0">
-              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+          <div className="pb-7 pt-6 md:pb-6 md:pt-6">
+            <div className={`${aboutCopyCol} ${aboutWhyShift}`}>
+              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
                 Why we&apos;re building this
               </h2>
-              <div className="space-y-4 text-lg leading-relaxed text-indigo-200/65">
+              <div className="space-y-2 text-lg leading-relaxed text-indigo-200/65 whitespace-normal [word-break:normal] [overflow-wrap:break-word]">
                 <p>
-                  Most AI tools today are either too complex or not practical for
-                  real-world use.
+                  We&apos;re developers who&apos;ve experienced firsthand the
+                  challenges of starting life in a new country.
                 </p>
                 <p>
-                  We saw this firsthand while working with different systems —
-                  tools looked powerful, but required too much setup, context, or
-                  technical knowledge.
-                </p>
-                <p>
-                  We focus on solving real problems directly — without
-                  unnecessary layers, abstractions, or friction.
+                  That&apos;s why we focus on simplifying integration and build
+                  products that help people find their way faster and feel more
+                  confident.
                 </p>
               </div>
             </div>
@@ -132,15 +132,15 @@ export default function HeroAbout() {
       </section>
 
       {/* Section 3 — Where we're going */}
-      <section>
+      <section className="relative translate-y-[40px] md:translate-y-[60px]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="relative overflow-hidden py-12 md:py-20">
+          <div className="relative min-h-[70vh] md:min-h-[80vh]">
             <style
               dangerouslySetInnerHTML={{ __html: heroAboutWhereGoingMaskStyles }}
             />
             {/* EU map — faint hint, slightly wider than text; tinted + masked */}
             <div
-              className="pointer-events-none absolute inset-0 z-[1] overflow-hidden"
+              className="pointer-events-none absolute inset-0 z-[1]"
               aria-hidden
             >
               <img
@@ -149,16 +149,16 @@ export default function HeroAbout() {
                 width={1462}
                 height={1443}
                 decoding="async"
-                className="hero-about-wg-map absolute left-1/2 top-[47%] z-0 w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 object-contain object-center opacity-0 md:w-[52%] md:-translate-x-1/2 md:opacity-[0.24]"
+                className="hero-about-wg-map absolute left-1/2 top-[56%] z-0 w-[82%] max-w-none object-contain object-center opacity-0 md:w-[52%] md:opacity-[0.24] [transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_20px))_scale(1.08)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
               />
               <div
-                className="pointer-events-none absolute left-1/2 top-[47%] z-[1] w-[82%] max-w-none translate-x-[calc(-50%_-_14px)] -translate-y-1/2 [aspect-ratio:1462/1443] mix-blend-normal md:mix-blend-soft-light opacity-[0.3] bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(244,248,255,0.88)_28%,rgba(234,242,252,0.78)_58%,rgba(220,234,248,0.56)_82%,rgba(220,234,248,0.28)_100%)] md:w-[52%] md:-translate-x-1/2 md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)]"
+                className="pointer-events-none absolute left-1/2 top-[56%] z-[1] w-[82%] max-w-none [aspect-ratio:1462/1443] mix-blend-normal md:mix-blend-soft-light opacity-[0.3] bg-[linear-gradient(to_right,rgba(255,255,255,0.92)_0%,rgba(244,248,255,0.88)_28%,rgba(234,242,252,0.78)_58%,rgba(220,234,248,0.56)_82%,rgba(220,234,248,0.28)_100%)] md:w-[52%] md:opacity-[0.34] md:bg-[linear-gradient(to_right,rgba(226,232,240,0.18)_0%,rgba(148,163,184,0.14)_38%,rgba(71,85,105,0.2)_72%,rgba(51,65,85,0.28)_100%)] [transform:translateX(calc(-50%_-_14px))_translateY(calc(-50%_+_20px))_scale(1.08)] md:[transform:translateX(-50%)_translateY(calc(-50%_+_30px))_scale(1.12)]"
                 style={whereGoingMapTonalOverlayMask}
                 aria-hidden
               />
               {/* Star shapes only (SVG as mask) — no full-viewport img rectangle */}
               <div
-                className="hero-about-wg-stars-clip pointer-events-none absolute left-1/2 top-[48%] translate-x-[calc(-50%_+_74px)] md:translate-x-[calc(-50%_+_112px)] z-[2] w-[82%] max-w-none -translate-y-1/2 [aspect-ratio:1462/1443] md:w-[52%]"
+                className="hero-about-wg-stars-clip pointer-events-none absolute left-1/2 top-[57%] z-[2] w-[82%] max-w-none [aspect-ratio:1462/1443] md:w-[52%] [transform:translateX(calc(-50%_+_74px))_translateY(calc(-50%_+_20px))] md:[transform:translateX(calc(-50%_+_112px))_translateY(calc(-50%_+_30px))]"
                 style={whereGoingEuLayerMask}
                 aria-hidden
               >
@@ -177,7 +177,7 @@ export default function HeroAbout() {
               </div>
             </div>
             <svg
-              className="pointer-events-none absolute inset-0 z-0 h-full min-h-[14rem] w-full select-none"
+              className="pointer-events-none absolute inset-0 z-0 h-full min-h-0 w-full select-none"
               viewBox="0 0 800 320"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid meet"
@@ -289,23 +289,14 @@ export default function HeroAbout() {
                 />
               </g>
             </svg>
-            <div className="relative z-10 mx-auto max-w-3xl text-center md:pb-0">
-              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <div className={aboutWhereCopyCol}>
+              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-3 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
                 Where we&apos;re going
               </h2>
-              <div className="space-y-4 text-lg leading-relaxed text-indigo-200/65">
+              <div className={aboutWhereBodyOneLine}>
                 <p>
-                  We are building tools that can scale beyond individual users —
-                  into systems that support real processes and communities.
-                </p>
-                <p>
-                  One of the key directions is migration — helping people
-                  navigate complex systems across different countries.
-                </p>
-                <p>
-                  Over time, we aim to move beyond individual tools and build
-                  solutions that can operate at the level of regions,
-                  institutions, and public systems.
+                  As part of the Northern Black Forest technology cluster, we
+                  build and scale products across Europe.
                 </p>
               </div>
             </div>
